@@ -1,0 +1,90 @@
+/* Phase 5.9 REAL — actual texture-based thumbnails for the seven non-Earth planets */
+:is(
+  .planet-thumbnail--mercury,
+  .planet-thumbnail--venus,
+  .planet-thumbnail--mars,
+  .planet-thumbnail--jupiter,
+  .planet-thumbnail--saturn,
+  .planet-thumbnail--uranus,
+  .planet-thumbnail--neptune
+) {
+  overflow: visible;
+  border-radius: 0;
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 0.55rem color-mix(in srgb, var(--planet-accent, #8da5d7) 11%, transparent));
+}
+
+:is(
+  .planet-thumbnail--mercury,
+  .planet-thumbnail--venus,
+  .planet-thumbnail--mars,
+  .planet-thumbnail--jupiter,
+  .planet-thumbnail--saturn,
+  .planet-thumbnail--uranus,
+  .planet-thumbnail--neptune
+)::before,
+:is(
+  .planet-thumbnail--mercury,
+  .planet-thumbnail--venus,
+  .planet-thumbnail--mars,
+  .planet-thumbnail--jupiter,
+  .planet-thumbnail--saturn,
+  .planet-thumbnail--uranus,
+  .planet-thumbnail--neptune
+)::after,
+:is(
+  .planet-thumbnail--mercury,
+  .planet-thumbnail--venus,
+  .planet-thumbnail--mars,
+  .planet-thumbnail--jupiter,
+  .planet-thumbnail--saturn,
+  .planet-thumbnail--uranus,
+  .planet-thumbnail--neptune
+) .planet-thumbnail-ring {
+  display: none !important;
+}
+
+.planet-thumbnail--mercury { background-image: url('../../public/images/planets/mercury-pbr-card.png') !important; }
+.planet-thumbnail--venus { background-image: url('../../public/images/planets/venus-pbr-card.png') !important; }
+.planet-thumbnail--mars { background-image: url('../../public/images/planets/mars-pbr-card.png') !important; }
+.planet-thumbnail--jupiter { background-image: url('../../public/images/planets/jupiter-pbr-card.png') !important; }
+.planet-thumbnail--saturn { background-image: url('../../public/images/planets/saturn-pbr-card.png') !important; }
+.planet-thumbnail--uranus { background-image: url('../../public/images/planets/uranus-pbr-card.png') !important; }
+.planet-thumbnail--neptune { background-image: url('../../public/images/planets/neptune-pbr-card.png') !important; }
+
+.planet-card:hover :is(
+  .planet-thumbnail--mercury,
+  .planet-thumbnail--venus,
+  .planet-thumbnail--mars,
+  .planet-thumbnail--jupiter,
+  .planet-thumbnail--saturn,
+  .planet-thumbnail--uranus,
+  .planet-thumbnail--neptune
+),
+.celestial-card:hover :is(
+  .planet-thumbnail--mercury,
+  .planet-thumbnail--venus,
+  .planet-thumbnail--mars,
+  .planet-thumbnail--jupiter,
+  .planet-thumbnail--saturn,
+  .planet-thumbnail--uranus,
+  .planet-thumbnail--neptune
+) {
+  transform: scale(1.055) !important;
+  filter: drop-shadow(0 0 0.82rem color-mix(in srgb, var(--planet-accent, #8da5d7) 16%, transparent));
+}
+
+/* The PBR viewer draws all seven planets with real 2K maps; avoid CSS blur on that canvas. */
+.planet-viewer-overlay:not([data-planet="earth"]) .planet-canvas {
+  filter: none !important;
+  image-rendering: auto;
+}
+
+.planet-viewer-overlay:not([data-planet="earth"]) .planet-stage-glow {
+  opacity: .16;
+  filter: blur(28px) saturate(.94);
+}

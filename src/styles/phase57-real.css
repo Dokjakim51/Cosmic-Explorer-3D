@@ -1,0 +1,273 @@
+/* Phase 5.7 REAL proof: Three.js/PBR Earth, Three.js hero, NASA gallery artwork */
+
+.home-page--three-proof .hero-visual--three {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(29rem, 47vw, 43rem);
+  background:
+    radial-gradient(circle at 72% 44%, rgba(107, 71, 255, .22), transparent 34%),
+    radial-gradient(circle at 20% 84%, rgba(40, 119, 255, .13), transparent 32%),
+    linear-gradient(150deg, rgba(2, 5, 18, .92), rgba(5, 9, 28, .72));
+  box-shadow:
+    inset 0 0 0 1px rgba(159, 133, 255, .13),
+    inset 0 -7rem 9rem rgba(0, 0, 0, .24),
+    0 2rem 5rem rgba(0, 0, 0, .32);
+}
+
+.hero-three-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+
+.hero-three-canvas:active { cursor: grabbing; }
+
+.home-page--three-proof .hero-visual--three:not(.hero-three-failed) > :not(.hero-three-canvas):not(.cosmic-quote-mini) {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.home-page--three-proof .cosmic-quote-mini {
+  z-index: 5;
+  border-color: rgba(170, 144, 255, .26);
+  background: linear-gradient(145deg, rgba(5, 9, 27, .76), rgba(8, 12, 37, .58));
+  box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, .3), inset 0 1px rgba(255,255,255,.06);
+  backdrop-filter: blur(16px);
+}
+
+.hero-three-failed .hero-three-canvas { display: none; }
+.hero-three-failed > :not(.cosmic-quote-mini) { opacity: 1; }
+
+/* Real Three.js Earth viewer */
+.planet-viewer-overlay[data-planet="earth"] .planet-stage {
+  background:
+    radial-gradient(circle at 56% 45%, rgba(28, 118, 255, .18), transparent 31%),
+    radial-gradient(circle at 28% 76%, rgba(39, 215, 255, .08), transparent 29%),
+    linear-gradient(180deg, #020716 0%, #040b20 58%, #01030a 100%);
+}
+
+.earth-three-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+  filter: drop-shadow(0 0 2.5rem rgba(45, 132, 255, .22));
+}
+
+.earth-three-canvas:active { cursor: grabbing; }
+.earth-three-canvas[hidden] { display: none !important; }
+
+.planet-viewer-overlay[data-planet="earth"] .planet-stage-glow {
+  opacity: .7;
+  background: radial-gradient(circle, rgba(42, 136, 255, .17), rgba(18, 76, 196, .07) 42%, transparent 70%);
+}
+
+.planet-viewer-overlay[data-planet="earth"] .planet-stage::before {
+  opacity: .48;
+}
+
+.planet-viewer-overlay[data-planet="earth"] .planet-stage-hint,
+.planet-viewer-overlay[data-planet="earth"] .planet-viewer-controls,
+.planet-viewer-overlay[data-planet="earth"] .planet-nav {
+  z-index: 6;
+}
+
+/* One high-quality real Gallery proof */
+.gallery-phase57-real .gallery-card--photo {
+  min-height: clamp(24rem, 38vw, 34rem);
+  border-color: rgba(222, 180, 255, .25);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, .42), 0 0 3rem rgba(139, 92, 246, .08);
+}
+
+.gallery-phase57-real .gallery-card--photo .gallery-visual--photo,
+.gallery-viewer-art.gallery-visual--photo {
+  background-image:
+    linear-gradient(180deg, rgba(5, 6, 18, .02), rgba(5, 6, 18, .05) 48%, rgba(2, 4, 13, .25)),
+    var(--gallery-photo);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gallery-phase57-real .gallery-card--photo .gallery-visual--photo::before,
+.gallery-phase57-real .gallery-card--photo .gallery-visual--photo::after,
+.gallery-viewer-art.gallery-visual--photo::before,
+.gallery-viewer-art.gallery-visual--photo::after,
+.gallery-phase57-real .gallery-card--photo .gallery-visual--photo > span,
+.gallery-viewer-art.gallery-visual--photo > span {
+  display: none !important;
+}
+
+.gallery-phase57-real .gallery-card--photo .gallery-card-overlay {
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: linear-gradient(180deg, transparent 22%, rgba(2, 4, 13, .25) 50%, rgba(2, 4, 13, .97));
+}
+
+.gallery-phase57-real .gallery-card--photo .gallery-card-overlay h2 {
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+}
+
+.gallery-viewer-art.gallery-visual--photo {
+  background-size: contain;
+  background-color: #02040c;
+}
+
+.gallery-viewer-copy {
+  display: grid;
+  gap: .32rem;
+  max-width: 56rem;
+}
+
+.gallery-viewer-credit {
+  color: #c4b5fd !important;
+  font-size: .72rem !important;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+
+.gallery-viewer-source {
+  display: inline-flex;
+  align-items: center;
+  gap: .42rem;
+  width: max-content;
+  margin-top: .25rem;
+  color: #7dd3fc;
+  font-size: .76rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.gallery-viewer-source svg { width: 1rem; height: 1rem; }
+.gallery-viewer-source:hover { color: white; }
+.gallery-viewer-source[hidden] { display: none !important; }
+
+@media (max-width: 64rem) {
+  .home-page--three-proof .hero-visual--three { min-height: 34rem; }
+  .gallery-phase57-real .gallery-card--photo { min-height: 27rem; }
+}
+
+@media (max-width: 48rem) {
+  .home-page--three-proof .hero-visual--three { min-height: 27rem; }
+  .gallery-phase57-real .gallery-card--photo { min-height: 22rem; }
+  .gallery-viewer-art.gallery-visual--photo { background-size: contain; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-three-canvas,
+  .earth-three-canvas { cursor: default; }
+}
+
+/* Earth preview also uses the real NASA-derived map, so the proof is visible before opening the viewer. */
+.home-page--three-proof .planet-thumbnail--earth,
+.universe-page .planet-thumbnail--earth {
+  background: url('../../public/images/planets/earth-real-card.png') center / contain no-repeat !important;
+  box-shadow: none !important;
+}
+
+.home-page--three-proof .planet-thumbnail--earth::before,
+.home-page--three-proof .planet-thumbnail--earth::after,
+.universe-page .planet-thumbnail--earth::before,
+.universe-page .planet-thumbnail--earth::after {
+  display: none !important;
+}
+
+/* Phase 5.7 fix pass: organic hero blending, calmer home planet, and cleaner hover behavior */
+.home-page--three-proof .hero-visual--three {
+  background:
+    radial-gradient(circle at 76% 48%, rgba(129, 141, 255, .16), transparent 28%),
+    radial-gradient(circle at 63% 58%, rgba(238, 198, 136, .09), transparent 18%),
+    radial-gradient(circle at 18% 82%, rgba(46, 117, 255, .10), transparent 28%),
+    linear-gradient(150deg, rgba(2, 5, 18, .96), rgba(4, 8, 23, .92) 52%, rgba(2, 5, 16, .98));
+}
+
+.home-page--three-proof .hero-visual--three::before,
+.home-page--three-proof .hero-visual--three::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.home-page--three-proof .hero-visual--three::before {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 74% 48%, rgba(177, 179, 255, .15), transparent 24%),
+    radial-gradient(circle at 65% 63%, rgba(109, 166, 255, .08), transparent 22%),
+    radial-gradient(circle at 82% 22%, rgba(255, 233, 200, .06), transparent 14%);
+  filter: blur(12px);
+}
+
+.home-page--three-proof .hero-visual--three::after {
+  z-index: 4;
+  background:
+    radial-gradient(circle at 74% 48%, transparent 0 24%, rgba(4, 7, 21, 0) 34%, rgba(4, 7, 21, .2) 56%, rgba(4, 7, 21, .68) 86%, rgba(4, 7, 21, .88) 100%);
+  mix-blend-mode: normal;
+}
+
+.hero-three-canvas {
+  opacity: .98;
+  -webkit-mask-image: radial-gradient(circle at 73% 49%, rgba(0,0,0,1) 0 34%, rgba(0,0,0,.95) 45%, rgba(0,0,0,.8) 60%, rgba(0,0,0,.42) 76%, rgba(0,0,0,.08) 92%, transparent 100%);
+  mask-image: radial-gradient(circle at 73% 49%, rgba(0,0,0,1) 0 34%, rgba(0,0,0,.95) 45%, rgba(0,0,0,.8) 60%, rgba(0,0,0,.42) 76%, rgba(0,0,0,.08) 92%, transparent 100%);
+}
+
+.home-page--three-proof .cosmic-quote-mini {
+  background: linear-gradient(145deg, rgba(5, 9, 27, .82), rgba(8, 12, 37, .62));
+}
+
+/* Hover feedback: grow a little, remove bright hover glows */
+.home-page--phase56 .planet-card,
+.celestial-card,
+.planet-thumbnail,
+.star-orb {
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal), filter var(--transition-normal);
+}
+
+.home-page--phase56 .planet-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(148,163,184,.18);
+  box-shadow: 0 1.9rem 3.7rem rgba(0,0,0,.3);
+}
+
+.celestial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.planet-card:hover .planet-thumbnail,
+.celestial-card:hover .planet-thumbnail {
+  transform: rotate(4deg) scale(1.04);
+  filter: none !important;
+}
+
+.celestial-card--star:hover .star-orb {
+  transform: scale(1.04);
+  filter: none;
+}
+
+.celestial-card--planet::after,
+.celestial-card--planet:hover::after,
+.celestial-card--star::after {
+  opacity: .18;
+  transform: none !important;
+}
+
+.home-page--phase56 .planet-card::after {
+  opacity: .22;
+}
+
+@media (max-width: 48rem) {
+  .hero-three-canvas {
+    -webkit-mask-image: radial-gradient(circle at 50% 40%, rgba(0,0,0,1) 0 38%, rgba(0,0,0,.9) 55%, rgba(0,0,0,.42) 78%, transparent 100%);
+    mask-image: radial-gradient(circle at 50% 40%, rgba(0,0,0,1) 0 38%, rgba(0,0,0,.9) 55%, rgba(0,0,0,.42) 78%, transparent 100%);
+  }
+}

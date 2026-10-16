@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "gameTitle": "Cosmic Explorer: Cosmic Defender",
+  "levels": [
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "order": 1,
+      "status": "planned",
+      "unlockedByDefault": true,
+      "accentColor": "#94a3b8",
+      "sceneKey": "level-mercury"
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "order": 2,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#f59e0b",
+      "sceneKey": "level-venus"
+    },
+    {
+      "id": "earth",
+      "name": "Earth",
+      "order": 3,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#3b82f6",
+      "sceneKey": "level-earth"
+    },
+    {
+      "id": "mars",
+      "name": "Mars",
+      "order": 4,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#ef4444",
+      "sceneKey": "level-mars"
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "order": 5,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#d6a36f",
+      "sceneKey": "level-jupiter"
+    },
+    {
+      "id": "saturn",
+      "name": "Saturn",
+      "order": 6,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#fde68a",
+      "sceneKey": "level-saturn"
+    },
+    {
+      "id": "uranus",
+      "name": "Uranus",
+      "order": 7,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#67e8f9",
+      "sceneKey": "level-uranus"
+    },
+    {
+      "id": "neptune",
+      "name": "Neptune",
+      "order": 8,
+      "status": "planned",
+      "unlockedByDefault": false,
+      "accentColor": "#2563eb",
+      "sceneKey": "level-neptune"
+    }
+  ]
+}

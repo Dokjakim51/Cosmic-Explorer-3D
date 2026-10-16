@@ -1,0 +1,715 @@
+/* Phase 5.6 — dramatic visual overhaul, custom accent engine, RGB galaxy mode */
+
+/* ---------- appearance panel ---------- */
+.theme-customizer-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .75rem;
+  margin-bottom: .65rem;
+}
+
+.theme-customizer-title-row p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .76rem;
+}
+
+.theme-customizer-options--accent {
+  margin-bottom: .85rem;
+}
+
+.theme-chip--rgb {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.theme-chip--rgb span,
+.theme-customizer-custom-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-chip--rgb span {
+  width: .95rem;
+  height: .95rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f9a8d4, #8b5cf6, #38bdf8, #4ade80);
+  background-size: 200% 200%;
+  animation: rgb-chip-flow 9s linear infinite;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.14) inset, 0 0 .85rem rgba(168,85,247,.35);
+}
+
+.theme-chip--rgb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,.04), transparent 36%, rgba(255,255,255,.03));
+  pointer-events: none;
+}
+
+.theme-customizer-custom {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr 1fr auto;
+  gap: .7rem;
+  align-items: end;
+}
+
+.theme-customizer-custom.is-active {
+  padding: .75rem;
+  border: 1px solid color-mix(in srgb, var(--violet) 40%, rgba(148,163,184,.2));
+  border-radius: 1rem;
+  background: linear-gradient(155deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+}
+
+.theme-customizer-custom-preview {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: .95rem;
+  border: 1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,.28), transparent 26%),
+    radial-gradient(circle at 72% 68%, rgba(255,255,255,.08), transparent 30%),
+    linear-gradient(135deg, color-mix(in srgb, var(--custom-accent) 70%, white), var(--custom-accent));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), 0 0 1.5rem color-mix(in srgb, var(--custom-accent) 28%, transparent);
+}
+
+.theme-customizer-custom-preview::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  background: conic-gradient(from 0deg, rgba(255,255,255,.08), transparent 30%, rgba(255,255,255,.06), transparent 74%, rgba(255,255,255,.08));
+  animation: rgb-chip-flow 16s linear infinite;
+}
+
+.theme-customizer-color-field,
+.theme-customizer-hex-field {
+  display: grid;
+  gap: .35rem;
+  min-width: 0;
+}
+
+.theme-customizer-color-field span,
+.theme-customizer-hex-field span {
+  font-size: .72rem;
+  color: var(--text-muted);
+  font-weight: 650;
+}
+
+.theme-customizer-color-field input,
+.theme-customizer-hex-field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.55rem;
+  border: 1px solid rgba(148,163,184,.2);
+  border-radius: .85rem;
+  background: rgba(255,255,255,.04);
+  color: var(--text-primary);
+  padding: 0 .8rem;
+}
+
+.theme-customizer-color-field input[type="color"] {
+  padding: .22rem;
+  cursor: pointer;
+}
+
+.theme-customizer-color-field input::-webkit-color-swatch-wrapper { padding: 0; }
+.theme-customizer-color-field input::-webkit-color-swatch {
+  border: 0;
+  border-radius: .65rem;
+}
+
+.theme-chip--apply {
+  min-height: 2.55rem;
+  padding-inline: 1rem;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--violet) 20%, rgba(255,255,255,.08)), rgba(255,255,255,.03));
+}
+
+/* ---------- home big upgrade ---------- */
+.home-page--phase56 .hero {
+  padding-top: clamp(2.2rem, 4vw, 4rem);
+  padding-bottom: 2rem;
+  border: 1px solid rgba(148,163,184,.1);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(56,189,248,.08), transparent 18rem),
+    radial-gradient(circle at 72% 34%, rgba(232,121,249,.12), transparent 24rem),
+    linear-gradient(145deg, rgba(7,12,30,.38), rgba(6,10,24,.08));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.04), 0 2rem 5rem rgba(0,0,0,.18);
+}
+
+.home-page--phase56 .hero-copy {
+  padding-left: clamp(1rem, 2vw, 2rem);
+}
+
+.home-page--phase56 .hero-copy h1 {
+  line-height: .92;
+  letter-spacing: -.045em;
+  text-shadow: 0 0 1.5rem rgba(0,0,0,.15);
+}
+
+.home-page--phase56 .hero-copy .hero-welcome {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
+  margin-bottom: .25rem;
+}
+
+.home-page--phase56 .hero-copy .gradient-text {
+  font-size: clamp(3.35rem, 9vw, 6rem);
+}
+
+.home-page--phase56 .hero-actions .button {
+  min-width: 11.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(0,0,0,.18);
+}
+
+.home-page--phase56 .feature-grid {
+  gap: 1rem;
+}
+
+.home-page--phase56 .status-card {
+  position: relative;
+  border: 1px solid rgba(148,163,184,.12);
+  border-radius: 1.35rem;
+  background: linear-gradient(155deg, rgba(7,12,30,.92), rgba(5,8,22,.82));
+  overflow: hidden;
+}
+
+.home-page--phase56 .status-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, rgba(255,255,255,.05), transparent 34%, transparent 70%, rgba(255,255,255,.03));
+  pointer-events: none;
+}
+
+.home-page--phase56 .status-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1.5rem 3rem rgba(0,0,0,.26), 0 0 1.5rem rgba(124,58,237,.1);
+}
+
+.home-page--phase56 .hero-visual {
+  min-height: clamp(24rem, 42vw, 36rem);
+  border: 1px solid rgba(148,163,184,.08);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 75% 12%, rgba(255,255,255,.08), transparent 12%),
+    radial-gradient(circle at 70% 46%, rgba(76,29,149,.45), transparent 18%),
+    linear-gradient(145deg, rgba(6,10,24,.42), rgba(3,6,18,.12));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 1.8rem 4rem rgba(0,0,0,.24);
+}
+
+.home-page--phase56 .hero-planet {
+  width: clamp(16rem, 33vw, 28rem);
+  height: clamp(16rem, 33vw, 28rem);
+  right: 5%;
+  top: 5%;
+}
+
+.home-page--phase56 .moon {
+  box-shadow: 0 0 2rem rgba(255,255,255,.15), 0 0 5rem rgba(124,58,237,.1);
+}
+
+.home-page--phase56 .cosmic-quote-mini {
+  border: 1px solid rgba(148,163,184,.12);
+  border-radius: 1.35rem;
+  background: linear-gradient(155deg, rgba(8,14,34,.88), rgba(4,9,24,.76));
+  backdrop-filter: blur(18px);
+  box-shadow: 0 1rem 2.5rem rgba(0,0,0,.25);
+}
+
+.home-page--phase56 .planet-card {
+  min-height: 15.2rem;
+  padding: 1.3rem 1.15rem 1.05rem;
+  border-radius: 1.35rem;
+  border-color: rgba(148,163,184,.14);
+  background:
+    radial-gradient(circle at 82% 10%, rgba(255,255,255,.05), transparent 18%),
+    linear-gradient(155deg, rgba(10,16,38,.97), rgba(4,8,22,.88));
+  box-shadow: 0 1.6rem 3.6rem rgba(0,0,0,.28);
+}
+
+.home-page--phase56 .planet-card::before,
+.home-page--phase56 .planet-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.home-page--phase56 .planet-card::before {
+  inset: .9rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+.home-page--phase56 .planet-card::after {
+  inset: auto 1.1rem .85rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--violet) 50%, white), transparent);
+  opacity: .35;
+}
+
+.home-page--phase56 .planet-card--featured {
+  border-color: rgba(56,189,248,.34);
+  background:
+    radial-gradient(circle at 70% 18%, rgba(56,189,248,.1), transparent 22%),
+    linear-gradient(155deg, rgba(10,16,38,.98), rgba(5,10,26,.9));
+}
+
+.home-page--phase56 .planet-card h3 {
+  font-size: 1.08rem;
+}
+
+.home-page--phase56 .planet-card p {
+  color: #d8e1ef;
+}
+
+/* ---------- planet and star realism ---------- */
+.planet-thumbnail {
+  overflow: hidden;
+  background-size: cover;
+  box-shadow:
+    inset -2rem -1.1rem 2.8rem rgba(0,0,0,.62),
+    inset .95rem .8rem 1.8rem rgba(255,255,255,.12),
+    0 0 2rem rgba(148,163,184,.18),
+    0 0 5rem rgba(0,0,0,.18);
+}
+
+.planet-thumbnail::before {
+  opacity: .45;
+}
+
+.planet-thumbnail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 28% 25%, rgba(255,255,255,.24), transparent 16%),
+    linear-gradient(122deg, transparent 42%, rgba(5,10,22,.18) 58%, rgba(4,7,18,.72) 94%);
+  pointer-events: none;
+}
+
+.planet-thumbnail--mercury {
+  background:
+    radial-gradient(circle at 26% 22%, rgba(255,255,255,.22) 0 4%, transparent 5%),
+    radial-gradient(circle at 36% 34%, rgba(17,24,39,.44) 0 6%, rgba(17,24,39,.08) 7% 8%, transparent 9%),
+    radial-gradient(circle at 62% 26%, rgba(229,231,235,.15) 0 5%, transparent 6%),
+    radial-gradient(circle at 72% 49%, rgba(2,6,23,.34) 0 7%, rgba(255,255,255,.06) 8% 9%, transparent 10%),
+    radial-gradient(circle at 55% 63%, rgba(15,23,42,.34) 0 9%, rgba(255,255,255,.08) 10% 11%, transparent 12%),
+    radial-gradient(circle at 32% 68%, rgba(203,213,225,.18) 0 5%, transparent 6%),
+    radial-gradient(circle at 47% 55%, rgba(255,255,255,.10) 0 3%, transparent 4%),
+    radial-gradient(circle at 31% 25%, #e0e3e7 0 7%, #aab0b8 18%, #646d78 44%, #151c28 84%);
+}
+
+.planet-thumbnail--venus {
+  background:
+    repeating-linear-gradient(142deg, rgba(255,239,184,.18) 0 7%, rgba(255,178,38,.06) 8% 14%, transparent 15% 22%),
+    radial-gradient(circle at 68% 41%, rgba(255,255,255,.11) 0 12%, transparent 22%),
+    radial-gradient(circle at 34% 62%, rgba(255,213,128,.10) 0 16%, transparent 28%),
+    radial-gradient(ellipse 80% 42% at 52% 45%, rgba(246,173,68,.14) 0 32%, transparent 55%),
+    radial-gradient(circle at 31% 25%, #fff1bf 0 8%, #f7c35a 20%, #df8d28 38%, #8a4317 70%, #190803 100%);
+}
+
+.planet-thumbnail--earth {
+  background:
+    radial-gradient(ellipse 18% 10% at 39% 37%, rgba(72,187,120,.92) 0 72%, transparent 80%),
+    radial-gradient(ellipse 10% 17% at 47% 52%, rgba(47,177,97,.88) 0 72%, transparent 80%),
+    radial-gradient(ellipse 10% 7% at 57% 35%, rgba(108,216,129,.88) 0 72%, transparent 80%),
+    radial-gradient(ellipse 18% 11% at 65% 39%, rgba(79,188,102,.88) 0 72%, transparent 80%),
+    radial-gradient(ellipse 11% 16% at 63% 56%, rgba(59,152,88,.86) 0 72%, transparent 80%),
+    radial-gradient(ellipse 7% 6% at 77% 66%, rgba(140,230,163,.76) 0 72%, transparent 80%),
+    radial-gradient(circle at 29% 24%, rgba(255,255,255,.3) 0 5%, transparent 11%),
+    radial-gradient(circle at 31% 25%, #cae9ff 0 7%, #2563eb 18%, #075985 36%, #1d4ed8 54%, #06132d 84%);
+}
+
+.planet-thumbnail--mars {
+  background:
+    radial-gradient(circle at 52% 16%, rgba(252,211,165,.34) 0 6%, transparent 8%),
+    radial-gradient(circle at 58% 38%, rgba(127,29,29,.30) 0 12%, transparent 16%),
+    radial-gradient(circle at 44% 66%, rgba(120,53,15,.28) 0 9%, transparent 13%),
+    radial-gradient(circle at 32% 47%, rgba(254,215,170,.11) 0 10%, transparent 14%),
+    radial-gradient(ellipse 30% 10% at 50% 8%, rgba(248,250,252,.68) 0 52%, transparent 60%),
+    radial-gradient(ellipse 28% 10% at 51% 94%, rgba(241,245,249,.46) 0 48%, transparent 58%),
+    radial-gradient(ellipse 26% 7% at 46% 56%, rgba(79,24,24,.20) 0 58%, transparent 66%),
+    radial-gradient(circle at 32% 24%, #fed7aa 0 8%, #df6635 23%, #9a281f 58%, #220b0b 100%);
+}
+
+.planet-thumbnail--jupiter {
+  background:
+    radial-gradient(ellipse 14% 9% at 69% 58%, rgba(177,63,41,.96) 0 60%, rgba(107,37,24,.94) 61% 100%, transparent 102%),
+    radial-gradient(ellipse 18% 7% at 60% 60%, rgba(255,231,201,.14) 0 62%, transparent 70%),
+    repeating-linear-gradient(177deg,
+      #faecd6 0 6%,
+      #d9ad7b 7% 12%,
+      #aa704d 13% 17%,
+      #f4dfc3 18% 24%,
+      #805038 25% 30%,
+      #f0d6b0 31% 39%,
+      #bc8052 40% 47%,
+      #f6e7cf 48% 56%,
+      #b36f4a 57% 63%,
+      #e7c69d 64% 72%,
+      #8e593d 73% 78%,
+      #f7ead5 79% 88%);
+}
+
+.planet-thumbnail--saturn {
+  background:
+    radial-gradient(ellipse 65% 20% at 46% 42%, rgba(255,255,255,.12) 0 30%, transparent 52%),
+    repeating-linear-gradient(178deg,
+      #fff8e1 0 8%,
+      #ead2a1 9% 15%,
+      #c99d67 16% 20%,
+      #faedca 21% 28%,
+      #9b7243 29% 34%,
+      #ead3aa 35% 42%,
+      #b38854 43% 48%,
+      #fff2cf 49% 58%,
+      #a67b4f 59% 64%,
+      #e7d2ae 65% 74%);
+}
+
+.planet-thumbnail--uranus {
+  background:
+    radial-gradient(ellipse 72% 44% at 50% 18%, rgba(255,255,255,.14) 0 22%, transparent 34%),
+    repeating-linear-gradient(178deg, rgba(255,255,255,.10) 0 6%, transparent 7% 15%),
+    radial-gradient(circle at 32% 25%, #effeff 0 7%, #baf6f8 22%, #7ee3e3 44%, #249caf 72%, #0a4059 100%);
+}
+
+.planet-thumbnail--neptune {
+  background:
+    radial-gradient(ellipse 13% 7% at 47% 44%, rgba(240,249,255,.72) 0 70%, transparent 78%),
+    radial-gradient(ellipse 18% 11% at 36% 56%, rgba(7,15,61,.62) 0 66%, transparent 74%),
+    radial-gradient(ellipse 10% 7% at 63% 38%, rgba(255,255,255,.20) 0 62%, transparent 70%),
+    repeating-linear-gradient(178deg, rgba(255,255,255,.08) 0 7%, transparent 8% 15%),
+    radial-gradient(circle at 32% 25%, #d7e8ff 0 7%, #3b82f6 22%, #0f4aa4 50%, #152a69 74%, #060a1a 100%);
+}
+
+.planet-thumbnail--saturn .planet-thumbnail-ring {
+  display: block;
+  border-color: rgba(255,245,208,.92);
+  border-width: .28rem;
+  box-shadow: 0 0 1rem rgba(255,240,190,.32), inset 0 0 .55rem rgba(255,255,255,.24);
+}
+
+.planet-thumbnail--uranus .planet-thumbnail-ring {
+  display: block;
+  border-color: rgba(186,246,255,.58);
+  border-width: .18rem;
+  top: 46%;
+  height: 12%;
+  box-shadow: 0 0 .75rem rgba(103,232,249,.24), inset 0 0 .24rem rgba(255,255,255,.12);
+}
+
+.star-orb {
+  background:
+    radial-gradient(circle at 35% 28%, white 0 6%, color-mix(in srgb, var(--accent) 76%, white) 16%, var(--accent) 32%, color-mix(in srgb, var(--accent) 50%, #0f172a) 60%, transparent 74%);
+  box-shadow: 0 0 2.3rem color-mix(in srgb, var(--accent) 82%, white), 0 0 5rem color-mix(in srgb, var(--accent) 36%, transparent);
+}
+
+.star-orb::before {
+  content: "";
+  position: absolute;
+  inset: 24%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, rgba(255,255,255,.8), transparent 42%);
+  mix-blend-mode: screen;
+}
+
+/* ---------- universe page and viewer realism ---------- */
+.universe-page--phase56 .universe-hero {
+  border: 1px solid rgba(148,163,184,.1);
+  border-radius: 1.8rem;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(56,189,248,.08), transparent 18rem),
+    radial-gradient(circle at 80% 28%, rgba(232,121,249,.12), transparent 26rem),
+    linear-gradient(155deg, rgba(7,12,30,.45), rgba(4,8,24,.18));
+}
+
+.universe-page--phase56 .catalog-header,
+.universe-page--phase56 .celestial-card {
+  backdrop-filter: blur(16px);
+}
+
+.universe-page--phase56 .celestial-card {
+  min-height: 26.25rem;
+  padding: 1.55rem;
+  border-radius: 1.55rem;
+  border-color: rgba(148,163,184,.15);
+  overflow: hidden;
+}
+
+.universe-page--phase56 .celestial-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 1.4rem 1.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 62%, white), transparent);
+  opacity: .32;
+}
+
+.universe-page--phase56 .celestial-card-copy h3 {
+  font-size: 1.6rem;
+  margin-bottom: .3rem;
+}
+
+.universe-page--phase56 .celestial-card-copy > p:not(.celestial-kind) {
+  color: #dde5f1;
+}
+
+.universe-page--phase56 .celestial-orb {
+  width: clamp(8rem, 13vw, 10.5rem);
+  height: clamp(8rem, 13vw, 10.5rem);
+}
+
+.planet-viewer-shell,
+.star-viewer-shell {
+  border: 1px solid rgba(148,163,184,.12);
+  border-radius: 1.8rem;
+  background:
+    radial-gradient(circle at 85% 8%, rgba(255,255,255,.05), transparent 14%),
+    linear-gradient(160deg, rgba(8,13,34,.97), rgba(3,7,20,.96));
+  box-shadow: 0 2rem 5rem rgba(0,0,0,.48);
+}
+
+.planet-viewer-topbar {
+  border-bottom: 1px solid rgba(148,163,184,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.03), transparent);
+}
+
+.planet-viewer-overlay .planet-stage,
+.star-viewer-overlay .star-stage {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(125,211,252,.08), transparent 25%),
+    radial-gradient(circle at 50% 72%, rgba(124,58,237,.09), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,0));
+}
+
+.planet-viewer-overlay .planet-stage::before,
+.star-viewer-overlay .star-stage::before {
+  opacity: .92;
+}
+
+.planet-stage-glow {
+  filter: blur(28px);
+  opacity: .95;
+}
+
+.planet-canvas,
+.planet-fallback {
+  filter: drop-shadow(0 0 1.8rem color-mix(in srgb, var(--planet-accent, #8b5cf6) 26%, transparent)) drop-shadow(0 0 5rem rgba(0,0,0,.2));
+}
+
+.planet-fallback .planet-thumbnail {
+  width: min(62%, 20rem);
+  max-width: 20rem;
+}
+
+.planet-information,
+.star-information {
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+}
+
+.favorite-button,
+.viewer-control,
+.viewer-icon-button,
+.planet-nav,
+.gallery-viewer-nav,
+.gallery-favorite-button {
+  backdrop-filter: blur(10px);
+}
+
+.star-viewer-visual {
+  filter: drop-shadow(0 0 1.6rem color-mix(in srgb, var(--star-color, #f59e0b) 38%, transparent)) drop-shadow(0 0 4rem color-mix(in srgb, var(--star-color, #f59e0b) 18%, transparent));
+}
+
+.star-core {
+  box-shadow: 0 0 1.8rem color-mix(in srgb, var(--star-color, #f59e0b) 60%, white), 0 0 4rem color-mix(in srgb, var(--star-color, #f59e0b) 28%, transparent);
+}
+
+.star-corona--outer,
+.star-corona--middle {
+  filter: blur(6px);
+}
+
+/* ---------- gallery realism ---------- */
+.gallery-phase56 .gallery-grid--phase5 {
+  gap: 1.15rem;
+}
+
+.gallery-phase56 .gallery-card {
+  overflow: hidden;
+  border-radius: 1.45rem;
+}
+
+.gallery-phase56 .gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(255,255,255,.05), transparent 36%, transparent 70%, rgba(255,255,255,.04));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-phase56 .gallery-visual,
+.gallery-phase56 .gallery-viewer-art {
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), inset 0 -2rem 4rem rgba(0,0,0,.22);
+}
+
+.gallery-phase56 .gallery-visual-core,
+.gallery-phase56 .gallery-visual-detail,
+.gallery-phase56 .gallery-visual-stars,
+.gallery-phase56 .gallery-visual-glow {
+  will-change: transform, opacity;
+}
+
+.gallery-phase56 .gallery-viewer-stage::before {
+  content: "";
+  position: absolute;
+  inset: 8% 15% 18%;
+  border-radius: 1.8rem;
+  background: radial-gradient(circle, rgba(255,255,255,.04), transparent 58%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.gallery-phase56 .gallery-card-overlay small {
+  color: #e9d5ff;
+  letter-spacing: .16em;
+}
+
+.gallery-phase56 .gallery-viewer-footer p {
+  max-width: 46rem;
+  line-height: 1.7;
+}
+
+.gallery-phase56 .gallery-visual--ringed-dream .gallery-visual-core {
+  inset: 19% 13% 17% 12%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 28%, #fff4cf 0 6%, #e8b56b 16%, #b86a41 36%, #5c2d24 70%, #0b0612 100%);
+}
+
+.gallery-phase56 .gallery-visual--ringed-dream .gallery-visual-detail {
+  inset: 37% -10% 39% -10%;
+  border-radius: 50%;
+  border: .6rem solid rgba(249, 231, 187, .65);
+  transform: rotate(-14deg);
+  box-shadow: 0 0 1rem rgba(255,245,208,.3), inset 0 0 .6rem rgba(255,255,255,.15);
+}
+
+.gallery-phase56 .gallery-visual--blue-supergiant .gallery-visual-core {
+  inset: 17%;
+  background: radial-gradient(circle at 42% 38%, #ffffff 0 7%, #dbeafe 16%, #60a5fa 40%, #1d4ed8 66%, #060c23 100%);
+}
+
+.gallery-phase56 .gallery-visual--silent-moon .gallery-visual-core {
+  inset: 21% 19% 17% 16%;
+  background:
+    radial-gradient(circle at 30% 26%, rgba(255,255,255,.28) 0 8%, transparent 10%),
+    radial-gradient(circle at 55% 62%, rgba(15,23,42,.36) 0 9%, transparent 11%),
+    radial-gradient(circle at 35% 30%, #f1f5f9 0 7%, #9ca3af 32%, #334155 68%, #020617 100%);
+}
+
+.gallery-phase56 .gallery-visual--solar-flare .gallery-visual-core {
+  inset: 16%;
+  background: radial-gradient(circle at 40% 36%, #fff7ed 0 7%, #fbbf24 20%, #f97316 42%, #b45309 65%, #1c0603 100%);
+}
+
+.gallery-phase56 .gallery-visual--solar-flare .gallery-visual-detail {
+  inset: 12%;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 56%, rgba(251,146,60,.26) 60%, transparent 73%),
+    radial-gradient(ellipse at 35% 46%, rgba(253,186,116,.35), transparent 18%),
+    radial-gradient(ellipse at 72% 42%, rgba(254,215,170,.35), transparent 18%);
+  filter: blur(5px);
+}
+
+.gallery-phase56 .gallery-visual--crimson-world .gallery-visual-core {
+  inset: 18% 15% 16% 15%;
+  background: radial-gradient(circle at 38% 28%, #fed7aa 0 6%, #fb7185 18%, #dc2626 44%, #450a0a 76%, #0a0306 100%);
+}
+
+.gallery-phase56 .gallery-visual--stellar-river .gallery-visual-detail {
+  inset: 16% 10% 16% 12%;
+  background:
+    linear-gradient(112deg, transparent 30%, rgba(125,211,252,.22) 42%, rgba(255,255,255,.5) 49%, rgba(103,232,249,.28) 56%, transparent 66%),
+    radial-gradient(circle at 64% 30%, rgba(255,255,255,.2), transparent 16%);
+  filter: blur(2px);
+}
+
+.gallery-phase56 .gallery-visual--celestial-gateway .gallery-visual-detail {
+  inset: 18%;
+  border-radius: 50%;
+  border: .45rem solid rgba(196,181,253,.5);
+  box-shadow: 0 0 1.2rem rgba(168,85,247,.22), inset 0 0 1rem rgba(255,255,255,.08);
+}
+
+.gallery-phase56 .gallery-visual--black-hole-garden .gallery-visual-core {
+  inset: 18%;
+  background: radial-gradient(circle at center, #020617 0 16%, #0f172a 18%, #3b0764 28%, #f97316 42%, rgba(249,115,22,.12) 54%, transparent 66%);
+}
+
+.gallery-phase56 .gallery-viewer-art {
+  animation: viewer-art-breathe 12s ease-in-out infinite;
+}
+
+@keyframes rgb-chip-flow {
+  0% { background-position: 0% 50%; transform: rotate(0deg); }
+  100% { background-position: 200% 50%; transform: rotate(360deg); }
+}
+
+@keyframes viewer-art-breathe {
+  0%, 100% { transform: scale(var(--gallery-zoom, 1)); }
+  50% { transform: scale(calc(var(--gallery-zoom, 1) * 1.02)); }
+}
+
+@media (max-width: 60rem) {
+  .theme-customizer-custom {
+    grid-template-columns: 3.1rem 1fr 1fr;
+  }
+
+  .theme-chip--apply {
+    grid-column: 2 / -1;
+  }
+
+  .home-page--phase56 .hero { border-radius: 1.55rem; }
+  .home-page--phase56 .hero-visual { min-height: 20rem; }
+}
+
+@media (max-width: 48rem) {
+  .theme-customizer-custom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .theme-customizer-custom-preview {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 2.8rem;
+  }
+
+  .theme-chip--apply {
+    grid-column: 1 / -1;
+  }
+
+  .home-page--phase56 .hero {
+    padding: 1.2rem;
+  }
+
+  .home-page--phase56 .hero-copy {
+    padding-left: 0;
+  }
+
+  .home-page--phase56 .planet-card {
+    min-height: 13.8rem;
+  }
+
+  .gallery-phase56 .gallery-viewer-stage::before {
+    inset: 10% 8% 18%;
+  }
+}

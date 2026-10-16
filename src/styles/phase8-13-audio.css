@@ -1,0 +1,153 @@
+/* Phase 8.13 — global ambient sound system */
+.ambient-audio-quick-control {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.ambient-audio-toggle,
+.ambient-audio-settings-shortcut {
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid var(--appearance-border, rgba(128,167,255,.3));
+  border-radius: 999px;
+  color: var(--appearance-text-primary, #f7f9ff);
+  background: var(--appearance-panel, rgba(8,13,35,.78));
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.ambient-audio-settings-shortcut { width: 2rem; height: 2rem; font-size: .78rem; }
+.ambient-audio-toggle:hover,
+.ambient-audio-settings-shortcut:hover,
+.ambient-audio-toggle:focus-visible,
+.ambient-audio-settings-shortcut:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--appearance-accent, #58d8ff);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--appearance-accent, #58d8ff) 35%, transparent);
+}
+.ambient-audio-toggle[aria-pressed="true"] {
+  color: var(--appearance-accent, #58d8ff);
+  border-color: color-mix(in srgb, var(--appearance-accent, #58d8ff) 70%, transparent);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--appearance-accent, #58d8ff) 32%, transparent);
+}
+.ambient-audio-toggle:disabled { opacity: .45; cursor: not-allowed; }
+
+.ambient-settings-summary,
+.ambient-recommendation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--appearance-border, rgba(128,167,255,.24));
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--appearance-panel-solid, #0b1028) 78%, transparent);
+}
+.ambient-settings-summary > div { display: grid; gap: .18rem; }
+.ambient-settings-summary span,
+.ambient-recommendation span { color: var(--appearance-text-secondary, #b9c3dd); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.ambient-settings-summary strong,
+.ambient-recommendation strong { color: var(--appearance-text-primary, #fff); }
+.ambient-settings-summary small { color: var(--appearance-secondary, #9b72ff); }
+.ambient-settings-summary button,
+.ambient-recommendation button {
+  border: 1px solid var(--appearance-border, rgba(128,167,255,.28));
+  border-radius: .75rem;
+  padding: .65rem .85rem;
+  color: var(--appearance-text-primary, #fff);
+  background: color-mix(in srgb, var(--appearance-accent, #58d8ff) 16%, transparent);
+}
+
+.ambient-science-note {
+  margin: .9rem 0 1.1rem;
+  padding: .8rem 1rem;
+  border-left: 3px solid var(--appearance-secondary, #9b72ff);
+  color: var(--appearance-text-secondary, #b9c3dd);
+  background: color-mix(in srgb, var(--appearance-secondary, #9b72ff) 8%, transparent);
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+.ambient-behavior-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+.ambient-behavior-grid label { display: grid; gap: .4rem; color: var(--appearance-text-secondary, #b9c3dd); }
+.ambient-behavior-grid select,
+.appearance-section-select select[data-ambient-section-profile],
+.appearance-section-select select[data-ambient-object-override] {
+  width: 100%;
+  min-height: 2.8rem;
+  border: 1px solid var(--appearance-border, rgba(128,167,255,.24));
+  border-radius: .7rem;
+  padding: .55rem .7rem;
+  color: var(--appearance-text-primary, #fff);
+  background: var(--appearance-panel-solid, #0b1028);
+}
+.ambient-recommendation { margin: 1rem 0; }
+.ambient-preview-actions { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+
+@media (max-width: 760px) {
+  .ambient-audio-settings-shortcut { display: none; }
+  .ambient-behavior-grid { grid-template-columns: 1fr; }
+  .ambient-settings-summary,
+  .ambient-recommendation { align-items: flex-start; flex-direction: column; }
+  .ambient-preview-actions > button { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-audio-toggle,
+  .ambient-audio-settings-shortcut { transition: none; }
+}
+
+/* Phase 8.14 audible ambient audio additions */
+.ambient-now-playing {
+  display: grid;
+  gap: .35rem;
+  padding: .9rem 1rem;
+  margin: 0 0 1rem;
+  border: 1px solid color-mix(in srgb, var(--appearance-accent, #58d8ff) 34%, transparent);
+  border-radius: .9rem;
+  background: color-mix(in srgb, var(--appearance-panel, #0b1230) 88%, transparent);
+}
+.ambient-now-playing > span,
+.ambient-now-playing b {
+  color: var(--appearance-text-secondary, #b9c3dd);
+  font-size: .76rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.ambient-now-playing strong { color: var(--appearance-text-primary, #fff); font-size: 1rem; }
+.ambient-now-playing small { color: var(--appearance-accent, #58d8ff); }
+.ambient-now-playing ul { margin: .35rem 0 0; padding-left: 1.15rem; color: var(--appearance-text-secondary, #b9c3dd); }
+.ambient-now-playing li + li { margin-top: .2rem; }
+.ambient-quick-preview { margin: 1rem 0; }
+.ambient-quick-preview h3 { margin: 0 0 .65rem; }
+.ambient-quick-preview > div { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .5rem; }
+.ambient-quick-preview button { min-height: 2.5rem; }
+.ambient-audio-diagnostics {
+  position: fixed;
+  z-index: 2147483200;
+  inset: auto 1rem 1rem auto;
+  width: min(36rem, calc(100vw - 2rem));
+  max-height: 45vh;
+  overflow: auto;
+  margin: 0;
+  padding: .85rem;
+  border: 1px solid #5de7ff;
+  border-radius: .75rem;
+  background: rgba(0,5,18,.94);
+  color: #d7f8ff;
+  font: 11px/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
+  pointer-events: none;
+  white-space: pre-wrap;
+}
+@media (max-width: 650px) {
+  .ambient-quick-preview > div { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}

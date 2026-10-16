@@ -1,0 +1,238 @@
+@media (max-width: 78rem) {
+  .hero { grid-template-columns: minmax(0,.9fr) minmax(27rem,1.1fr); }
+  .planet-preview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .planet-card { display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; align-items: center; }
+  .planet-card .planet-thumbnail { grid-row: 1 / 5; width: 6.6rem; margin: 0; }
+  .planet-card p { min-height: 0; }
+  .celestial-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 66rem) {
+  .header-inner { grid-template-columns: 1fr auto; }
+  .primary-navigation { grid-column: auto; }
+  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: calc(var(--header-height) + 4rem); }
+  .hero-copy { max-width: 48rem; }
+  .hero-visual { min-height: 34rem; max-width: 46rem; width: 100%; margin-inline: auto; }
+  .hero-planet { width: min(58vw, 28rem); right: 13%; }
+  .feature-section { margin-top: 0; }
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .status-card:nth-child(2) { border-right: 0; }
+  .status-card:nth-child(-n+2) { border-bottom: 1px solid var(--glass-border); }
+  .journey-section { grid-template-columns: .8fr 1.2fr; }
+  .celestial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .favorite-empty { grid-template-columns: auto 1fr; }
+  .favorite-orbits { display: none; }
+  .gallery-art:nth-child(n) { grid-column: span 6; }
+  .music-preview,
+  .game-preview { grid-template-columns: 1fr; }
+  .album-cosmos { width: min(100%, 24rem); }
+}
+
+@media (max-width: 48rem) {
+  :root { --header-height: 4.7rem; }
+  .container { width: min(calc(100% - 1.5rem), var(--container)); }
+  .header-inner { display: flex; justify-content: space-between; }
+  .menu-toggle { display: inline-grid; place-content: center; }
+  .primary-navigation {
+    position: absolute;
+    top: calc(100% + .45rem);
+    left: .75rem;
+    right: .75rem;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-.7rem);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    background: rgba(3,7,18,.97);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(22px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal), visibility var(--transition-normal);
+  }
+  .primary-navigation.is-open { visibility: visible; opacity: 1; transform: translateY(0); }
+  .nav-list { display: grid; gap: 0; padding: .65rem; }
+  .nav-list a { padding: .85rem 1rem; border-radius: .75rem; }
+  .nav-list a::after { display: none; }
+  .nav-list a.is-active { background: rgba(124,58,237,.15); }
+  .hero { padding-top: calc(var(--header-height) + 3.4rem); }
+  .hero h1 { max-width: none; }
+  .hero-visual { min-height: 27rem; }
+  .hero-planet { top: 13%; right: 15%; width: min(64vw, 22rem); }
+  .moon--one { width: 3rem; height: 3rem; right: 4%; }
+  .cosmic-quote-mini { right: 2%; bottom: 4%; width: 12rem; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .status-card { border-right: 0; border-bottom: 1px solid var(--glass-border); }
+  .status-card:nth-child(2) { border-right: 0; }
+  .status-card:nth-child(-n+2) { border-bottom: 1px solid var(--glass-border); }
+  .status-card:last-child { border-bottom: 0; }
+  .planet-preview-grid { grid-template-columns: 1fr 1fr; }
+  .planet-card { display: block; }
+  .planet-card .planet-thumbnail { width: 6.7rem; margin: 0 auto 1rem; }
+  .journey-section { grid-template-columns: 1fr; }
+  .journey-art { min-height: 9rem; }
+  .journey-section blockquote { padding: 2rem 2.5rem; }
+  .cosmic-launch { align-items: flex-start; flex-direction: column; }
+  .cosmic-launch > div { grid-template-columns: auto 1fr; }
+  .cosmic-launch .button { width: 100%; }
+  .page-hero { min-height: 25rem; padding-top: calc(var(--header-height) + 4rem); }
+  .catalog-header { align-items: flex-start; flex-direction: column; }
+  .celestial-grid { grid-template-columns: 1fr; }
+  .celestial-card { min-height: auto; display: grid; grid-template-columns: auto 1fr; column-gap: 1.5rem; align-items: center; }
+  .celestial-orb { grid-row: 1 / 3; width: 7.5rem; margin: .6rem 0; }
+  .celestial-card-copy { grid-column: 2; }
+  .favorite-empty { grid-template-columns: 1fr; text-align: center; }
+  .favorite-heart { margin-inline: auto; }
+  .gallery-grid { grid-auto-rows: 12rem; }
+  .gallery-art:nth-child(n) { grid-column: 1 / -1; }
+  .music-preview,
+  .game-preview { padding: 1.25rem; }
+  .arcade-screen { min-height: 21rem; }
+  .footer-inner { align-items: flex-start; flex-direction: column; padding-block: 2rem; }
+}
+
+@media (max-width: 34rem) {
+  .logo-wordmark { font-size: .78rem; letter-spacing: .1em; }
+  .hero { padding-bottom: 2rem; }
+  .hero-actions { display: grid; }
+  .hero-actions .button { width: 100%; }
+  .hero-visual { min-height: 22rem; }
+  .hero-planet { right: 13%; width: min(68vw, 18rem); }
+  .cosmic-quote-mini { display: none; }
+  .moon--one { bottom: 12%; top: auto; }
+  .planet-preview-grid { grid-template-columns: 1fr; }
+  .planet-card { display: grid; grid-template-columns: auto 1fr; }
+  .planet-card .planet-thumbnail { grid-row: 1 / 5; width: 6rem; margin: 0; }
+  .journey-section blockquote { padding: 1.7rem 1.5rem 1.7rem 2.2rem; }
+  .quote-mark { left: .2rem; }
+  .cosmic-launch > div { grid-template-columns: 1fr; }
+  .launch-icon { margin-bottom: .8rem; }
+  .celestial-card { display: block; }
+  .celestial-orb { width: 8.5rem; margin: 1rem auto 1.5rem; }
+  .celestial-card-copy { grid-column: auto; }
+  .gallery-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .3rem; }
+  .filter-chip { flex: 0 0 auto; }
+  .fake-track { grid-template-columns: auto 1fr; }
+  .fake-track i { display: none; }
+}
+
+@media (max-width: 48rem) {
+  .hero-visual { overflow: hidden; border-radius: var(--radius-xl); }
+  .hero-copy,
+  .hero-visual,
+  .status-card,
+  .planet-card,
+  .journey-section { min-width: 0; }
+}
+
+/* Phase 2 viewer responsive rules */
+@media (max-width: 78rem) {
+  .favorite-planet-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .planet-viewer-layout { grid-template-columns: minmax(0, .9fr) minmax(23rem, 1.1fr); }
+  .viewer-control span { display: none; }
+  .viewer-control { width: 2.8rem; padding-inline: 0; }
+}
+
+@media (max-width: 58rem) {
+  .planet-viewer-overlay { padding: 0; }
+  .planet-viewer-shell {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    border: 0;
+    border-radius: 0;
+  }
+  .planet-viewer-topbar { min-height: 4.8rem; }
+  .planet-viewer-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(20rem, 44vh) minmax(0, 1fr);
+    height: calc(100% - 4.8rem);
+  }
+  .planet-stage { border-right: 0; border-bottom: 1px solid rgba(148,163,184,.12); }
+  .planet-information { min-height: 0; }
+  .planet-stage-hint { bottom: 4.8rem; }
+  .planet-viewer-controls { bottom: .7rem; }
+  .planet-nav { width: 2.65rem; height: 2.65rem; }
+  .planet-nav--previous { left: .65rem; }
+  .planet-nav--next { right: .65rem; }
+  .planet-detail-columns { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 48rem) {
+  .favorite-planet-grid { grid-template-columns: 1fr; }
+  .favorite-planet-card { grid-template-columns: auto 1fr; }
+  .planet-viewer-identity .eyebrow { display: none; }
+  .planet-viewer-identity .planet-order { width: 2.55rem; height: 2.55rem; }
+  .planet-viewer-identity h2 { font-size: 1.45rem; }
+  .viewer-icon-button { width: 2.65rem; height: 2.65rem; }
+  .planet-viewer-layout { grid-template-rows: minmax(18rem, 41vh) minmax(0,1fr); }
+  .planet-summary-row { grid-template-columns: 1fr; }
+  .favorite-button { justify-self: start; }
+  .planet-fact-grid { grid-template-columns: 1fr 1fr; }
+  .planet-stage-hint { display: none; }
+}
+
+@media (max-width: 34rem) {
+  .planet-viewer-topbar { padding-inline: .8rem; }
+  .planet-viewer-layout { grid-template-rows: minmax(16.5rem, 38vh) minmax(0,1fr); }
+  .planet-viewer-controls { gap: .35rem; }
+  .viewer-control { width: 2.55rem; min-height: 2.55rem; }
+  .planet-fact-grid { grid-template-columns: 1fr; }
+  .planet-information-scroll { padding: 1rem; }
+  .planet-nav { top: 44%; }
+  .favorite-planet-card { grid-template-columns: 1fr; text-align: center; }
+  .favorite-planet-card .planet-thumbnail { margin-inline: auto; }
+  .favorite-card-actions { justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .planet-viewer-shell,
+  .planet-viewer-overlay { transition: none; }
+  .planet-fallback .planet-thumbnail { animation: none; }
+}
+
+/* Phase 3 responsive rules */
+@media (max-width: 68rem) {
+  .cosmic-search { grid-template-columns: 1fr; gap: 1.15rem; }
+  .cosmic-search-copy { max-width: 42rem; }
+  .star-viewer-visual { width: min(39%, 17rem); }
+}
+
+@media (max-width: 58rem) {
+  .universe-search-slot { margin-top: -.5rem; }
+  .cosmic-search { border-radius: var(--radius-lg); }
+  .star-viewer-layout { grid-template-rows: minmax(20rem, 44vh) minmax(0,1fr); }
+  .star-viewer-visual { width: min(34%, 14rem); }
+  .star-stage-hint { bottom: 4.7rem; }
+}
+
+@media (max-width: 48rem) {
+  .cosmic-search-copy { grid-template-columns: 1fr; }
+  .cosmic-search-icon { width: 3.1rem; height: 3.1rem; }
+  .cosmic-search-field > input { min-height: 3.45rem; font-size: .88rem; }
+  .cosmic-search-result { grid-template-columns: auto minmax(0,1fr) auto; }
+  .cosmic-search-kind { display: none; }
+  .star-viewer-visual { width: min(42%, 13.5rem); }
+  .star-fact-grid { grid-template-columns: 1fr 1fr; }
+  .favorite-celestial-card--star .favorite-star-visual { margin-inline: 0; }
+}
+
+@media (max-width: 34rem) {
+  .cosmic-search { padding: 1rem; }
+  .cosmic-search-copy h2 { font-size: 1.2rem; }
+  .cosmic-search-copy p:last-child { font-size: .74rem; }
+  .cosmic-search-field > input { padding-left: 2.9rem; padding-right: 2.9rem; }
+  .cosmic-search-results { max-height: 54vh; }
+  .cosmic-search-result { gap: .65rem; padding: .65rem; }
+  .cosmic-search-result-visual { width: 2.15rem; height: 2.15rem; }
+  .star-viewer-visual { width: min(48%, 12rem); }
+  .star-fact-grid { grid-template-columns: 1fr; }
+  .favorite-celestial-card--star .favorite-star-visual { margin-inline: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-viewer-visual,
+  .star-core,
+  .star-corona,
+  .star-flare,
+  .star-stage::before,
+  .star-stage::after { animation: none !important; }
+}

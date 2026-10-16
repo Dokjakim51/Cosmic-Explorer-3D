@@ -1,0 +1,324 @@
+/* Phase 5.8 — immersive theme scenes, stronger hero exoplanet, and corrected interactivity */
+
+/* ---------- Global backdrop / appearance themes ---------- */
+.cosmic-backdrop {
+  isolation: isolate;
+  transition: background 420ms ease, filter 420ms ease;
+}
+
+.theme-scene {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 360ms ease, transform 360ms ease;
+}
+
+.theme-orbit,
+.theme-body,
+.theme-sun,
+.theme-blackhole-core,
+.theme-blackhole-disk,
+.theme-blackhole-lens,
+.theme-blackhole-jet,
+.theme-nebula-cloud,
+.theme-nebula-cluster {
+  position: absolute;
+  display: block;
+}
+
+html[data-backdrop-theme="galaxy"] .theme-scene { opacity: 0; }
+html[data-backdrop-theme="solar"] .theme-scene--solar,
+html[data-backdrop-theme="blackhole"] .theme-scene--blackhole,
+html[data-backdrop-theme="nebula"] .theme-scene--nebula {
+  opacity: 1;
+}
+
+html[data-backdrop-theme="galaxy"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 84% 7%, rgba(162, 104, 255, 0.36), transparent 28rem),
+    radial-gradient(circle at 16% 24%, rgba(58, 130, 246, 0.18), transparent 24rem),
+    radial-gradient(circle at 48% 80%, rgba(137, 77, 255, 0.12), transparent 34rem),
+    linear-gradient(180deg, #020613 0%, #050a1a 44%, #02040d 100%);
+}
+html[data-backdrop-theme="galaxy"] .nebula--one {
+  background: radial-gradient(ellipse at center, rgba(175, 108, 255, .28), rgba(46, 107, 255, .1) 42%, transparent 72%);
+}
+html[data-backdrop-theme="galaxy"] .nebula--two {
+  background: radial-gradient(ellipse at center, rgba(67, 201, 255, .12), rgba(168, 85, 247, .08) 46%, transparent 72%);
+}
+
+html[data-backdrop-theme="solar"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 11% 18%, rgba(251, 191, 36, 0.24), transparent 14rem),
+    radial-gradient(circle at 13% 19%, rgba(249, 115, 22, 0.16), transparent 26rem),
+    radial-gradient(circle at 78% 26%, rgba(89, 152, 255, 0.08), transparent 28rem),
+    linear-gradient(180deg, #060a16 0%, #050a16 52%, #02040d 100%);
+}
+html[data-backdrop-theme="solar"] .nebula--one,
+html[data-backdrop-theme="solar"] .nebula--two {
+  opacity: .35;
+}
+.theme-scene--solar .theme-sun {
+  width: clamp(11rem, 18vw, 18rem);
+  aspect-ratio: 1;
+  left: 6%;
+  top: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,248,209,.98) 0 10%, rgba(250,202,58,.9) 30%, rgba(249,115,22,.58) 56%, rgba(249,115,22,0) 74%);
+  box-shadow: 0 0 4rem rgba(250,202,58,.35), 0 0 9rem rgba(249,115,22,.2);
+}
+.theme-scene--solar .theme-orbit {
+  left: 6%;
+  top: 12%;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+.theme-scene--solar .theme-orbit--one { width: 30rem; height: 12rem; }
+.theme-scene--solar .theme-orbit--two { width: 43rem; height: 18rem; top: 10%; }
+.theme-scene--solar .theme-orbit--three { width: 58rem; height: 24rem; top: 7%; opacity: .55; }
+.theme-scene--solar .theme-body {
+  border-radius: 50%;
+  box-shadow: 0 0 1.5rem rgba(255,255,255,.08);
+  animation: theme-drift 18s ease-in-out infinite;
+}
+.theme-scene--solar .theme-body--one {
+  width: 1.1rem; height: 1.1rem; left: 22%; top: 18%;
+  background: radial-gradient(circle at 30% 30%, #e5e7eb, #94a3b8 60%, #334155 100%);
+}
+.theme-scene--solar .theme-body--two {
+  width: 1.7rem; height: 1.7rem; left: 38%; top: 23%; animation-delay: -5s;
+  background: radial-gradient(circle at 30% 30%, #fef3c7, #f59e0b 58%, #7c2d12 100%);
+}
+.theme-scene--solar .theme-body--three {
+  width: 2.2rem; height: 2.2rem; left: 57%; top: 29%; animation-delay: -9s;
+  background: radial-gradient(circle at 30% 30%, #bfdbfe, #3b82f6 58%, #1e3a8a 100%);
+}
+
+html[data-backdrop-theme="blackhole"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 58% 26%, rgba(0,0,0,.98) 0 8rem, rgba(111,66,255,.16) 10rem, transparent 22rem),
+    radial-gradient(circle at 58% 26%, rgba(249,115,22,.09), transparent 24rem),
+    radial-gradient(circle at 18% 70%, rgba(59,130,246,.12), transparent 24rem),
+    linear-gradient(180deg, #010205 0%, #040813 46%, #02040b 100%);
+}
+html[data-backdrop-theme="blackhole"] .nebula--one,
+html[data-backdrop-theme="blackhole"] .nebula--two {
+  opacity: .24;
+}
+.theme-scene--blackhole .theme-blackhole-core {
+  width: clamp(10rem, 14vw, 14rem);
+  aspect-ratio: 1;
+  left: 54%; top: 17%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #000 55%, rgba(0,0,0,.92) 70%, transparent 74%);
+  box-shadow: 0 0 2rem rgba(0,0,0,.8);
+}
+.theme-scene--blackhole .theme-blackhole-disk {
+  width: clamp(24rem, 38vw, 40rem);
+  height: clamp(8rem, 12vw, 12rem);
+  left: 41%; top: 21%;
+  border-radius: 50%;
+  background: conic-gradient(from 10deg, rgba(255,180,93,.0), rgba(255,182,76,.55), rgba(255,120,43,.14), rgba(83,45,194,.22), rgba(255,180,93,.0));
+  filter: blur(10px) saturate(1.18);
+  transform: rotate(-6deg);
+}
+.theme-scene--blackhole .theme-blackhole-lens {
+  width: clamp(27rem, 42vw, 44rem);
+  height: clamp(12rem, 16vw, 16rem);
+  left: 39%; top: 18%;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 0 2.5rem rgba(113, 82, 255, .12) inset;
+  transform: rotate(-6deg);
+}
+.theme-scene--blackhole .theme-blackhole-jet {
+  width: .38rem; left: 61.8%;
+  background: linear-gradient(180deg, rgba(135,211,255,.0), rgba(135,211,255,.62), rgba(208,120,255,.0));
+  filter: blur(2px);
+}
+.theme-scene--blackhole .theme-blackhole-jet--top { top: 1%; height: 18%; }
+.theme-scene--blackhole .theme-blackhole-jet--bottom { top: 31%; height: 21%; }
+
+html[data-backdrop-theme="nebula"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(42, 201, 164, 0.16), transparent 22rem),
+    radial-gradient(circle at 72% 22%, rgba(56, 189, 248, 0.14), transparent 24rem),
+    radial-gradient(circle at 56% 72%, rgba(232, 121, 249, 0.18), transparent 32rem),
+    linear-gradient(180deg, #040712 0%, #050a16 48%, #02040c 100%);
+}
+html[data-backdrop-theme="nebula"] .nebula--one,
+html[data-backdrop-theme="nebula"] .nebula--two {
+  opacity: .08;
+}
+.theme-scene--nebula .theme-nebula-cloud {
+  border-radius: 50%;
+  filter: blur(28px);
+  mix-blend-mode: screen;
+}
+.theme-scene--nebula .theme-nebula-cloud--one {
+  width: 35rem; height: 18rem; left: 10%; top: 12%;
+  background: radial-gradient(circle at 40% 50%, rgba(86,214,255,.42), rgba(86,214,255,0) 70%);
+}
+.theme-scene--nebula .theme-nebula-cloud--two {
+  width: 42rem; height: 22rem; left: 42%; top: 10%;
+  background: radial-gradient(circle at 50% 45%, rgba(213,108,255,.44), rgba(213,108,255,0) 70%);
+}
+.theme-scene--nebula .theme-nebula-cloud--three {
+  width: 38rem; height: 20rem; left: 28%; top: 38%;
+  background: radial-gradient(circle at 50% 45%, rgba(47,225,181,.3), rgba(47,225,181,0) 70%);
+}
+.theme-scene--nebula .theme-nebula-cluster {
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 31% 26%, rgba(255,255,255,.9) 0 1px, transparent 2px),
+    radial-gradient(circle at 53% 18%, rgba(201,240,255,.78) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 61% 39%, rgba(255,220,255,.88) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 51%, rgba(220,255,241,.86) 0 1px, transparent 2px);
+  opacity: .72;
+}
+
+@keyframes theme-drift {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.04); }
+}
+
+/* ---------- Home hero refinement ---------- */
+.home-page--three-proof .hero {
+  grid-template-columns: minmax(0, .95fr) minmax(22rem, 1.12fr);
+}
+
+.home-page--three-proof .hero-visual--three {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 52%, rgba(183, 200, 255, .09), transparent 18%),
+    radial-gradient(circle at 63% 66%, rgba(236, 208, 148, .07), transparent 15%),
+    radial-gradient(circle at 19% 80%, rgba(46, 117, 255, .08), transparent 24%),
+    linear-gradient(148deg, rgba(2, 5, 18, .96), rgba(4, 8, 23, .92) 52%, rgba(2, 5, 16, .98));
+}
+.home-page--three-proof .hero-visual--three::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 72% 49%, rgba(255, 240, 214, .07), transparent 17%),
+    radial-gradient(circle at 83% 27%, rgba(153, 174, 255, .06), transparent 14%);
+  filter: blur(16px);
+}
+.home-page--three-proof .hero-visual--three::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 75% 50%, transparent 0 28%, rgba(4, 7, 21, 0) 38%, rgba(4, 7, 21, .17) 56%, rgba(4, 7, 21, .54) 82%, rgba(4, 7, 21, .82) 100%);
+}
+.hero-three-canvas {
+  opacity: .99;
+  -webkit-mask-image: radial-gradient(circle at 75% 50%, rgba(0,0,0,1) 0 37%, rgba(0,0,0,.97) 48%, rgba(0,0,0,.85) 64%, rgba(0,0,0,.42) 82%, rgba(0,0,0,.08) 94%, transparent 100%);
+  mask-image: radial-gradient(circle at 75% 50%, rgba(0,0,0,1) 0 37%, rgba(0,0,0,.97) 48%, rgba(0,0,0,.85) 64%, rgba(0,0,0,.42) 82%, rgba(0,0,0,.08) 94%, transparent 100%);
+}
+
+/* ---------- Planet cards and click feedback ---------- */
+.home-page--phase56 .planet-card,
+.universe-page--phase56 .celestial-card {
+  cursor: pointer;
+}
+
+.universe-page--phase56 .celestial-card {
+  min-height: 24.5rem;
+}
+
+.home-page--phase56 .planet-card:hover,
+.universe-page--phase56 .celestial-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 1.9rem 3.7rem rgba(0,0,0,.3);
+}
+
+.home-page--phase56 .planet-card:focus-visible,
+.universe-page--phase56 .celestial-card:focus-visible {
+  outline: 3px solid rgba(103,232,249,.7);
+  outline-offset: 4px;
+}
+
+.celestial-card--planet,
+.celestial-card--star {
+  cursor: pointer !important;
+}
+
+.celestial-card--planet::after,
+.celestial-card--planet:hover::after,
+.celestial-card--star::after,
+.home-page--phase56 .planet-card::after {
+  opacity: .18;
+  transform: none !important;
+}
+
+.planet-card:hover .planet-thumbnail,
+.celestial-card:hover .planet-thumbnail,
+.celestial-card:hover .star-orb {
+  filter: none !important;
+}
+
+/* ---------- Planet viewer: larger stage and clearer interaction ---------- */
+.planet-viewer-shell {
+  width: min(98vw, 98rem);
+  height: min(95vh, 61rem);
+}
+
+.planet-viewer-layout {
+  grid-template-columns: minmax(0, 1.12fr) minmax(25rem, .88fr);
+}
+
+.planet-stage::before { width: min(82%, 43rem); }
+.planet-stage::after { width: min(98%, 52rem); }
+.planet-stage-glow { width: min(62%, 35rem); }
+
+.planet-canvas,
+.earth-three-canvas {
+  filter: drop-shadow(0 0 2.4rem color-mix(in srgb, var(--planet-accent) 22%, transparent));
+}
+
+.planet-viewer-overlay[data-planet="earth"] .planet-stage,
+.planet-viewer-overlay .planet-stage {
+  background:
+    radial-gradient(circle at 56% 45%, color-mix(in srgb, var(--planet-accent) 14%, rgba(28,118,255,.14)), transparent 29%),
+    radial-gradient(circle at 28% 76%, rgba(39, 215, 255, .06), transparent 29%),
+    linear-gradient(180deg, #020716 0%, #040b20 58%, #01030a 100%);
+}
+
+/* ---------- Gallery realism boost using existing assets + richer cards ---------- */
+.gallery-phase57-real .gallery-card,
+.gallery-page .gallery-card {
+  overflow: hidden;
+}
+
+.gallery-page .gallery-visual {
+  background-color: #040814;
+}
+
+.gallery-page .gallery-card--photo .gallery-visual,
+.gallery-viewer-art.gallery-visual--photo {
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.gallery-page .gallery-card:not(.gallery-card--photo) .gallery-visual {
+  box-shadow: inset 0 -4rem 8rem rgba(2, 7, 24, .4);
+}
+
+@media (max-width: 64rem) {
+  .planet-viewer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-three-canvas {
+    -webkit-mask-image: radial-gradient(circle at 50% 42%, rgba(0,0,0,1) 0 38%, rgba(0,0,0,.9) 55%, rgba(0,0,0,.42) 78%, transparent 100%);
+    mask-image: radial-gradient(circle at 50% 42%, rgba(0,0,0,1) 0 38%, rgba(0,0,0,.9) 55%, rgba(0,0,0,.42) 78%, transparent 100%);
+  }
+}

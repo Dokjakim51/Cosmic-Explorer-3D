@@ -1,0 +1,370 @@
+/* Phase 5.5 — strong visual redesign for Universe, Gallery, and global appearance */
+
+html[data-accent-theme="violet"] {
+  --blue-primary: #3b82f6;
+  --blue-light: #67e8f9;
+  --purple-primary: #8b5cf6;
+  --violet: #c084fc;
+  --cosmic-pink: #f0abfc;
+  --gradient-primary: linear-gradient(135deg, #f0abfc 0%, #a855f7 33%, #3b82f6 68%, #67e8f9 100%);
+  --glass-border-bright: rgba(192, 132, 252, 0.46);
+}
+
+html[data-accent-theme="aqua"] {
+  --blue-primary: #38bdf8;
+  --blue-light: #a5f3fc;
+  --purple-primary: #0891b2;
+  --violet: #22d3ee;
+  --cosmic-pink: #67e8f9;
+  --gradient-primary: linear-gradient(135deg, #a5f3fc 0%, #22d3ee 35%, #38bdf8 65%, #0ea5e9 100%);
+  --glass-border-bright: rgba(103, 232, 249, 0.46);
+}
+
+html[data-accent-theme="rose"] {
+  --blue-primary: #6366f1;
+  --blue-light: #c4b5fd;
+  --purple-primary: #ec4899;
+  --violet: #f472b6;
+  --cosmic-pink: #fb7185;
+  --gradient-primary: linear-gradient(135deg, #fbcfe8 0%, #f472b6 34%, #a855f7 64%, #818cf8 100%);
+  --glass-border-bright: rgba(244, 114, 182, 0.5);
+}
+
+html[data-accent-theme="gold"] {
+  --blue-primary: #fb923c;
+  --blue-light: #fde68a;
+  --purple-primary: #d97706;
+  --violet: #f59e0b;
+  --cosmic-pink: #fdba74;
+  --gradient-primary: linear-gradient(135deg, #fef3c7 0%, #fbbf24 34%, #f59e0b 65%, #fb923c 100%);
+  --glass-border-bright: rgba(251, 191, 36, 0.48);
+}
+
+html[data-backdrop-theme="galaxy"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 84% 6%, rgba(139, 92, 246, 0.36), transparent 30rem),
+    radial-gradient(circle at 18% 24%, rgba(59, 130, 246, 0.16), transparent 25rem),
+    radial-gradient(circle at 50% 82%, rgba(124, 58, 237, 0.12), transparent 34rem),
+    linear-gradient(180deg, #030612 0%, #060a1a 44%, #02040d 100%);
+}
+html[data-backdrop-theme="galaxy"] .nebula--one { background: radial-gradient(ellipse at center, rgba(168,85,247,.24), rgba(37,99,235,.08) 42%, transparent 72%); }
+html[data-backdrop-theme="galaxy"] .nebula--two { background: radial-gradient(ellipse at center, rgba(56,189,248,.1), rgba(168,85,247,.08) 46%, transparent 72%); }
+
+html[data-backdrop-theme="solar"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 8% 16%, rgba(251, 191, 36, 0.32), transparent 18rem),
+    radial-gradient(circle at 12% 18%, rgba(249, 115, 22, 0.15), transparent 36rem),
+    radial-gradient(circle at 72% 28%, rgba(59, 130, 246, 0.12), transparent 26rem),
+    linear-gradient(180deg, #060814 0%, #050914 55%, #02040d 100%);
+}
+html[data-backdrop-theme="solar"] .nebula--one { width: 52rem; height: 52rem; inset: -12% auto auto -10%; background: radial-gradient(circle, rgba(251,191,36,.28), rgba(249,115,22,.12) 44%, transparent 72%); }
+html[data-backdrop-theme="solar"] .nebula--two { width: 76rem; height: 30rem; inset: 60% -18% auto auto; background: radial-gradient(ellipse, rgba(59,130,246,.12), rgba(125,211,252,.06) 42%, transparent 70%); }
+
+html[data-backdrop-theme="blackhole"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 50% 26%, rgba(0,0,0,.95) 0 8rem, rgba(124,58,237,.18) 10rem, transparent 22rem),
+    radial-gradient(circle at 50% 26%, rgba(251,146,60,.1), transparent 25rem),
+    radial-gradient(circle at 16% 74%, rgba(59,130,246,.12), transparent 24rem),
+    linear-gradient(180deg, #010205 0%, #050812 45%, #02040b 100%);
+}
+html[data-backdrop-theme="blackhole"] .nebula--one { background: radial-gradient(ellipse at center, rgba(124,58,237,.16), transparent 68%); }
+html[data-backdrop-theme="blackhole"] .nebula--two { background: radial-gradient(ellipse at center, rgba(251,146,60,.1), transparent 72%); }
+
+html[data-backdrop-theme="nebula"] .cosmic-backdrop {
+  background:
+    radial-gradient(circle at 22% 18%, rgba(16, 185, 129, 0.18), transparent 22rem),
+    radial-gradient(circle at 72% 22%, rgba(56, 189, 248, 0.16), transparent 24rem),
+    radial-gradient(circle at 56% 72%, rgba(232, 121, 249, 0.16), transparent 32rem),
+    linear-gradient(180deg, #040712 0%, #050a16 48%, #02040c 100%);
+}
+html[data-backdrop-theme="nebula"] .nebula--one { background: radial-gradient(ellipse at center, rgba(16,185,129,.18), rgba(56,189,248,.08) 42%, transparent 72%); }
+html[data-backdrop-theme="nebula"] .nebula--two { background: radial-gradient(ellipse at center, rgba(232,121,249,.16), rgba(14,165,233,.08) 42%, transparent 72%); }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.theme-customizer {
+  position: relative;
+}
+
+.theme-customizer-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 3.15rem;
+  height: 3.15rem;
+  border: 1px solid rgba(148,163,184,.24);
+  border-radius: 50%;
+  color: var(--text-primary);
+  background: rgba(7, 12, 30, .7);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset;
+}
+.theme-customizer-toggle:hover,
+.theme-customizer-toggle.is-open {
+  border-color: var(--glass-border-bright);
+  box-shadow: var(--shadow-cosmic);
+}
+
+.theme-customizer-panel {
+  position: absolute;
+  top: calc(100% + .8rem);
+  right: 0;
+  width: min(22rem, calc(100vw - 2rem));
+  padding: 1rem;
+  border-radius: 1.3rem;
+  background: linear-gradient(155deg, rgba(8,15,40,.95), rgba(3,8,24,.92));
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.35);
+}
+.theme-customizer-group + .theme-customizer-group { margin-top: 1rem; }
+.theme-customizer-group h3 { font-size: .95rem; margin-bottom: .65rem; }
+.theme-customizer-options { display: flex; flex-wrap: wrap; gap: .55rem; }
+.theme-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  min-height: 2.4rem;
+  padding: .55rem .9rem;
+  border: 1px solid rgba(148,163,184,.22);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,.03);
+  font-weight: 700;
+  font-size: .84rem;
+}
+.theme-chip:hover,
+.theme-chip.is-active {
+  color: var(--text-primary);
+  border-color: var(--glass-border-bright);
+  background: rgba(124,58,237,.12);
+}
+.theme-chip--violet span,
+.theme-chip--aqua span,
+.theme-chip--rose span,
+.theme-chip--gold span {
+  width: .85rem;
+  height: .85rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset;
+}
+.theme-chip--violet span { background: linear-gradient(135deg, #e879f9, #3b82f6); }
+.theme-chip--aqua span { background: linear-gradient(135deg, #a5f3fc, #0891b2); }
+.theme-chip--rose span { background: linear-gradient(135deg, #fbcfe8, #ec4899); }
+.theme-chip--gold span { background: linear-gradient(135deg, #fde68a, #f59e0b); }
+
+/* Universe redesign */
+.universe-page--phase55 .catalog-header {
+  align-items: center;
+  padding: 1.35rem 1.6rem;
+  border: 1px solid rgba(148,163,184,.14);
+  border-radius: 1.35rem;
+  background: linear-gradient(145deg, rgba(12,18,42,.82), rgba(4,9,26,.74));
+  box-shadow: var(--shadow-card);
+}
+.universe-page--phase55 .catalog-header span {
+  padding: .65rem .95rem;
+  border: 1px solid rgba(148,163,184,.18);
+  border-radius: 999px;
+  color: var(--text-primary);
+  background: rgba(255,255,255,.03);
+  font-weight: 800;
+}
+.universe-page--phase55 .celestial-grid {
+  gap: 1.35rem;
+}
+.universe-page--phase55 .celestial-card {
+  min-height: 25.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(148,163,184,.16);
+  background:
+    radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 8rem),
+    linear-gradient(160deg, rgba(9,14,36,.96), rgba(4,8,24,.9));
+  box-shadow: 0 22px 70px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.04);
+}
+.universe-page--phase55 .celestial-card::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: calc(var(--radius-lg) - .4rem);
+  border: 1px solid rgba(255,255,255,.05);
+  pointer-events: none;
+}
+.universe-page--phase55 .celestial-order {
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 0 2rem color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.universe-page--phase55 .celestial-kind { color: color-mix(in srgb, var(--accent) 55%, white); }
+.universe-page--phase55 .celestial-card-copy h3 { font-size: 1.5rem; }
+.universe-page--phase55 .celestial-card-copy > p:not(.celestial-kind) { color: #d8e2f0; min-height: 3.9rem; }
+.universe-page--phase55 .celestial-explore-button {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 30%, rgba(255,255,255,.06)), rgba(255,255,255,.04));
+  border-color: color-mix(in srgb, var(--accent) 32%, rgba(255,255,255,.1));
+}
+.universe-page--phase55 .planet-thumbnail,
+.universe-page--phase55 .star-orb {
+  width: clamp(7.2rem, 12vw, 9.6rem);
+  height: clamp(7.2rem, 12vw, 9.6rem);
+  margin: 1rem auto 1.4rem;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset;
+}
+.universe-page--phase55 .planet-thumbnail-aura,
+.universe-page--phase55 .star-orb-halo {
+  position: absolute;
+  inset: -18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, white) 0%, color-mix(in srgb, var(--accent) 12%, transparent) 34%, transparent 72%);
+  filter: blur(8px);
+  opacity: .95;
+  z-index: -1;
+}
+.universe-page--phase55 .planet-thumbnail::after,
+.universe-page--phase55 .star-orb::after {
+  box-shadow: 0 0 2.5rem color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.universe-page--phase55 .celestial-card--planet:hover .planet-thumbnail,
+.universe-page--phase55 .celestial-card--star:hover .star-orb { transform: translateY(-4px) scale(1.08); }
+
+/* Gallery redesign */
+.gallery-phase55 .gallery-toolbar {
+  position: sticky;
+  top: calc(var(--header-height) + .85rem);
+  z-index: 5;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(148,163,184,.14);
+  background: linear-gradient(155deg, rgba(9,15,36,.95), rgba(5,9,26,.88));
+  backdrop-filter: blur(18px);
+}
+.gallery-phase55 .gallery-results-summary {
+  margin-bottom: 1rem;
+  color: #d7e3f7;
+  font-weight: 600;
+}
+.gallery-phase55 .gallery-card {
+  min-height: 16rem;
+  border: 1px solid rgba(148,163,184,.16);
+  background: linear-gradient(160deg, rgba(6,10,24,.96), rgba(4,7,20,.88));
+  box-shadow: 0 24px 72px rgba(0,0,0,.38);
+}
+.gallery-phase55 .gallery-card::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,.05);
+  pointer-events: none;
+  z-index: 2;
+}
+.gallery-phase55 .gallery-card:hover { transform: translateY(-8px); }
+.gallery-phase55 .gallery-card:hover .gallery-visual { transform: scale(1.08); }
+.gallery-phase55 .gallery-visual,
+.gallery-phase55 .gallery-viewer-art {
+  background:
+    radial-gradient(circle at 50% -8%, rgba(255,255,255,.05), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,0) 32%),
+    #030816;
+}
+.gallery-phase55 .gallery-visual-stars {
+  opacity: .95;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.95) 0 1.1px, transparent 1.8px),
+    radial-gradient(circle, rgba(196,181,253,.8) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(125,211,252,.65) 0 .9px, transparent 1.5px);
+  background-size: 3.8rem 3.8rem, 6.8rem 6.8rem, 8.6rem 8.6rem;
+  background-position: 0 0, 1.4rem 2.2rem, 2.8rem 1rem;
+  mix-blend-mode: screen;
+}
+.gallery-phase55 .gallery-visual-glow { opacity: .92; filter: blur(22px); }
+.gallery-phase55 .gallery-card-overlay {
+  padding: 1.3rem 1.3rem 1.2rem;
+  background: linear-gradient(180deg, transparent, rgba(2,4,13,.56) 26%, rgba(2,4,13,.96));
+}
+.gallery-phase55 .gallery-card-overlay h2 {
+  font-size: 1.35rem;
+  text-shadow: 0 0 1rem rgba(0,0,0,.35);
+}
+.gallery-phase55 .gallery-card-overlay p {
+  color: #d9e2f1;
+  font-size: .8rem;
+}
+.gallery-phase55 .gallery-favorite-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: rgba(2,6,23,.52);
+  backdrop-filter: blur(10px);
+}
+.gallery-phase55 .gallery-viewer-shell {
+  width: min(92rem, calc(100vw - 2rem));
+  border: 1px solid rgba(148,163,184,.14);
+  background: linear-gradient(160deg, rgba(7,12,30,.96), rgba(3,6,18,.95));
+  box-shadow: 0 1rem 4rem rgba(0,0,0,.48);
+}
+.gallery-phase55 .gallery-viewer-stage {
+  min-height: clamp(24rem, 68vh, 44rem);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(125,211,252,.06), transparent 32%),
+    linear-gradient(180deg, rgba(255,255,255,.015), rgba(0,0,0,0));
+}
+.gallery-phase55 .gallery-viewer-art {
+  inset: 2rem 2rem 1.5rem;
+  border-radius: 1.7rem;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset, 0 1.2rem 3rem rgba(0,0,0,.24);
+}
+.gallery-phase55 .gallery-viewer-footer {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148,163,184,.12);
+}
+.gallery-phase55 .gallery-viewer-footer p { color: #e2e8f0; }
+.gallery-phase55 .gallery-viewer-nav {
+  background: rgba(5,10,30,.84);
+  backdrop-filter: blur(10px);
+}
+.gallery-phase55 .gallery-empty {
+  background: linear-gradient(145deg, rgba(8,15,40,.78), rgba(4,8,23,.68));
+}
+
+/* Stronger procedural art visibility */
+.gallery-phase55 .gallery-visual--violet-nebula,
+.gallery-phase55 .gallery-visual--emerald-nebula,
+.gallery-phase55 .gallery-visual--stellar-river,
+.gallery-phase55 .gallery-visual--spiral-dreams,
+.gallery-phase55 .gallery-visual--black-hole-garden {
+  isolation: isolate;
+}
+.gallery-phase55 .gallery-visual--violet-nebula .gallery-visual-glow {
+  background: radial-gradient(circle at 36% 38%, rgba(251,207,232,.7), rgba(192,132,252,.58) 22%, rgba(79,70,229,.45) 48%, transparent 72%);
+}
+.gallery-phase55 .gallery-visual--spiral-dreams .gallery-visual-glow {
+  background: radial-gradient(circle at center, rgba(244,114,182,.3), rgba(59,130,246,.25) 28%, transparent 68%);
+}
+.gallery-phase55 .gallery-visual--black-hole-garden .gallery-visual-glow {
+  background: radial-gradient(circle at center, rgba(251,146,60,.24), rgba(124,58,237,.22) 30%, transparent 70%);
+}
+.gallery-phase55 .gallery-visual--ringed-dream .gallery-visual-glow,
+.gallery-phase55 .gallery-visual--crimson-world .gallery-visual-glow,
+.gallery-phase55 .gallery-visual--silent-moon .gallery-visual-glow,
+.gallery-phase55 .gallery-visual--blue-supergiant .gallery-visual-glow,
+.gallery-phase55 .gallery-visual--solar-flare .gallery-visual-glow,
+.gallery-phase55 .gallery-visual--celestial-gateway .gallery-visual-glow,
+.gallery-phase55 .gallery-visual--cosmic-imagination .gallery-visual-glow {
+  background: radial-gradient(circle at center, color-mix(in srgb, var(--accent) 18%, white), transparent 64%);
+}
+
+@media (max-width: 64rem) {
+  .header-actions { gap: .55rem; }
+  .theme-customizer-panel { right: -.5rem; }
+  .gallery-phase55 .gallery-viewer-art { inset: 1rem 1rem 1rem; }
+}
+
+@media (max-width: 48rem) {
+  .header-actions { margin-left: auto; }
+  .theme-customizer-toggle,
+  .language-switcher { width: 2.85rem; height: 2.85rem; }
+  .theme-customizer-panel { left: 0; right: auto; width: min(20rem, calc(100vw - 2rem)); }
+  .gallery-phase55 .gallery-toolbar { top: calc(var(--header-height) + .5rem); }
+  .gallery-phase55 .gallery-viewer-stage { min-height: 18rem; }
+  .universe-page--phase55 .catalog-header { padding: 1rem 1.1rem; }
+}

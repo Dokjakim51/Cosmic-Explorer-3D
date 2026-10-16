@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030712" />
+    <title>Lost in Space — Cosmic Explorer</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; color: #f8fafc; background: radial-gradient(circle at 70% 20%, #4c1d95 0, transparent 28%), #030712; }
+      main { max-width: 42rem; padding: 2rem; text-align: center; }
+      h1 { font-size: clamp(3rem, 10vw, 7rem); margin: 0; background: linear-gradient(135deg,#e879f9,#a855f7,#3b82f6,#38bdf8); -webkit-background-clip: text; color: transparent; }
+      a { display: inline-block; margin-top: 1rem; color: #f8fafc; padding: .8rem 1.2rem; border: 1px solid rgba(148,163,184,.3); border-radius: 999px; text-decoration: none; }
+      a:focus-visible { outline: 3px solid #38bdf8; outline-offset: 4px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p id="eyebrow">DREAM. EXPLORE. INSPIRE.</p>
+      <h1>404</h1>
+      <h2 id="heading">This star is outside the current map.</h2>
+      <p id="description">Return to Cosmic Explorer and continue exploring.</p>
+      <a id="return-link" href="./#/home">Return home</a>
+    </main>
+    <script>
+      if (String(navigator.language || '').toLowerCase().startsWith('es')) {
+        document.documentElement.lang = 'es';
+        document.title = 'Perdido en el espacio — Cosmic Explorer';
+        document.querySelector('#eyebrow').textContent = 'SUEÑA. EXPLORA. INSPIRA.';
+        document.querySelector('#heading').textContent = 'Esta estrella está fuera del mapa actual.';
+        document.querySelector('#description').textContent = 'Regresa a Cosmic Explorer y continúa explorando.';
+        document.querySelector('#return-link').textContent = 'Volver al inicio';
+      }
+    </script>
+  </body>
+</html>

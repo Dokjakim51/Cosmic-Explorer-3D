@@ -1,0 +1,279 @@
+{
+  "version": 5,
+  "phase": "5.11.5",
+  "categories": [
+    "compactObjects",
+    "explosions",
+    "starFormation",
+    "stellarSystems",
+    "largeScale"
+  ],
+  "items": [
+    {
+      "id": "black-hole-accretion-disk",
+      "scene": "black-hole",
+      "category": "compactObjects",
+      "titleKey": "gallery.item.blackHole",
+      "descriptionKey": "gallery.desc.blackHole",
+      "techniqueKey": "gallery.tech.blackHole",
+      "tags": [
+        "gallery.tag.lensing",
+        "gallery.tag.accretion",
+        "gallery.tag.doppler"
+      ],
+      "featured": true,
+      "layout": "hero",
+      "accent": "#ff8a3d",
+      "accentSecondary": "#ffd27a"
+    },
+    {
+      "id": "quasar",
+      "scene": "quasar",
+      "category": "compactObjects",
+      "titleKey": "gallery.item.quasar",
+      "descriptionKey": "gallery.desc.quasar",
+      "techniqueKey": "gallery.tech.quasar",
+      "tags": [
+        "gallery.tag.activeNucleus",
+        "gallery.tag.jets",
+        "gallery.tag.hostGalaxy"
+      ],
+      "featured": true,
+      "layout": "portrait",
+      "accent": "#7ee7ff",
+      "accentSecondary": "#fff0ad"
+    },
+    {
+      "id": "blazar",
+      "scene": "blazar",
+      "category": "compactObjects",
+      "titleKey": "gallery.item.blazar",
+      "descriptionKey": "gallery.desc.blazar",
+      "techniqueKey": "gallery.tech.blazar",
+      "tags": [
+        "gallery.tag.beaming",
+        "gallery.tag.jetFacing",
+        "gallery.tag.variability"
+      ],
+      "layout": "compact",
+      "accent": "#62cfff",
+      "accentSecondary": "#d7f7ff"
+    },
+    {
+      "id": "tidal-disruption-event",
+      "scene": "tidal-disruption",
+      "category": "compactObjects",
+      "titleKey": "gallery.item.tidalDisruption",
+      "descriptionKey": "gallery.desc.tidalDisruption",
+      "techniqueKey": "gallery.tech.tidalDisruption",
+      "tags": [
+        "gallery.tag.spaghettification",
+        "gallery.tag.debrisStream",
+        "gallery.tag.accretion"
+      ],
+      "featured": true,
+      "layout": "wide",
+      "accent": "#ff7648",
+      "accentSecondary": "#ffd39b"
+    },
+    {
+      "id": "pulsar",
+      "scene": "pulsar",
+      "category": "compactObjects",
+      "titleKey": "gallery.item.pulsar",
+      "descriptionKey": "gallery.desc.pulsar",
+      "techniqueKey": "gallery.tech.pulsar",
+      "tags": [
+        "gallery.tag.neutronStar",
+        "gallery.tag.lighthouse",
+        "gallery.tag.rotation"
+      ],
+      "layout": "compact",
+      "accent": "#7edcff",
+      "accentSecondary": "#f1fcff"
+    },
+    {
+      "id": "magnetar",
+      "scene": "magnetar",
+      "category": "compactObjects",
+      "titleKey": "gallery.item.magnetar",
+      "descriptionKey": "gallery.desc.magnetar",
+      "techniqueKey": "gallery.tech.magnetar",
+      "tags": [
+        "gallery.tag.magneticField",
+        "gallery.tag.arcs",
+        "gallery.tag.starquake"
+      ],
+      "layout": "compact",
+      "accent": "#55e0d0",
+      "accentSecondary": "#ffad72"
+    },
+    {
+      "id": "supernova",
+      "scene": "supernova",
+      "category": "explosions",
+      "titleKey": "gallery.item.supernova",
+      "descriptionKey": "gallery.desc.supernova",
+      "techniqueKey": "gallery.tech.supernova",
+      "tags": [
+        "gallery.tag.shockwave",
+        "gallery.tag.ejecta",
+        "gallery.tag.expansion"
+      ],
+      "featured": true,
+      "layout": "compact",
+      "accent": "#ff653b",
+      "accentSecondary": "#ffe4a3"
+    },
+    {
+      "id": "supernova-remnant",
+      "scene": "supernova-remnant",
+      "category": "explosions",
+      "titleKey": "gallery.item.supernovaRemnant",
+      "descriptionKey": "gallery.desc.supernovaRemnant",
+      "techniqueKey": "gallery.tech.supernovaRemnant",
+      "tags": [
+        "gallery.tag.filaments",
+        "gallery.tag.shells",
+        "gallery.tag.ejecta"
+      ],
+      "layout": "half",
+      "accent": "#43d2d4",
+      "accentSecondary": "#ff9d55"
+    },
+    {
+      "id": "neutron-star-merger-kilonova",
+      "scene": "kilonova",
+      "category": "explosions",
+      "titleKey": "gallery.item.kilonova",
+      "descriptionKey": "gallery.desc.kilonova",
+      "techniqueKey": "gallery.tech.kilonova",
+      "tags": [
+        "gallery.tag.merger",
+        "gallery.tag.ejecta",
+        "gallery.tag.heavyElements"
+      ],
+      "featured": true,
+      "layout": "half",
+      "accent": "#7fc8ff",
+      "accentSecondary": "#ff6d88"
+    },
+    {
+      "id": "protostar-protoplanetary-disk",
+      "scene": "protostar",
+      "category": "starFormation",
+      "titleKey": "gallery.item.protostar",
+      "descriptionKey": "gallery.desc.protostar",
+      "techniqueKey": "gallery.tech.protostar",
+      "tags": [
+        "gallery.tag.protoplanetaryDisk",
+        "gallery.tag.outflow",
+        "gallery.tag.formation"
+      ],
+      "layout": "portrait",
+      "accent": "#ffad4f",
+      "accentSecondary": "#f1d28c"
+    },
+    {
+      "id": "planetary-nebula",
+      "scene": "planetary-nebula",
+      "category": "starFormation",
+      "titleKey": "gallery.item.planetaryNebula",
+      "descriptionKey": "gallery.desc.planetaryNebula",
+      "techniqueKey": "gallery.tech.planetaryNebula",
+      "tags": [
+        "gallery.tag.ionizedGas",
+        "gallery.tag.bipolarLobes",
+        "gallery.tag.whiteDwarf"
+      ],
+      "layout": "compact",
+      "accent": "#64e5c8",
+      "accentSecondary": "#ff7aaa"
+    },
+    {
+      "id": "cosmic-web",
+      "scene": "cosmic-web",
+      "category": "largeScale",
+      "titleKey": "gallery.item.cosmicWeb",
+      "descriptionKey": "gallery.desc.cosmicWeb",
+      "techniqueKey": "gallery.tech.cosmicWeb",
+      "tags": [
+        "gallery.tag.filaments",
+        "gallery.tag.nodes",
+        "gallery.tag.largeScale"
+      ],
+      "featured": true,
+      "layout": "compact",
+      "accent": "#738cff",
+      "accentSecondary": "#ffb66f"
+    },
+    {
+      "id": "wolf-rayet-star",
+      "scene": "wolf-rayet",
+      "category": "stellarSystems",
+      "titleKey": "gallery.item.wolfRayet",
+      "descriptionKey": "gallery.desc.wolfRayet",
+      "techniqueKey": "gallery.tech.wolfRayet",
+      "tags": [
+        "gallery.tag.stellarWind",
+        "gallery.tag.massLoss",
+        "gallery.tag.ejectedNebula"
+      ],
+      "featured": true,
+      "layout": "hero",
+      "accent": "#8fe8ff",
+      "accentSecondary": "#ff9e62"
+    },
+    {
+      "id": "vampire-star-system",
+      "scene": "vampire-star",
+      "category": "stellarSystems",
+      "titleKey": "gallery.item.vampireStar",
+      "descriptionKey": "gallery.desc.vampireStar",
+      "techniqueKey": "gallery.tech.vampireStar",
+      "tags": [
+        "gallery.tag.binarySystem",
+        "gallery.tag.massTransfer",
+        "gallery.tag.accretionDisk"
+      ],
+      "featured": true,
+      "layout": "portrait",
+      "accent": "#ffad6b",
+      "accentSecondary": "#72cfff"
+    },
+    {
+      "id": "herbig-haro-stellar-jet",
+      "scene": "herbig-haro",
+      "category": "starFormation",
+      "titleKey": "gallery.item.herbigHaro",
+      "descriptionKey": "gallery.desc.herbigHaro",
+      "techniqueKey": "gallery.tech.herbigHaro",
+      "tags": [
+        "gallery.tag.youngStar",
+        "gallery.tag.bipolarJet",
+        "gallery.tag.bowShock"
+      ],
+      "featured": true,
+      "layout": "wide",
+      "accent": "#ff8066",
+      "accentSecondary": "#65d6da"
+    },
+    {
+      "id": "gamma-ray-burst",
+      "scene": "gamma-ray-burst",
+      "category": "explosions",
+      "titleKey": "gallery.item.gammaRayBurst",
+      "descriptionKey": "gallery.desc.gammaRayBurst",
+      "techniqueKey": "gallery.tech.gammaRayBurst",
+      "tags": [
+        "gallery.tag.relativisticJets",
+        "gallery.tag.coreCollapse",
+        "gallery.tag.afterglow"
+      ],
+      "featured": true,
+      "layout": "portrait",
+      "accent": "#b98cff",
+      "accentSecondary": "#ffe17a"
+    }
+  ]
+}

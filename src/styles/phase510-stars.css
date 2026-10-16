@@ -1,0 +1,185 @@
+/* Phase 5.10 — dedicated Three.js stellar renderer and texture-based star catalog */
+
+.celestial-card--star {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.celestial-card--star::after {
+  opacity: .13 !important;
+  background: radial-gradient(circle at 50% 34%, color-mix(in srgb, var(--planet-accent, #b9d6ff) 18%, transparent), transparent 56%) !important;
+  filter: none !important;
+}
+
+.celestial-card--star:hover::after,
+.celestial-card--star:focus-within::after {
+  opacity: .20 !important;
+}
+
+.star-orb {
+  width: min(11.5rem, 74%) !important;
+  aspect-ratio: 1 !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background-color: transparent !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  box-shadow: none !important;
+  filter: none !important;
+  animation: none !important;
+  transform: translateZ(0) scale(1) !important;
+  transition: transform .35s cubic-bezier(.22,1,.36,1), opacity .35s ease !important;
+}
+
+.star-orb::before,
+.star-orb::after,
+.star-orb > span {
+  display: none !important;
+}
+
+.star-orb--sun { background-image: url('../../public/images/stars/sun-stellar-card.png') !important; }
+.star-orb--sirius { background-image: url('../../public/images/stars/sirius-stellar-card.png') !important; }
+.star-orb--vega { background-image: url('../../public/images/stars/vega-stellar-card.png') !important; }
+.star-orb--betelgeuse { background-image: url('../../public/images/stars/betelgeuse-stellar-card.png') !important; }
+.star-orb--rigel { background-image: url('../../public/images/stars/rigel-stellar-card.png') !important; }
+.star-orb--polaris { background-image: url('../../public/images/stars/polaris-stellar-card.png') !important; }
+.star-orb--proxima-centauri { background-image: url('../../public/images/stars/proxima-centauri-stellar-card.png') !important; }
+.star-orb--antares { background-image: url('../../public/images/stars/antares-stellar-card.png') !important; }
+
+.celestial-card--star:hover .star-orb,
+.celestial-card--star:focus-within .star-orb {
+  filter: none !important;
+  transform: translateZ(0) scale(1.045) !important;
+}
+
+.star-viewer-overlay[data-star] .star-stage {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 48%, color-mix(in srgb, var(--star-color, #f8c75f) 11%, transparent), transparent 31rem),
+    radial-gradient(circle at 16% 12%, rgba(74, 91, 148, .12), transparent 24rem),
+    linear-gradient(148deg, #030817 0%, #050a1b 48%, #02050f 100%) !important;
+}
+
+.star-viewer-overlay[data-star] .star-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.45) 0 .08rem, transparent .1rem),
+    radial-gradient(circle at 82% 18%, rgba(178,205,255,.34) 0 .06rem, transparent .09rem),
+    radial-gradient(circle at 74% 78%, rgba(255,255,255,.28) 0 .07rem, transparent .1rem),
+    radial-gradient(circle at 28% 72%, rgba(160,190,255,.25) 0 .05rem, transparent .08rem);
+  opacity: .72;
+}
+
+.star-viewer-visual {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  transform: none !important;
+  filter: none !important;
+  z-index: 2;
+}
+
+.star-three-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+}
+
+.star-three-canvas:active { cursor: grabbing; }
+
+.star-render-fallback {
+  position: absolute;
+  inset: 12%;
+  display: none;
+}
+
+.star-render-fallback-active .star-render-fallback { display: block; }
+.star-render-fallback-active .star-three-canvas { display: none; }
+
+.star-viewer-overlay .star-space-dust {
+  opacity: .45;
+  filter: none;
+}
+
+.star-viewer-overlay .star-stage-hint {
+  z-index: 5;
+  bottom: 7.3rem;
+  color: rgba(220,231,255,.82);
+  background: rgba(4, 9, 24, .72);
+  border-color: rgba(123, 146, 205, .25);
+  backdrop-filter: blur(10px);
+}
+
+.star-three-controls {
+  z-index: 6;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(100% - 5rem);
+}
+
+.star-three-controls .viewer-control {
+  background: rgba(7, 13, 31, .82);
+  border-color: color-mix(in srgb, var(--star-color, #a9d7ff) 22%, rgba(115,132,176,.22));
+  box-shadow: 0 .7rem 1.8rem rgba(0,0,0,.22);
+}
+
+.star-three-controls .viewer-control:hover,
+.star-three-controls .viewer-control:focus-visible {
+  background: color-mix(in srgb, var(--star-color, #a9d7ff) 14%, rgba(7,13,31,.88));
+  box-shadow: 0 .8rem 2rem rgba(0,0,0,.28);
+}
+
+.star-viewer-overlay .planet-nav {
+  z-index: 7;
+}
+
+.star-pulse-paused .star-three-canvas {
+  cursor: grab;
+}
+
+.star-viewer-overlay[data-star='sirius'] .star-stage,
+.star-viewer-overlay[data-star='vega'] .star-stage,
+.star-viewer-overlay[data-star='rigel'] .star-stage {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(99, 160, 255, .14), transparent 30rem),
+    radial-gradient(circle at 12% 15%, rgba(138, 180, 255, .10), transparent 22rem),
+    linear-gradient(148deg, #030917, #050b20 50%, #02050f) !important;
+}
+
+.star-viewer-overlay[data-star='betelgeuse'] .star-stage,
+.star-viewer-overlay[data-star='proxima-centauri'] .star-stage,
+.star-viewer-overlay[data-star='antares'] .star-stage {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(196, 34, 18, .15), transparent 31rem),
+    radial-gradient(circle at 15% 18%, rgba(122, 22, 18, .10), transparent 24rem),
+    linear-gradient(148deg, #0d0305, #090510 50%, #02040c) !important;
+}
+
+@media (max-width: 900px) {
+  .star-orb { width: min(10rem, 70%) !important; }
+  .star-three-controls { max-width: calc(100% - 2rem); }
+  .star-viewer-overlay .star-stage-hint { bottom: 9.4rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-orb,
+  .celestial-card--star:hover .star-orb,
+  .celestial-card--star:focus-within .star-orb {
+    transition: none !important;
+    transform: none !important;
+  }
+}

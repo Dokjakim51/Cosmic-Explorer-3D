@@ -1,0 +1,379 @@
+/* Phase 3.6 — visual realism pass for the hero scene, planets, and stars. */
+
+/* --- Home hero realism --- */
+.hero-visual {
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.hero-visual::before,
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-visual::before {
+  z-index: -6;
+  background:
+    radial-gradient(circle at 68% 36%, rgba(56, 189, 248, .12), transparent 17%),
+    radial-gradient(circle at 34% 66%, rgba(232, 121, 249, .12), transparent 18%),
+    radial-gradient(circle at 52% 50%, rgba(59, 130, 246, .11), transparent 30%);
+  filter: blur(34px);
+  transform: translateZ(-120px) scale(1.12);
+}
+
+.hero-visual::after {
+  z-index: -5;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.94) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(255,255,255,.8) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,.7) 0 1px, transparent 1.4px);
+  background-size: 13rem 13rem, 17rem 17rem, 11rem 11rem;
+  background-position: 12% 18%, 76% 42%, 58% 80%;
+  opacity: .52;
+}
+
+.hero-nebula {
+  inset: -2% -16% 0 -16%;
+  background:
+    radial-gradient(circle at 72% 40%, rgba(232,121,249,.28), transparent 19%),
+    radial-gradient(circle at 52% 52%, rgba(76,29,149,.42), rgba(37,99,235,.18) 34%, transparent 64%),
+    radial-gradient(circle at 30% 58%, rgba(59,130,246,.2), transparent 20%);
+  filter: blur(36px) saturate(120%);
+}
+
+.hero-planet {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 26% 18%, rgba(255,255,255,.82) 0 .9%, transparent 8%),
+    radial-gradient(circle at 40% 28%, #f5d0fe 0 4%, #c084fc 13%, #7c3aed 29%, #4338ca 55%, #191b55 74%, #060814 100%);
+  box-shadow:
+    inset -4.6rem -3.2rem 7.8rem rgba(0,0,0,.72),
+    inset 2.2rem 1.8rem 4.6rem rgba(255,255,255,.16),
+    inset 0 -.8rem 2.4rem rgba(10, 12, 38, .55),
+    0 0 1.7rem rgba(232,121,249,.52),
+    0 0 5.5rem rgba(124,58,237,.44),
+    0 0 12rem rgba(37,99,235,.2);
+}
+
+.hero-planet::before,
+.hero-planet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.hero-planet::before {
+  background:
+    conic-gradient(from 160deg at 55% 48%, transparent 0 12%, rgba(255,255,255,.07) 12% 20%, transparent 20% 42%, rgba(96,165,250,.08) 42% 54%, transparent 54% 100%),
+    radial-gradient(circle at 33% 23%, rgba(255,255,255,.22), transparent 18%);
+  mix-blend-mode: screen;
+  animation: hero-planet-sheen 14s linear infinite;
+}
+
+.hero-planet::after {
+  background:
+    radial-gradient(ellipse at 36% 33%, rgba(255,255,255,.18), transparent 28%),
+    linear-gradient(118deg, transparent 40%, rgba(7, 10, 28, .16) 52%, rgba(4, 6, 18, .72) 88%);
+}
+
+.planet-surface {
+  filter: blur(1px);
+}
+
+.planet-surface--one {
+  inset: 18% 7% 46% 18%;
+  opacity: .35;
+  background:
+    repeating-linear-gradient(140deg, rgba(251,191,248,.3) 0 10px, transparent 10px 24px),
+    linear-gradient(160deg, transparent, rgba(244,114,182,.5), transparent 70%);
+  mix-blend-mode: screen;
+  animation: hero-clouds-drift 24s linear infinite;
+}
+
+.planet-surface--two {
+  inset: 44% 6% 16% 12%;
+  opacity: .28;
+  background:
+    repeating-linear-gradient(160deg, rgba(96,165,250,.38) 0 14px, transparent 14px 29px),
+    linear-gradient(160deg, transparent, rgba(59,130,246,.55), transparent 72%);
+  animation: hero-bands-drift 20s linear infinite reverse;
+}
+
+.planet-surface--three {
+  position: absolute;
+  inset: 12% 15% 14% 9%;
+  border-radius: 50%;
+  opacity: .18;
+  background:
+    radial-gradient(circle at 28% 34%, rgba(255,255,255,.22), transparent 10%),
+    radial-gradient(circle at 61% 62%, rgba(14,165,233,.18), transparent 14%),
+    radial-gradient(circle at 72% 40%, rgba(251,191,248,.16), transparent 10%);
+  animation: hero-weather-drift 26s linear infinite;
+}
+
+.planet-clouds,
+.planet-haze {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.planet-clouds {
+  background:
+    radial-gradient(circle at 24% 26%, rgba(255,255,255,.16), transparent 11%),
+    radial-gradient(circle at 55% 32%, rgba(255,255,255,.12), transparent 12%),
+    radial-gradient(circle at 68% 62%, rgba(255,255,255,.12), transparent 14%),
+    radial-gradient(circle at 42% 72%, rgba(255,255,255,.09), transparent 13%);
+  mix-blend-mode: screen;
+  animation: hero-weather-drift 18s linear infinite;
+}
+
+.planet-haze {
+  inset: -1%;
+  background: radial-gradient(circle at 26% 27%, rgba(255,255,255,.12), transparent 19%), radial-gradient(circle at 50% 50%, transparent 58%, rgba(255,255,255,.06) 72%, transparent 80%);
+  filter: blur(8px);
+}
+
+.planet-atmosphere {
+  inset: -2.6%;
+  border: 2px solid rgba(232,121,249,.58);
+  box-shadow:
+    inset 0 0 1.8rem rgba(216,180,254,.46),
+    0 0 2rem rgba(232,121,249,.4),
+    0 0 4rem rgba(59,130,246,.22);
+}
+
+.planet-rings {
+  left: -44%;
+  top: 36.5%;
+  width: 188%;
+  height: 31%;
+  border-width: clamp(.82rem, 1.2vw, 1.2rem);
+  border-color: rgba(226,232,240,.66);
+  border-left-color: rgba(125,211,252,.2);
+  border-right-color: rgba(244,114,182,.26);
+  background:
+    radial-gradient(ellipse at center, transparent 48%, rgba(255,255,255,.18) 52%, transparent 58%),
+    repeating-radial-gradient(ellipse at center, rgba(255,255,255,.04) 0 2px, rgba(255,255,255,0) 2px 8px);
+  box-shadow:
+    inset 0 0 1rem rgba(255,255,255,.1),
+    0 0 1.4rem rgba(168,85,247,.32),
+    0 0 3rem rgba(59,130,246,.14);
+}
+
+.planet-rings::before,
+.planet-rings::after {
+  border-color: rgba(226,232,240,.18);
+}
+
+.planet-rings--back {
+  filter: blur(.25px) brightness(.8);
+  opacity: .72;
+}
+
+.planet-rings--front {
+  opacity: .96;
+  clip-path: inset(49% 0 0 0);
+}
+
+.moon {
+  background: radial-gradient(circle at 30% 24%, #ede9fe 0, #d8b4fe 14%, #625581 34%, #151b38 74%);
+  box-shadow: inset -.7rem -.4rem 1rem rgba(0,0,0,.52), 0 0 1.3rem rgba(196,181,253,.16);
+}
+
+.moon--one {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.cosmic-quote-mini {
+  background: rgba(6, 11, 29, .72);
+  border-color: rgba(125,211,252,.28);
+}
+
+/* --- Planet viewer depth and realism --- */
+.planet-viewer-overlay .planet-stage {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 28% 26%, rgba(255,255,255,.06), transparent 12%),
+    radial-gradient(circle at 70% 20%, rgba(59,130,246,.09), transparent 18%),
+    radial-gradient(circle at 55% 70%, rgba(76,29,149,.22), transparent 28%),
+    linear-gradient(180deg, rgba(8, 12, 30, .92), rgba(3, 6, 18, .96));
+}
+
+.planet-viewer-overlay .planet-stage::before,
+.planet-viewer-overlay .planet-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.planet-viewer-overlay .planet-stage::before {
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.86) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(255,255,255,.68) 0 1px, transparent 1.8px);
+  background-size: 10rem 10rem, 14rem 14rem;
+  background-position: 20% 15%, 70% 60%;
+  opacity: .26;
+}
+
+.planet-viewer-overlay .planet-stage::after {
+  inset: 8% 7% 7%;
+  border-radius: 2rem;
+  border: 1px solid rgba(148,163,184,.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.02), inset 0 -2rem 3rem rgba(0,0,0,.22);
+}
+
+.planet-stage-glow {
+  inset: auto 50% 10%;
+  width: min(30rem, 75%);
+  height: 7rem;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--planet-accent) 50%, transparent) 0 15%, rgba(255,255,255,.04) 35%, transparent 72%);
+  filter: blur(14px);
+  opacity: .8;
+}
+
+.planet-canvas,
+.planet-fallback {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 1.1rem 2.6rem rgba(0, 0, 0, .4));
+}
+
+.planet-viewer-overlay[data-planet="mercury"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(148,163,184,.42), transparent 68%); }
+.planet-viewer-overlay[data-planet="venus"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(251,191,36,.32), transparent 68%); }
+.planet-viewer-overlay[data-planet="earth"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(56,189,248,.32), rgba(34,197,94,.12) 42%, transparent 72%); }
+.planet-viewer-overlay[data-planet="mars"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(249,115,22,.3), transparent 70%); }
+.planet-viewer-overlay[data-planet="jupiter"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(251,146,60,.25), transparent 70%); }
+.planet-viewer-overlay[data-planet="saturn"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(250,204,21,.3), rgba(244,114,182,.08) 42%, transparent 74%); }
+.planet-viewer-overlay[data-planet="uranus"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(103,232,249,.28), transparent 72%); }
+.planet-viewer-overlay[data-planet="neptune"] .planet-stage-glow { background: radial-gradient(ellipse at center, rgba(59,130,246,.34), transparent 72%); }
+
+.planet-viewer-overlay[data-planet="saturn"] .planet-stage::before,
+.planet-viewer-overlay[data-planet="uranus"] .planet-stage::before {
+  opacity: .36;
+}
+
+/* --- Star viewer differentiation and richer backdrops --- */
+.star-viewer-overlay .star-stage {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,.05), transparent 12%),
+    radial-gradient(circle at 72% 18%, rgba(59,130,246,.08), transparent 18%),
+    linear-gradient(180deg, rgba(7, 10, 24, .92), rgba(3, 6, 18, .98));
+}
+
+.star-viewer-overlay .star-stage::before,
+.star-viewer-overlay .star-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.star-viewer-overlay .star-stage::before {
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.86) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(255,255,255,.58) 0 1px, transparent 1.7px);
+  background-size: 12rem 12rem, 16rem 16rem;
+  background-position: 18% 18%, 72% 62%;
+  opacity: .22;
+}
+
+.star-viewer-overlay .star-stage::after {
+  inset: auto 20% 9%;
+  height: 8rem;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--star-color) 45%, transparent), transparent 70%);
+  filter: blur(16px);
+  opacity: .8;
+}
+
+.star-viewer-visual {
+  filter: drop-shadow(0 1rem 2.8rem rgba(0,0,0,.38));
+}
+
+.star-viewer-overlay[data-star="sun"] .star-stage {
+  background: radial-gradient(circle at 70% 18%, rgba(251,191,36,.08), transparent 18%), linear-gradient(180deg, rgba(16,10,2,.92), rgba(7,6,18,.98));
+}
+
+.star-viewer-overlay[data-star="sirius"] .star-stage,
+.star-viewer-overlay[data-star="rigel"] .star-stage,
+.star-viewer-overlay[data-star="vega"] .star-stage {
+  background: radial-gradient(circle at 70% 18%, rgba(96,165,250,.11), transparent 18%), linear-gradient(180deg, rgba(7,10,26,.92), rgba(3,5,18,.98));
+}
+
+.star-viewer-overlay[data-star="betelgeuse"] .star-stage,
+.star-viewer-overlay[data-star="antares"] .star-stage,
+.star-viewer-overlay[data-star="proxima-centauri"] .star-stage {
+  background: radial-gradient(circle at 22% 18%, rgba(248,113,113,.09), transparent 18%), linear-gradient(180deg, rgba(20,6,9,.92), rgba(5,4,12,.98));
+}
+
+.star-viewer-overlay[data-star="polaris"] .star-stage {
+  background: radial-gradient(circle at 70% 18%, rgba(250,204,21,.08), transparent 18%), linear-gradient(180deg, rgba(12,10,4,.92), rgba(4,5,14,.98));
+}
+
+.star-viewer-overlay[data-star="betelgeuse"] .star-space-dust span,
+.star-viewer-overlay[data-star="antares"] .star-space-dust span,
+.star-viewer-overlay[data-star="proxima-centauri"] .star-space-dust span {
+  background: rgba(248,113,113,.56);
+  box-shadow: 0 0 1rem rgba(248,113,113,.35);
+}
+
+.star-viewer-overlay[data-star="sirius"] .star-space-dust span,
+.star-viewer-overlay[data-star="rigel"] .star-space-dust span,
+.star-viewer-overlay[data-star="vega"] .star-space-dust span {
+  background: rgba(147,197,253,.58);
+  box-shadow: 0 0 1rem rgba(96,165,250,.36);
+}
+
+@keyframes hero-clouds-drift {
+  from { transform: translate3d(-4%, 0, 0) rotate(-8deg); }
+  to { transform: translate3d(6%, 0, 0) rotate(8deg); }
+}
+
+@keyframes hero-bands-drift {
+  from { transform: translate3d(3%, 0, 0) rotate(12deg); }
+  to { transform: translate3d(-5%, 0, 0) rotate(-10deg); }
+}
+
+@keyframes hero-weather-drift {
+  from { transform: translate3d(-2%, 0, 0) rotate(0deg); }
+  to { transform: translate3d(3%, 0, 0) rotate(16deg); }
+}
+
+@keyframes hero-planet-sheen {
+  from { transform: rotate(0deg) scale(1); }
+  to { transform: rotate(360deg) scale(1); }
+}
+
+@media (max-width: 64rem) {
+  .hero-planet { box-shadow: inset -3.2rem -2.4rem 5rem rgba(0,0,0,.68), inset 1.4rem 1.2rem 3rem rgba(255,255,255,.14), 0 0 3rem rgba(124,58,237,.35), 0 0 6rem rgba(37,99,235,.16); }
+  .planet-rings { width: 183%; left: -41%; }
+}
+
+@media (max-width: 48rem) {
+  .planet-stage::after,
+  .star-stage::after { inset: auto 12% 7%; }
+  .planet-viewer-overlay .planet-stage::after { inset: 6% 5.5% 5.5%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-planet::before,
+  .planet-surface--one,
+  .planet-surface--two,
+  .planet-surface--three,
+  .planet-clouds,
+  .hero-visual::before,
+  .hero-visual::after {
+    animation: none !important;
+  }
+}

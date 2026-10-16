@@ -1,0 +1,306 @@
+/* Phase 5.8.1 — verified repair pass based on screenshots/video */
+
+/* HOME: one continuous scene, no independent right-hand panel */
+.home-page--three-proof .hero {
+  position: relative;
+  grid-template-columns: minmax(0, .9fr) minmax(30rem, 1.1fr);
+  gap: clamp(.5rem, 1.5vw, 1.5rem);
+  min-height: clamp(42rem, 88vh, 58rem);
+  padding: calc(var(--header-height) + 1.5rem) clamp(1.1rem, 3vw, 2.5rem) 2.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, .10);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 73% 46%, rgba(113, 146, 217, .11), transparent 24rem),
+    radial-gradient(circle at 15% 24%, rgba(38, 149, 190, .10), transparent 23rem),
+    radial-gradient(circle at 46% 88%, rgba(114, 61, 164, .08), transparent 26rem),
+    linear-gradient(145deg, rgba(3, 9, 24, .58), rgba(5, 9, 25, .31) 54%, rgba(3, 7, 20, .46));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .025), 0 2rem 5rem rgba(0, 0, 0, .18);
+}
+
+.home-page--three-proof .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(2, 7, 20, .18), transparent 45%, rgba(2, 5, 16, .05)),
+    radial-gradient(circle at 74% 45%, rgba(255, 231, 188, .035), transparent 16rem);
+}
+
+.home-page--three-proof .hero-copy,
+.home-page--three-proof .hero-visual--three {
+  position: relative;
+  z-index: 1;
+}
+
+.home-page--three-proof .hero-copy {
+  padding-left: clamp(.4rem, 1.4vw, 1.15rem);
+}
+
+.home-page--three-proof .hero-visual,
+.home-page--three-proof .hero-visual--three {
+  min-height: clamp(34rem, 46vw, 47rem);
+  overflow: visible;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.home-page--three-proof .hero-visual--three::before,
+.home-page--three-proof .hero-visual--three::after {
+  display: none !important;
+}
+
+.home-page--three-proof .hero-three-canvas {
+  inset: -4% -6% -4% -8%;
+  width: 114%;
+  height: 108%;
+  opacity: 1;
+  -webkit-mask-image: radial-gradient(ellipse 72% 82% at 58% 50%, #000 0 66%, rgba(0,0,0,.92) 76%, rgba(0,0,0,.45) 90%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 82% at 58% 50%, #000 0 66%, rgba(0,0,0,.92) 76%, rgba(0,0,0,.45) 90%, transparent 100%);
+}
+
+.home-page--three-proof .cosmic-quote-mini {
+  right: 1rem;
+  bottom: 1.1rem;
+  border-color: rgba(148, 163, 184, .20);
+  background: rgba(4, 9, 26, .78);
+  box-shadow: 0 1rem 2.6rem rgba(0, 0, 0, .28), inset 0 1px rgba(255, 255, 255, .035);
+}
+
+/* APPEARANCE: make each backdrop unmistakable */
+.theme-scene {
+  z-index: 1;
+}
+
+.star-layer { z-index: 2; }
+.nebula { z-index: 0; }
+.cursor-aura { z-index: 3; }
+
+html[data-backdrop-theme="galaxy"] .cosmic-backdrop {
+  background:
+    radial-gradient(ellipse at 73% 18%, rgba(144, 74, 255, .36), transparent 32rem),
+    radial-gradient(ellipse at 19% 34%, rgba(34, 122, 255, .23), transparent 28rem),
+    radial-gradient(ellipse at 50% 82%, rgba(205, 77, 240, .13), transparent 36rem),
+    linear-gradient(180deg, #020512, #07091d 48%, #02040d);
+}
+
+html[data-backdrop-theme="solar"] .theme-scene--solar {
+  opacity: .98;
+  filter: saturate(1.08);
+}
+html[data-backdrop-theme="solar"] .theme-scene--solar .theme-sun {
+  width: clamp(14rem, 22vw, 23rem);
+  left: 3%;
+  top: 7%;
+  box-shadow: 0 0 4rem rgba(255, 214, 77, .5), 0 0 11rem rgba(248, 118, 25, .28);
+}
+html[data-backdrop-theme="solar"] .theme-scene--solar .theme-orbit {
+  border-color: rgba(255, 237, 188, .17);
+  box-shadow: 0 0 1.2rem rgba(255, 194, 98, .04);
+}
+html[data-backdrop-theme="solar"] .theme-scene--solar .theme-body {
+  opacity: .95;
+}
+html[data-backdrop-theme="solar"] .home-page--three-proof .hero {
+  background:
+    radial-gradient(circle at 7% 18%, rgba(251, 191, 36, .16), transparent 23rem),
+    radial-gradient(circle at 24% 24%, rgba(249, 115, 22, .10), transparent 26rem),
+    radial-gradient(circle at 77% 46%, rgba(72, 126, 210, .08), transparent 25rem),
+    linear-gradient(145deg, rgba(19, 12, 7, .40), rgba(5, 10, 23, .32) 42%, rgba(2, 6, 18, .42));
+}
+
+html[data-backdrop-theme="solar"] .home-page--three-proof .hero::before {
+  background:
+    linear-gradient(90deg, rgba(18, 12, 6, .10), transparent 44%, rgba(2, 5, 16, .05)),
+    radial-gradient(circle at 9% 21%, rgba(255, 228, 161, .07), transparent 14rem),
+    radial-gradient(circle at 72% 45%, rgba(255, 231, 188, .035), transparent 16rem);
+}
+
+html[data-backdrop-theme="blackhole"] .theme-scene--blackhole { opacity: 1; }
+html[data-backdrop-theme="blackhole"] .theme-blackhole-core {
+  width: clamp(12rem, 18vw, 19rem);
+  left: 52%;
+  top: 13%;
+  box-shadow: 0 0 2rem #000, 0 0 5rem rgba(0, 0, 0, .85);
+}
+html[data-backdrop-theme="blackhole"] .theme-blackhole-disk {
+  width: clamp(32rem, 52vw, 58rem);
+  height: clamp(9rem, 15vw, 17rem);
+  left: 31%;
+  top: 18%;
+  opacity: .92;
+  background:
+    radial-gradient(ellipse, transparent 0 24%, rgba(255, 231, 171, .85) 29%, rgba(255, 136, 50, .68) 36%, rgba(141, 74, 255, .28) 48%, transparent 64%);
+  filter: blur(6px) saturate(1.25);
+}
+html[data-backdrop-theme="blackhole"] .theme-blackhole-lens {
+  width: clamp(35rem, 56vw, 62rem);
+  height: clamp(13rem, 19vw, 21rem);
+  left: 29%;
+  top: 15%;
+  border-color: rgba(255, 190, 108, .16);
+}
+html[data-backdrop-theme="blackhole"] .home-page--three-proof .hero {
+  background:
+    radial-gradient(circle at 58% 23%, rgba(0,0,0,.58), transparent 22rem),
+    radial-gradient(circle at 76% 44%, rgba(124, 58, 237, .08), transparent 26rem),
+    linear-gradient(145deg, rgba(1, 2, 8, .68), rgba(4, 7, 18, .44));
+}
+
+html[data-backdrop-theme="nebula"] .theme-scene--nebula { opacity: 1; }
+html[data-backdrop-theme="nebula"] .theme-nebula-cloud {
+  opacity: .95;
+  filter: blur(36px) saturate(1.3);
+}
+html[data-backdrop-theme="nebula"] .theme-nebula-cloud--one {
+  width: 46rem; height: 25rem; left: 1%; top: 7%;
+}
+html[data-backdrop-theme="nebula"] .theme-nebula-cloud--two {
+  width: 52rem; height: 28rem; left: 38%; top: 6%;
+}
+html[data-backdrop-theme="nebula"] .theme-nebula-cloud--three {
+  width: 48rem; height: 25rem; left: 23%; top: 40%;
+}
+html[data-backdrop-theme="nebula"] .home-page--three-proof .hero {
+  background:
+    radial-gradient(circle at 20% 23%, rgba(52, 211, 153, .10), transparent 22rem),
+    radial-gradient(circle at 72% 25%, rgba(217, 70, 239, .12), transparent 26rem),
+    radial-gradient(circle at 55% 78%, rgba(56, 189, 248, .09), transparent 28rem),
+    linear-gradient(145deg, rgba(4, 8, 22, .47), rgba(4, 8, 20, .28));
+}
+
+/* INTERACTION: whole card really opens the viewer */
+.planet-card[data-planet-id],
+.celestial-card[data-planet-id],
+.celestial-card[data-star-id] {
+  cursor: pointer !important;
+}
+
+.planet-card[data-planet-id]:focus-visible,
+.celestial-card[data-planet-id]:focus-visible,
+.celestial-card[data-star-id]:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent, var(--blue-light)) 75%, white);
+  outline-offset: 4px;
+}
+
+/* HOVER: no white wash, only subtle scale and border */
+.celestial-card,
+.home-page--phase56 .planet-card {
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.celestial-card:hover,
+.home-page--phase56 .planet-card:hover {
+  transform: translateY(-4px) scale(1.012) !important;
+  border-color: color-mix(in srgb, var(--accent, #94a3b8) 32%, rgba(148,163,184,.18)) !important;
+  box-shadow: 0 1.55rem 3.3rem rgba(0,0,0,.28) !important;
+}
+
+.celestial-card::before,
+.celestial-card::after,
+.home-page--phase56 .planet-card::before,
+.home-page--phase56 .planet-card::after {
+  transition: opacity 220ms ease !important;
+}
+
+.celestial-card:hover::before,
+.celestial-card:hover::after,
+.home-page--phase56 .planet-card:hover::before,
+.home-page--phase56 .planet-card:hover::after {
+  opacity: .12 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.celestial-card:hover .planet-thumbnail,
+.celestial-card:hover .star-orb,
+.home-page--phase56 .planet-card:hover .planet-thumbnail {
+  transform: scale(1.035) !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.celestial-card:hover .planet-thumbnail::before,
+.celestial-card:hover .planet-thumbnail::after,
+.celestial-card:hover .star-orb::before,
+.celestial-card:hover .star-orb::after {
+  opacity: .16 !important;
+  filter: none !important;
+}
+
+/* VIEWER: larger, clearer and functional */
+.planet-viewer-shell,
+.star-viewer-shell {
+  width: min(98vw, 100rem);
+  height: min(95vh, 62rem);
+}
+
+.planet-viewer-layout,
+.star-viewer-layout {
+  grid-template-columns: minmax(0, 1.18fr) minmax(25rem, .82fr);
+}
+
+.planet-stage,
+.star-stage {
+  min-height: 35rem;
+}
+
+.planet-canvas,
+.earth-three-canvas {
+  transform: scale(1.04);
+  transform-origin: center;
+}
+
+@media (max-width: 64rem) {
+  .home-page--three-proof .hero {
+    grid-template-columns: 1fr;
+    padding-inline: 1rem;
+  }
+
+  .home-page--three-proof .hero-visual,
+  .home-page--three-proof .hero-visual--three {
+    min-height: 31rem;
+  }
+
+  .home-page--three-proof .hero-three-canvas {
+    inset: -4%;
+    width: 108%;
+    height: 108%;
+    -webkit-mask-image: radial-gradient(ellipse 78% 82% at 50% 48%, #000 0 66%, rgba(0,0,0,.9) 78%, transparent 100%);
+    mask-image: radial-gradient(ellipse 78% 82% at 50% 48%, #000 0 66%, rgba(0,0,0,.9) 78%, transparent 100%);
+  }
+
+  .planet-viewer-layout,
+  .star-viewer-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Phase 5.8.2 — targeted polish: softer detailed lighting + richer hero rings */
+.planet-stage-glow {
+  width: min(54%, 30rem);
+  opacity: .42;
+  filter: blur(22px) saturate(1.02);
+}
+
+.planet-viewer-overlay[data-planet="saturn"] .planet-stage-glow,
+.planet-viewer-overlay[data-planet="jupiter"] .planet-stage-glow,
+.planet-viewer-overlay[data-planet="uranus"] .planet-stage-glow {
+  opacity: .26;
+}
+
+.planet-canvas,
+.earth-three-canvas {
+  filter:
+    drop-shadow(0 0 1rem color-mix(in srgb, var(--planet-accent) 14%, transparent))
+    drop-shadow(0 0 2.2rem rgba(0, 0, 0, .12));
+}
+
+.planet-stage::before { opacity: .55; }
+.planet-stage::after { opacity: .45; }

@@ -1,0 +1,314 @@
+[
+  {
+    "id": "section-home",
+    "category": "section",
+    "names": {
+      "es": "Umbral de Cosmic Explorer",
+      "en": "Cosmic Explorer Threshold"
+    }
+  },
+  {
+    "id": "section-universe",
+    "category": "section",
+    "names": {
+      "es": "Horizonte profundo",
+      "en": "Deep Horizon"
+    }
+  },
+  {
+    "id": "section-gallery",
+    "category": "section",
+    "names": {
+      "es": "Archivo de fenómenos",
+      "en": "Phenomena Archive"
+    }
+  },
+  {
+    "id": "section-favorites",
+    "category": "section",
+    "names": {
+      "es": "Colección estelar",
+      "en": "Stellar Collection"
+    }
+  },
+  {
+    "id": "section-music-space",
+    "category": "section",
+    "names": {
+      "es": "Antesala musical",
+      "en": "Music Antechamber"
+    }
+  },
+  {
+    "id": "section-cosmic-defender",
+    "category": "section",
+    "names": {
+      "es": "Sala de lanzamiento",
+      "en": "Launch Bay"
+    }
+  },
+  {
+    "id": "section-appearance",
+    "category": "section",
+    "names": {
+      "es": "Laboratorio visual",
+      "en": "Visual Laboratory"
+    }
+  },
+  {
+    "id": "planet-mercury",
+    "category": "planet",
+    "names": {
+      "es": "Mercurio · Hierro solar",
+      "en": "Mercury · Solar Iron"
+    }
+  },
+  {
+    "id": "planet-venus",
+    "category": "planet",
+    "names": {
+      "es": "Venus · Velo de presión",
+      "en": "Venus · Pressure Veil"
+    }
+  },
+  {
+    "id": "planet-earth",
+    "category": "planet",
+    "names": {
+      "es": "Tierra · Mundo vivo",
+      "en": "Earth · Living World"
+    }
+  },
+  {
+    "id": "planet-mars",
+    "category": "planet",
+    "names": {
+      "es": "Marte · Viento rojo",
+      "en": "Mars · Red Wind"
+    }
+  },
+  {
+    "id": "planet-jupiter",
+    "category": "planet",
+    "names": {
+      "es": "Júpiter · Núcleo de tormenta",
+      "en": "Jupiter · Storm Core"
+    }
+  },
+  {
+    "id": "planet-saturn",
+    "category": "planet",
+    "names": {
+      "es": "Saturno · Resonancia orbital",
+      "en": "Saturn · Orbital Resonance"
+    }
+  },
+  {
+    "id": "planet-uranus",
+    "category": "planet",
+    "names": {
+      "es": "Urano · Cristal inclinado",
+      "en": "Uranus · Tilted Crystal"
+    }
+  },
+  {
+    "id": "planet-neptune",
+    "category": "planet",
+    "names": {
+      "es": "Neptuno · Viento oscuro",
+      "en": "Neptune · Dark Wind"
+    }
+  },
+  {
+    "id": "star-sun",
+    "category": "star",
+    "names": {
+      "es": "Sol · Firma estelar",
+      "en": "Sun · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-sirius",
+    "category": "star",
+    "names": {
+      "es": "Sirio · Firma estelar",
+      "en": "Sirius · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-vega",
+    "category": "star",
+    "names": {
+      "es": "Vega · Firma estelar",
+      "en": "Vega · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-betelgeuse",
+    "category": "star",
+    "names": {
+      "es": "Betelgeuse · Firma estelar",
+      "en": "Betelgeuse · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-rigel",
+    "category": "star",
+    "names": {
+      "es": "Rigel · Firma estelar",
+      "en": "Rigel · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-polaris",
+    "category": "star",
+    "names": {
+      "es": "Polaris · Firma estelar",
+      "en": "Polaris · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-proxima-centauri",
+    "category": "star",
+    "names": {
+      "es": "Próxima Centauri · Firma estelar",
+      "en": "Proxima Centauri · Stellar Signature"
+    }
+  },
+  {
+    "id": "star-antares",
+    "category": "star",
+    "names": {
+      "es": "Antares · Firma estelar",
+      "en": "Antares · Stellar Signature"
+    }
+  },
+  {
+    "id": "gallery-black-hole-accretion-disk",
+    "category": "gallery",
+    "names": {
+      "es": "Agujero negro · Disco de acreción",
+      "en": "Black Hole · Accretion Disk"
+    }
+  },
+  {
+    "id": "gallery-quasar",
+    "category": "gallery",
+    "names": {
+      "es": "Cuásar · Faro energético",
+      "en": "Quasar · Energetic Beacon"
+    }
+  },
+  {
+    "id": "gallery-blazar",
+    "category": "gallery",
+    "names": {
+      "es": "Blázar · Chorro frontal",
+      "en": "Blazar · Forward Jet"
+    }
+  },
+  {
+    "id": "gallery-tidal-disruption-event",
+    "category": "gallery",
+    "names": {
+      "es": "Disrupción de marea",
+      "en": "Tidal Disruption Event"
+    }
+  },
+  {
+    "id": "gallery-pulsar",
+    "category": "gallery",
+    "names": {
+      "es": "Púlsar · Faro regular",
+      "en": "Pulsar · Regular Beacon"
+    }
+  },
+  {
+    "id": "gallery-magnetar",
+    "category": "gallery",
+    "names": {
+      "es": "Magnetar · Pulso magnético",
+      "en": "Magnetar · Magnetic Pulse"
+    }
+  },
+  {
+    "id": "gallery-supernova",
+    "category": "gallery",
+    "names": {
+      "es": "Supernova · Expansión",
+      "en": "Supernova · Expansion"
+    }
+  },
+  {
+    "id": "gallery-supernova-remnant",
+    "category": "gallery",
+    "names": {
+      "es": "Remanente · Eco expansivo",
+      "en": "Remnant · Expanding Echo"
+    }
+  },
+  {
+    "id": "gallery-neutron-star-merger-kilonova",
+    "category": "gallery",
+    "names": {
+      "es": "Kilonova · Choque denso",
+      "en": "Kilonova · Dense Collision"
+    }
+  },
+  {
+    "id": "gallery-protostar-protoplanetary-disk",
+    "category": "gallery",
+    "names": {
+      "es": "Protoestrella · Nacimiento orbital",
+      "en": "Protostar · Orbital Birth"
+    }
+  },
+  {
+    "id": "gallery-planetary-nebula",
+    "category": "gallery",
+    "names": {
+      "es": "Nebulosa planetaria · Capas etéreas",
+      "en": "Planetary Nebula · Ethereal Layers"
+    }
+  },
+  {
+    "id": "gallery-cosmic-web",
+    "category": "gallery",
+    "names": {
+      "es": "Red cósmica · Nodos lentos",
+      "en": "Cosmic Web · Slow Nodes"
+    }
+  },
+  {
+    "id": "gallery-wolf-rayet-star",
+    "category": "gallery",
+    "names": {
+      "es": "Wolf–Rayet · Viento estelar",
+      "en": "Wolf–Rayet · Stellar Wind"
+    }
+  },
+  {
+    "id": "gallery-vampire-star-system",
+    "category": "gallery",
+    "names": {
+      "es": "Sistema vampiro · Transferencia dual",
+      "en": "Vampire System · Dual Transfer"
+    }
+  },
+  {
+    "id": "gallery-herbig-haro-stellar-jet",
+    "category": "gallery",
+    "names": {
+      "es": "Herbig–Haro · Chorro joven",
+      "en": "Herbig–Haro · Young Jet"
+    }
+  },
+  {
+    "id": "gallery-gamma-ray-burst",
+    "category": "gallery",
+    "names": {
+      "es": "Estallido gamma · Pulso breve",
+      "en": "Gamma-Ray Burst · Brief Pulse"
+    }
+  }
+]

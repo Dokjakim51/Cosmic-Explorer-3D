@@ -1,0 +1,418 @@
+[
+  {
+    "id": "mercury",
+    "name": "Mercury",
+    "slug": "mercury",
+    "category": "planet",
+    "type": "Terrestrial planet",
+    "orderFromSun": 1,
+    "shortDescription": "The swift, cratered world closest to the Sun.",
+    "accentColor": "#a8b0bd",
+    "available": true,
+    "viewer": {
+      "styleIndex": 0,
+      "rotationSpeed": 0.13,
+      "cameraDistance": 3.08,
+      "axialTilt": 0.034,
+      "hasRings": false,
+      "atmosphereOpacity": 0.025,
+      "atmosphereScale": 1.018,
+      "initialPitch": -0.14,
+      "initialYaw": 0.37
+    },
+    "facts": {
+      "distanceFromSun": "57.9 million km",
+      "diameter": "4,880 km",
+      "mass": "3.30 × 10²³ kg",
+      "gravity": "3.7 m/s²",
+      "temperature": "About 167 °C mean; roughly −180 to 430 °C",
+      "dayLength": "58.6 Earth days per rotation",
+      "yearLength": "88 Earth days",
+      "moons": 0,
+      "composition": "A large iron-rich core beneath a rocky silicate mantle and crust.",
+      "features": [
+        "The smallest planet in the Solar System.",
+        "Its surface preserves impact craters, scarps, and ancient volcanic plains.",
+        "Water ice exists inside permanently shadowed polar craters."
+      ],
+      "curiosities": [
+        "A solar day on Mercury lasts about 176 Earth days.",
+        "Despite being closest to the Sun, it is not the hottest planet.",
+        "Mercury has only a very thin exosphere rather than a substantial atmosphere."
+      ],
+      "discovery": "Known since ancient times because it can be seen without a telescope.",
+      "earthComparison": "Mercury is about 38% of Earth's diameter and has about 38% of Earth's surface gravity."
+    },
+    "source": {
+      "label": "NASA Science — Mercury Facts",
+      "url": "https://science.nasa.gov/mercury/facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "venus",
+    "name": "Venus",
+    "slug": "venus",
+    "category": "planet",
+    "type": "Terrestrial planet",
+    "orderFromSun": 2,
+    "shortDescription": "A brilliant, cloud-wrapped world with a furnace-hot surface.",
+    "accentColor": "#f5b85c",
+    "available": true,
+    "viewer": {
+      "styleIndex": 1,
+      "rotationSpeed": -0.035,
+      "cameraDistance": 3.1,
+      "axialTilt": 3.095,
+      "hasRings": false,
+      "atmosphereOpacity": 0.22,
+      "atmosphereScale": 1.045,
+      "initialPitch": -0.16,
+      "initialYaw": 0.36
+    },
+    "facts": {
+      "distanceFromSun": "108.2 million km",
+      "diameter": "12,104 km",
+      "mass": "4.87 × 10²⁴ kg",
+      "gravity": "8.87 m/s²",
+      "temperature": "About 464 °C mean surface temperature",
+      "dayLength": "243 Earth days per rotation (retrograde)",
+      "yearLength": "224.7 Earth days",
+      "moons": 0,
+      "composition": "A rocky interior beneath a thick carbon-dioxide atmosphere and sulfuric-acid clouds.",
+      "features": [
+        "The hottest planetary surface in the Solar System.",
+        "Its atmosphere creates a runaway greenhouse effect.",
+        "Most of the surface consists of volcanic plains and deformed highlands."
+      ],
+      "curiosities": [
+        "Venus rotates in the opposite direction from most planets.",
+        "A day on Venus is longer than its year.",
+        "It is often the brightest planet visible from Earth."
+      ],
+      "discovery": "Known since ancient times and historically called the morning or evening star.",
+      "earthComparison": "Venus is about 95% of Earth's diameter and has about 90% of Earth's surface gravity."
+    },
+    "source": {
+      "label": "NASA Science — Venus Facts",
+      "url": "https://science.nasa.gov/venus/venus-facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "earth",
+    "name": "Earth",
+    "slug": "earth",
+    "category": "planet",
+    "type": "Terrestrial planet",
+    "orderFromSun": 3,
+    "shortDescription": "Our ocean world and the only known home of life.",
+    "accentColor": "#4f8cff",
+    "available": true,
+    "viewer": {
+      "styleIndex": 2,
+      "rotationSpeed": 0.16,
+      "cameraDistance": 3.15,
+      "axialTilt": 0.408,
+      "hasRings": false,
+      "atmosphereOpacity": 0.24,
+      "atmosphereScale": 1.038,
+      "initialPitch": -0.2,
+      "initialYaw": 0.34
+    },
+    "facts": {
+      "distanceFromSun": "149.6 million km (1 AU)",
+      "diameter": "12,756 km equatorial",
+      "mass": "5.97 × 10²⁴ kg",
+      "gravity": "9.81 m/s²",
+      "temperature": "About 15 °C mean surface temperature",
+      "dayLength": "23.9 hours",
+      "yearLength": "365.25 days",
+      "moons": 1,
+      "composition": "An iron-nickel core, rocky mantle and crust, liquid-water oceans, and a nitrogen-oxygen atmosphere.",
+      "features": [
+        "About 71% of the surface is covered by water.",
+        "Active plate tectonics continually reshapes the crust.",
+        "Its atmosphere and magnetic field help protect life."
+      ],
+      "curiosities": [
+        "Earth is the largest terrestrial planet.",
+        "It is the only world currently known to host life.",
+        "The Moon helps stabilize Earth's axial tilt."
+      ],
+      "discovery": "Earth was not discovered as a planet in the modern sense; its planetary nature became clear through centuries of astronomy.",
+      "earthComparison": "Earth is the reference used for comparisons throughout this catalog."
+    },
+    "source": {
+      "label": "NASA Science — Earth Facts",
+      "url": "https://science.nasa.gov/earth/facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "mars",
+    "name": "Mars",
+    "slug": "mars",
+    "category": "planet",
+    "type": "Terrestrial planet",
+    "orderFromSun": 4,
+    "shortDescription": "The red frontier shaped by ancient water, volcanoes, and dust.",
+    "accentColor": "#ef684b",
+    "available": true,
+    "viewer": {
+      "styleIndex": 3,
+      "rotationSpeed": 0.15,
+      "cameraDistance": 3.08,
+      "axialTilt": 0.439,
+      "hasRings": false,
+      "atmosphereOpacity": 0.088,
+      "atmosphereScale": 1.024,
+      "initialPitch": -0.18,
+      "initialYaw": 0.39
+    },
+    "facts": {
+      "distanceFromSun": "228 million km",
+      "diameter": "6,779 km",
+      "mass": "6.42 × 10²³ kg",
+      "gravity": "3.71 m/s²",
+      "temperature": "About −65 °C mean surface temperature",
+      "dayLength": "24.6 hours (one sol)",
+      "yearLength": "687 Earth days",
+      "moons": 2,
+      "composition": "A rocky planet rich in iron minerals, with a thin atmosphere mostly made of carbon dioxide.",
+      "features": [
+        "Home to Olympus Mons, the largest volcano in the Solar System.",
+        "Valles Marineris forms a canyon system thousands of kilometers long.",
+        "Evidence shows that liquid water once flowed across its surface."
+      ],
+      "curiosities": [
+        "Mars has seasons, polar ice caps, dust storms, and weather.",
+        "Its two small moons are Phobos and Deimos.",
+        "Robotic missions have explored Mars more extensively than any planet beyond Earth."
+      ],
+      "discovery": "Known since ancient times; its reddish color associated it with war in many cultures.",
+      "earthComparison": "Mars is about half Earth's diameter and has roughly 38% of Earth's surface gravity."
+    },
+    "source": {
+      "label": "NASA Science — Mars Facts",
+      "url": "https://science.nasa.gov/mars/facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "jupiter",
+    "name": "Jupiter",
+    "slug": "jupiter",
+    "category": "planet",
+    "type": "Gas giant",
+    "orderFromSun": 5,
+    "shortDescription": "The enormous storm world that rules the outer Solar System.",
+    "accentColor": "#d8a77c",
+    "available": true,
+    "viewer": {
+      "styleIndex": 4,
+      "rotationSpeed": 0.24,
+      "cameraDistance": 3.12,
+      "axialTilt": 0.054,
+      "hasRings": false,
+      "atmosphereOpacity": 0.11,
+      "atmosphereScale": 1.027,
+      "initialPitch": -0.11,
+      "initialYaw": 0.34
+    },
+    "facts": {
+      "distanceFromSun": "778 million km",
+      "diameter": "139,822 km",
+      "mass": "1.90 × 10²⁷ kg",
+      "gravity": "24.79 m/s² at the cloud tops",
+      "temperature": "About −110 °C near the cloud tops",
+      "dayLength": "9.9 hours",
+      "yearLength": "About 11.86 Earth years",
+      "moons": 95,
+      "composition": "Mostly hydrogen and helium, with deep layers of liquid and metallic hydrogen and a diffuse heavy-element core.",
+      "features": [
+        "The largest planet in the Solar System.",
+        "The Great Red Spot is a giant long-lived storm.",
+        "Its powerful magnetic field creates an enormous magnetosphere."
+      ],
+      "curiosities": [
+        "Jupiter has the shortest day of any planet.",
+        "Its four largest moons are Io, Europa, Ganymede, and Callisto.",
+        "More than twice the mass of all other planets combined is concentrated in Jupiter."
+      ],
+      "discovery": "Known since ancient times; Galileo observed its four large moons in 1610.",
+      "earthComparison": "Jupiter is about 11 times wider and 318 times more massive than Earth."
+    },
+    "source": {
+      "label": "NASA Science — Jupiter Facts",
+      "url": "https://science.nasa.gov/jupiter/jupiter-facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "saturn",
+    "name": "Saturn",
+    "slug": "saturn",
+    "category": "planet",
+    "type": "Gas giant",
+    "orderFromSun": 6,
+    "shortDescription": "A pale giant encircled by the Solar System's most spectacular rings.",
+    "accentColor": "#f0cf88",
+    "available": true,
+    "viewer": {
+      "styleIndex": 5,
+      "rotationSpeed": 0.21,
+      "cameraDistance": 3.48,
+      "axialTilt": 0.466,
+      "hasRings": true,
+      "atmosphereOpacity": 0.082,
+      "atmosphereScale": 1.026,
+      "ringOpacity": 0.98,
+      "ringScale": 1.11,
+      "ringMotion": 0.62,
+      "initialPitch": 0.52,
+      "initialYaw": 0.24,
+      "initialRoll": -0.06,
+      "fallbackPitch": 24,
+      "fallbackYaw": 16
+    },
+    "facts": {
+      "distanceFromSun": "1.4 billion km",
+      "diameter": "About 120,500 km equatorial",
+      "mass": "5.68 × 10²⁶ kg",
+      "gravity": "10.44 m/s² at the cloud tops",
+      "temperature": "About −140 °C near the cloud tops",
+      "dayLength": "10.7 hours",
+      "yearLength": "About 29.4 Earth years",
+      "moons": 274,
+      "composition": "Mostly hydrogen and helium surrounding deeper liquid layers and a dense core.",
+      "features": [
+        "Its rings consist of countless pieces of ice, rock, and dust.",
+        "The main rings extend hundreds of thousands of kilometers but are remarkably thin.",
+        "Titan and Enceladus are among its most scientifically important moons."
+      ],
+      "curiosities": [
+        "Saturn is the least dense planet and has an average density lower than water.",
+        "As of March 2025, NASA listed 274 confirmed moons.",
+        "A hexagon-shaped jet stream surrounds Saturn's north pole."
+      ],
+      "discovery": "Known since ancient times; Galileo first observed its unusual appearance through a telescope in 1610.",
+      "earthComparison": "Saturn is about nine times wider and about 95 times more massive than Earth."
+    },
+    "source": {
+      "label": "NASA Science — Saturn Facts",
+      "url": "https://science.nasa.gov/saturn/facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "uranus",
+    "name": "Uranus",
+    "slug": "uranus",
+    "category": "planet",
+    "type": "Ice giant",
+    "orderFromSun": 7,
+    "shortDescription": "A blue-green ice giant that rolls around the Sun on its side.",
+    "accentColor": "#7ee7f2",
+    "available": true,
+    "viewer": {
+      "styleIndex": 6,
+      "rotationSpeed": -0.11,
+      "cameraDistance": 3.4,
+      "axialTilt": 1.706,
+      "hasRings": true,
+      "ringOpacity": 0.46,
+      "atmosphereOpacity": 0.15,
+      "atmosphereScale": 1.035,
+      "ringScale": 0.94,
+      "ringMotion": 0.42,
+      "initialPitch": -0.2,
+      "initialYaw": 0.29,
+      "initialRoll": -0.14,
+      "fallbackPitch": -14,
+      "fallbackYaw": 18,
+      "fallbackRoll": -8
+    },
+    "facts": {
+      "distanceFromSun": "2.9 billion km",
+      "diameter": "51,118 km",
+      "mass": "8.68 × 10²⁵ kg",
+      "gravity": "8.69 m/s²",
+      "temperature": "About −195 °C mean; minima near −224 °C",
+      "dayLength": "About 17 hours (retrograde)",
+      "yearLength": "About 84 Earth years",
+      "moons": 28,
+      "composition": "A hot dense fluid of water, methane, and ammonia above a rocky core, beneath a hydrogen-helium-methane atmosphere.",
+      "features": [
+        "Its axis is tilted about 98 degrees, producing extreme seasons.",
+        "Methane in the atmosphere gives the planet its blue-green color.",
+        "It has 13 known faint rings."
+      ],
+      "curiosities": [
+        "Each pole experiences roughly 21 years of continuous darkness during part of its orbit.",
+        "Uranus was the first planet discovered with a telescope.",
+        "Its magnetic field is strongly tilted and offset from the planet's center."
+      ],
+      "discovery": "William Herschel discovered Uranus in 1781, though it had previously been mistaken for a star.",
+      "earthComparison": "Uranus is about four times wider and about 14.5 times more massive than Earth."
+    },
+    "source": {
+      "label": "NASA Science — Uranus Facts",
+      "url": "https://science.nasa.gov/uranus/facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "neptune",
+    "name": "Neptune",
+    "slug": "neptune",
+    "category": "planet",
+    "type": "Ice giant",
+    "orderFromSun": 8,
+    "shortDescription": "A distant cobalt world swept by the fastest planetary winds.",
+    "accentColor": "#3973ff",
+    "available": true,
+    "viewer": {
+      "styleIndex": 7,
+      "rotationSpeed": 0.14,
+      "cameraDistance": 3.18,
+      "axialTilt": 0.489,
+      "hasRings": true,
+      "atmosphereOpacity": 0.17,
+      "atmosphereScale": 1.036,
+      "ringOpacity": 0.18,
+      "ringScale": 0.88,
+      "ringMotion": 0.35,
+      "initialPitch": -0.15,
+      "initialYaw": 0.35
+    },
+    "facts": {
+      "distanceFromSun": "4.5 billion km",
+      "diameter": "49,528 km",
+      "mass": "1.02 × 10²⁶ kg",
+      "gravity": "11.15 m/s²",
+      "temperature": "About −200 °C mean near the cloud tops",
+      "dayLength": "About 16 hours",
+      "yearLength": "About 165 Earth years",
+      "moons": 16,
+      "composition": "A hot dense interior rich in water, methane, and ammonia, beneath a hydrogen-helium-methane atmosphere.",
+      "features": [
+        "The most distant major planet from the Sun.",
+        "Its winds can exceed 2,000 km/h.",
+        "It has faint rings and dark storm systems that appear and disappear."
+      ],
+      "curiosities": [
+        "Neptune was the first planet found through mathematical prediction.",
+        "It completed its first full orbit since discovery in 2011.",
+        "Triton, its largest moon, travels in a retrograde orbit."
+      ],
+      "discovery": "Johann Gottfried Galle observed Neptune in 1846 near the position predicted by Urbain Le Verrier.",
+      "earthComparison": "Neptune is about four times wider and about 17 times more massive than Earth."
+    },
+    "source": {
+      "label": "NASA Science — Neptune Facts",
+      "url": "https://science.nasa.gov/neptune/neptune-facts/",
+      "accessed": "2026-07-30"
+    }
+  }
+]

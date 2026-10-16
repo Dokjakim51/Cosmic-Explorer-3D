@@ -1,0 +1,363 @@
+/* Phase 3.5 — free planetary rotation, synchronized rings, and unique stars */
+
+/* Planet interaction polish */
+.planet-canvas,
+.planet-fallback {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.planet-fallback {
+  cursor: grab;
+  touch-action: none;
+  perspective: 900px;
+}
+
+.planet-fallback.is-dragging { cursor: grabbing; }
+
+.planet-fallback .planet-thumbnail {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: filter .25s ease;
+}
+
+.planet-fallback.is-dragging .planet-thumbnail {
+  filter: brightness(1.08) saturate(1.08);
+}
+
+.planet-stage-hint {
+  max-width: calc(100% - 10rem);
+  text-align: center;
+}
+
+/* Thumbnail rings now support both ringed planets and remain attached to the orb. */
+.planet-thumbnail-ring {
+  pointer-events: none;
+  transform-origin: 50% 50%;
+}
+
+.planet-thumbnail--saturn .planet-thumbnail-ring,
+.planet-thumbnail--uranus .planet-thumbnail-ring {
+  display: block;
+}
+
+.planet-thumbnail--saturn .planet-thumbnail-ring {
+  left: -43%;
+  top: 39%;
+  width: 186%;
+  height: 23%;
+  border-width: .38rem;
+  border-color: rgba(255,240,190,.83);
+  background: repeating-linear-gradient(90deg, transparent 0 9%, rgba(255,255,255,.10) 10% 11%, transparent 12% 20%);
+  transform: rotate(-13deg) rotateX(68deg);
+  box-shadow: 0 0 .85rem rgba(254,243,199,.3), inset 0 0 .45rem rgba(255,255,255,.2);
+}
+
+.planet-thumbnail--uranus .planet-thumbnail-ring {
+  left: -23%;
+  top: 43%;
+  width: 146%;
+  height: 13%;
+  border-width: .16rem;
+  border-color: rgba(165,243,252,.53);
+  transform: rotate(77deg) rotateX(71deg);
+  box-shadow: 0 0 .55rem rgba(103,232,249,.26);
+}
+
+.planet-thumbnail--uranus .planet-thumbnail-ring::after,
+.planet-thumbnail--saturn .planet-thumbnail-ring::after {
+  content: "";
+  position: absolute;
+  inset: -.7rem -.3rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: .36;
+}
+
+/* Card stars: shared structure */
+.star-orb {
+  --star-axis-x: 1;
+  --star-axis-y: 1;
+  --star-card-scale: 1;
+  --star-ray-strength: .48;
+  transform-origin: 50% 50%;
+  animation-name: star-breathe-variant;
+  isolation: isolate;
+}
+
+.star-orb > span {
+  position: absolute;
+  pointer-events: none;
+}
+
+.star-orb > .star-orb-detail {
+  inset: 7%;
+  border-radius: inherit;
+  background:
+    repeating-radial-gradient(circle at 31% 28%, rgba(255,255,255,.18) 0 1px, transparent 1px 8px),
+    conic-gradient(from 10deg, transparent, rgba(255,255,255,.22), transparent 24%, rgba(255,255,255,.10), transparent 54%, rgba(255,255,255,.18), transparent 76%);
+  mix-blend-mode: overlay;
+  opacity: .48;
+  animation: star-card-surface 15s linear infinite;
+}
+
+.star-orb > .star-orb-detail::before,
+.star-orb > .star-orb-detail::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.star-orb > .star-orb-detail::before {
+  left: 50%;
+  top: 50%;
+  width: 190%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 80%, white), transparent);
+  opacity: var(--star-ray-strength);
+  transform: translate(-50%,-50%);
+  filter: blur(.55px);
+}
+
+.star-orb > .star-orb-detail::after {
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 190%;
+  background: linear-gradient(transparent, color-mix(in srgb, var(--accent) 80%, white), transparent);
+  opacity: var(--star-ray-strength);
+  transform: translate(-50%,-50%);
+  filter: blur(.55px);
+}
+
+.star-orb > .star-orb-companion {
+  inset: auto;
+  right: -13%;
+  top: 17%;
+  width: 12%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 .65rem white, 0 0 1.3rem var(--accent);
+  opacity: 0;
+}
+
+/* Individually recognizable star cards */
+.star-orb--sun {
+  --star-ray-strength: .22;
+  background: radial-gradient(circle at 38% 32%, #fff9d6 0 4%, #fde68a 14%, #f59e0b 43%, #b45309 68%, transparent 73%);
+}
+.star-orb--sun .star-orb-detail { opacity: .82; background: repeating-radial-gradient(circle at 32% 28%, rgba(255,255,255,.22) 0 1px, transparent 1px 5px), conic-gradient(from 30deg, transparent, rgba(120,53,15,.45), transparent 18%, rgba(255,255,255,.24), transparent 43%, rgba(120,53,15,.36), transparent 70%); }
+.star-orb--sun .star-orb-detail::before { width: 31%; height: 13%; left: 34%; top: 62%; border-radius: 50%; background: rgba(74,20,4,.44); filter: blur(2px); opacity: 1; }
+.star-orb--sun .star-orb-detail::after { display: none; }
+
+.star-orb--sirius {
+  --star-ray-strength: .95;
+  background: radial-gradient(circle at 42% 35%, #fff 0 9%, #dbeafe 21%, #93c5fd 43%, #1d4ed8 65%, transparent 72%);
+  box-shadow: 0 0 2.3rem #dbeafe, 0 0 6rem rgba(147,197,253,.48);
+}
+.star-orb--sirius .star-orb-companion { opacity: .95; animation: star-card-companion 7s linear infinite; }
+
+.star-orb--vega {
+  --star-axis-x: 1.13;
+  --star-axis-y: .88;
+  --star-ray-strength: .30;
+  background: radial-gradient(ellipse at 50% 22%, #fff 0 8%, #e0f2fe 19%, #7dd3fc 44%, #4338ca 68%, transparent 74%);
+}
+.star-orb--vega::after { inset: -28% -48%; border-color: rgba(186,230,253,.24); transform: rotate(-14deg) scaleY(.31); opacity: .7; }
+.star-orb--vega .star-orb-detail { background: linear-gradient(180deg, rgba(255,255,255,.45), transparent 27%, transparent 70%, rgba(255,255,255,.25)); opacity: .7; }
+
+.star-orb--betelgeuse {
+  --star-card-scale: 1.13;
+  --star-ray-strength: .08;
+  border-radius: 46% 54% 51% 49% / 55% 43% 57% 45%;
+  background: radial-gradient(circle at 34% 29%, #fed7aa 0 4%, #fb7185 18%, #dc2626 45%, #7f1d1d 67%, transparent 74%);
+  box-shadow: 0 0 2.4rem #fb7185, 0 0 6rem rgba(220,38,38,.38);
+}
+.star-orb--betelgeuse .star-orb-detail { background: radial-gradient(ellipse 28% 19% at 33% 35%, rgba(255,220,170,.38), transparent 72%), radial-gradient(ellipse 34% 25% at 70% 57%, rgba(69,10,10,.5), transparent 70%), radial-gradient(ellipse 22% 18% at 44% 76%, rgba(255,150,100,.28), transparent 70%); opacity: 1; animation-duration: 9s; }
+.star-orb--betelgeuse .star-orb-detail::before,
+.star-orb--betelgeuse .star-orb-detail::after { display: none; }
+
+.star-orb--rigel {
+  --star-card-scale: 1.08;
+  --star-ray-strength: .9;
+  background: radial-gradient(circle at 38% 30%, #fff 0 10%, #bfdbfe 22%, #60a5fa 43%, #3730a3 66%, transparent 73%);
+  box-shadow: 0 0 2.7rem #bfdbfe, 0 0 7rem rgba(96,165,250,.5);
+}
+.star-orb--rigel .star-orb-detail { transform: rotate(45deg); }
+.star-orb--rigel .star-orb-companion { opacity: .76; right: -22%; top: 62%; width: 8%; box-shadow: 0 0 .5rem white, 0 0 1rem #60a5fa; }
+
+.star-orb--polaris {
+  --star-ray-strength: .58;
+  background: radial-gradient(circle at 39% 31%, #fff 0 8%, #fef3c7 20%, #facc15 44%, #a16207 68%, transparent 74%);
+}
+.star-orb--polaris::before { inset: -31%; border-width: 2px; animation: polaris-ring 3.97s ease-in-out infinite; }
+.star-orb--polaris::after { inset: -55%; animation: polaris-ring 3.97s ease-in-out infinite .7s; }
+
+.star-orb--proxima-centauri {
+  --star-card-scale: .72;
+  --star-ray-strength: .05;
+  background: radial-gradient(circle at 35% 29%, #fecaca 0 4%, #f87171 18%, #b91c1c 48%, #450a0a 70%, transparent 75%);
+  box-shadow: 0 0 1.4rem #f87171, 0 0 3.3rem rgba(239,68,68,.35);
+}
+.star-orb--proxima-centauri .star-orb-detail::before { left: -27%; top: 12%; width: 62%; height: 22%; border: .16rem solid #fca5a5; border-right-color: transparent; border-bottom-color: transparent; border-radius: 50%; background: none; opacity: .9; transform: rotate(-43deg); filter: drop-shadow(0 0 .5rem #f87171); animation: proxima-card-flare 2.8s ease-in-out infinite; }
+.star-orb--proxima-centauri .star-orb-detail::after { display: none; }
+
+.star-orb--antares {
+  --star-card-scale: 1.16;
+  --star-ray-strength: .10;
+  border-radius: 51% 49% 45% 55% / 47% 55% 45% 53%;
+  background: radial-gradient(circle at 34% 28%, #fed7aa 0 4%, #ef4444 20%, #b91c1c 48%, #450a0a 70%, transparent 75%);
+  box-shadow: 0 0 2.4rem #ef4444, 0 0 6.5rem rgba(185,28,28,.4);
+}
+.star-orb--antares .star-orb-detail { background: radial-gradient(ellipse 30% 22% at 30% 34%, rgba(255,210,160,.3), transparent 72%), radial-gradient(ellipse 36% 25% at 69% 62%, rgba(45,5,8,.52), transparent 72%); opacity: 1; }
+.star-orb--antares .star-orb-detail::before,
+.star-orb--antares .star-orb-detail::after { display: none; }
+.star-orb--antares .star-orb-companion { opacity: .95; right: -26%; top: 26%; width: 9%; background: #dbeafe; box-shadow: 0 0 .7rem #dbeafe, 0 0 1.5rem #60a5fa; }
+
+/* Viewer stars: new layers */
+.star-orbital-disk,
+.star-pulse-shell,
+.star-companion { position: absolute; pointer-events: none; opacity: 0; }
+
+.star-orbital-disk {
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  width: 172%;
+  height: 32%;
+  border: 1px solid color-mix(in srgb, var(--star-color) 48%, white);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, transparent 49%, color-mix(in srgb, var(--star-color) 14%, transparent) 51% 64%, transparent 68%);
+  transform: translate(-50%,-50%) rotate(-13deg);
+  filter: drop-shadow(0 0 .8rem var(--star-color));
+}
+
+.star-pulse-shell {
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  aspect-ratio: 1;
+  border: 2px solid color-mix(in srgb, var(--star-color) 44%, transparent);
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+.star-pulse-shell--one { width: 106%; }
+.star-pulse-shell--two { width: 136%; }
+
+.star-companion {
+  z-index: 6;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 .8rem white, 0 0 1.8rem var(--star-color);
+}
+
+.star-ray--diagonal-one,
+.star-ray--diagonal-two { width: 165%; height: 1px; opacity: 0; }
+.star-ray--diagonal-one { transform: translate(-50%,-50%) rotate(45deg); }
+.star-ray--diagonal-two { transform: translate(-50%,-50%) rotate(-45deg); }
+
+.star-core em { width: 24%; height: 11%; left: 57%; top: 62%; background: rgba(45,5,10,.38); filter: blur(7px); transform: rotate(17deg); }
+
+/* Sun */
+.star-viewer-overlay[data-star="sun"] .star-core { inset: 17%; background: radial-gradient(circle at 35% 28%, #fff8d0 0 4%, #fde68a 14%, #f59e0b 43%, #b45309 70%, #431407 100%); }
+.star-viewer-overlay[data-star="sun"] .star-core::after { opacity: .88; background: repeating-radial-gradient(circle at 31% 27%, rgba(255,255,255,.2) 0 1px, transparent 1px 5px); }
+.star-viewer-overlay[data-star="sun"] .star-core i { background: rgba(67,20,7,.55); filter: blur(5px); }
+.star-viewer-overlay[data-star="sun"] .star-ray { opacity: .24; }
+
+/* Sirius */
+.star-viewer-overlay[data-star="sirius"] .star-core { inset: 19%; background: radial-gradient(circle at 40% 31%, #fff 0 11%, #dbeafe 22%, #93c5fd 43%, #1d4ed8 71%, #11104b 100%); }
+.star-viewer-overlay[data-star="sirius"] .star-ray--horizontal,
+.star-viewer-overlay[data-star="sirius"] .star-ray--vertical { opacity: .95; width: 230%; }
+.star-viewer-overlay[data-star="sirius"] .star-ray--vertical { width: 2px; height: 230%; }
+.star-viewer-overlay[data-star="sirius"] .star-companion--primary { opacity: 1; right: -2%; top: 18%; animation: stellar-companion-orbit 8s linear infinite; }
+.star-viewer-overlay[data-star="sirius"] .star-flare { opacity: .18; }
+
+/* Vega */
+.star-viewer-overlay[data-star="vega"] .star-core { inset: 22% 12%; border-radius: 50%; background: radial-gradient(ellipse at 50% 14%, #fff 0 11%, #e0f2fe 24%, #7dd3fc 46%, #4338ca 75%, #111036 100%); }
+.star-viewer-overlay[data-star="vega"] .star-orbital-disk { opacity: .8; animation: vega-disk-drift 18s linear infinite; }
+.star-viewer-overlay[data-star="vega"] .star-core::after { background: linear-gradient(180deg, rgba(255,255,255,.4), transparent 26%, transparent 72%, rgba(255,255,255,.18)); opacity: .8; }
+.star-viewer-overlay[data-star="vega"] .star-flare { opacity: .12; }
+.star-viewer-overlay[data-star="vega"] .star-ray { opacity: .25; }
+
+/* Betelgeuse */
+.star-viewer-overlay[data-star="betelgeuse"] .star-core { inset: 10%; border-radius: 46% 54% 51% 49% / 55% 43% 57% 45%; background: radial-gradient(circle at 32% 27%, #fed7aa 0 4%, #fb7185 17%, #dc2626 43%, #7f1d1d 70%, #2b0508 100%); }
+.star-viewer-overlay[data-star="betelgeuse"] .star-core::after { opacity: 1; background: radial-gradient(ellipse 29% 20% at 28% 36%, rgba(255,215,170,.38), transparent 72%), radial-gradient(ellipse 36% 25% at 72% 56%, rgba(45,4,7,.54), transparent 70%), radial-gradient(ellipse 27% 19% at 48% 79%, rgba(255,135,105,.28), transparent 72%); }
+.star-viewer-overlay[data-star="betelgeuse"] .star-ray { opacity: .08; }
+.star-viewer-overlay[data-star="betelgeuse"] .star-corona--outer { width: 145%; height: 132%; }
+
+/* Rigel */
+.star-viewer-overlay[data-star="rigel"] .star-core { inset: 14%; background: radial-gradient(circle at 38% 28%, #fff 0 12%, #bfdbfe 24%, #60a5fa 44%, #3730a3 73%, #101034 100%); }
+.star-viewer-overlay[data-star="rigel"] .star-ray { opacity: .82; }
+.star-viewer-overlay[data-star="rigel"] .star-ray--diagonal-one,
+.star-viewer-overlay[data-star="rigel"] .star-ray--diagonal-two { opacity: .68; }
+.star-viewer-overlay[data-star="rigel"] .star-companion--primary { opacity: .72; right: -8%; bottom: 12%; width: 5%; }
+.star-viewer-overlay[data-star="rigel"] .star-companion--secondary { opacity: .5; left: -3%; top: 27%; width: 3.5%; }
+
+/* Polaris */
+.star-viewer-overlay[data-star="polaris"] .star-core { inset: 17%; background: radial-gradient(circle at 37% 28%, #fff 0 9%, #fef3c7 23%, #facc15 45%, #a16207 72%, #351604 100%); }
+.star-viewer-overlay[data-star="polaris"] .star-pulse-shell { opacity: .62; animation: polaris-viewer-shell 3.97s ease-out infinite; }
+.star-viewer-overlay[data-star="polaris"] .star-pulse-shell--two { animation-delay: 1.25s; }
+.star-viewer-overlay[data-star="polaris"] .star-ray { opacity: .48; }
+
+/* Proxima Centauri */
+.star-viewer-overlay[data-star="proxima-centauri"] .star-core { inset: 27%; background: radial-gradient(circle at 35% 28%, #fecaca 0 4%, #f87171 18%, #b91c1c 48%, #450a0a 75%, #180304 100%); }
+.star-viewer-overlay[data-star="proxima-centauri"] .star-corona--middle { width: 63%; height: 63%; }
+.star-viewer-overlay[data-star="proxima-centauri"] .star-corona--outer { width: 91%; height: 91%; }
+.star-viewer-overlay[data-star="proxima-centauri"] .star-ray { opacity: .07; }
+.star-viewer-overlay[data-star="proxima-centauri"] .star-flare { opacity: 1; width: 48%; height: 21%; animation-duration: 2.6s; }
+.star-viewer-overlay[data-star="proxima-centauri"] .star-core i,
+.star-viewer-overlay[data-star="proxima-centauri"] .star-core em { background: rgba(30,2,4,.68); }
+
+/* Antares */
+.star-viewer-overlay[data-star="antares"] .star-core { inset: 11%; border-radius: 51% 49% 45% 55% / 47% 55% 45% 53%; background: radial-gradient(circle at 32% 27%, #fed7aa 0 4%, #ef4444 18%, #b91c1c 48%, #450a0a 75%, #180304 100%); }
+.star-viewer-overlay[data-star="antares"] .star-core::after { opacity: .95; background: radial-gradient(ellipse 31% 22% at 30% 34%, rgba(255,210,160,.31), transparent 72%), radial-gradient(ellipse 38% 27% at 70% 63%, rgba(35,3,5,.56), transparent 70%); }
+.star-viewer-overlay[data-star="antares"] .star-ray { opacity: .08; }
+.star-viewer-overlay[data-star="antares"] .star-companion--primary { opacity: 1; right: -12%; top: 25%; background: #dbeafe; box-shadow: 0 0 .8rem #dbeafe, 0 0 1.8rem #60a5fa; }
+
+.star-pulse-paused .star-pulse-shell,
+.star-pulse-paused .star-orbital-disk,
+.star-pulse-paused .star-companion { animation-play-state: paused !important; }
+
+@keyframes star-breathe-variant {
+  0%,100% { transform: scale(var(--star-card-scale)) scaleX(var(--star-axis-x)) scaleY(var(--star-axis-y)); filter: brightness(.94); }
+  50% { transform: scale(calc(var(--star-card-scale) * 1.055)) scaleX(var(--star-axis-x)) scaleY(var(--star-axis-y)); filter: brightness(1.15); }
+}
+
+@keyframes star-card-surface { to { transform: rotate(360deg); } }
+@keyframes star-card-companion { to { transform: rotate(360deg) translateX(1.05rem) rotate(-360deg); } }
+@keyframes polaris-ring { 0%,100% { transform: scale(.86); opacity: .18; } 50% { transform: scale(1.12); opacity: .68; } }
+@keyframes proxima-card-flare { 0%,100% { opacity: .2; scale: .78; } 45% { opacity: 1; scale: 1.18; } }
+@keyframes stellar-companion-orbit { to { transform: rotate(360deg) translateX(2.2rem) rotate(-360deg); } }
+@keyframes vega-disk-drift { to { transform: translate(-50%,-50%) rotate(347deg); } }
+@keyframes polaris-viewer-shell { 0% { transform: translate(-50%,-50%) scale(.65); opacity: .7; } 100% { transform: translate(-50%,-50%) scale(1.35); opacity: 0; } }
+
+@media (max-width: 48rem) {
+  .planet-stage-hint { max-width: calc(100% - 7rem); font-size: .66rem; }
+  .star-orb--betelgeuse,
+  .star-orb--antares { --star-card-scale: 1.06; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-orb,
+  .star-orb-detail,
+  .star-orb-companion,
+  .star-pulse-shell,
+  .star-orbital-disk,
+  .star-companion { animation: none !important; }
+}
+
+/* Reset legacy generic span dimensions for the richer star markup. */
+.star-orb > .star-orb-detail,
+.star-orb > .star-orb-companion {
+  height: auto;
+  filter: none;
+}
+
+.star-core em {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}

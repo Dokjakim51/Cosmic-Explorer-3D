@@ -1,0 +1,36 @@
+{
+  "name": "cosmic-explorer-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive bilingual space exploration platform with 3D planets, stars, a cosmic gallery, local music player, contextual assistant and arcade game.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/dev-server.mjs --root dist --port 4173",
+    "check": "node scripts/check.mjs",
+    "preflight": "node scripts/production-preflight.mjs",
+    "preflight:production": "node scripts/production-preflight.mjs --require-three",
+    "validate:dist": "node scripts/validate-dist.mjs dist",
+    "test": "node --test tests/*.test.mjs",
+    "verify:static": "npm run check && npm test && npm run preflight",
+    "verify": "npm run check && npm test && npm run preflight:production && npm run build && npm run validate:dist"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cosmic-explorer",
+    "3d",
+    "threejs",
+    "astronomy",
+    "interactive",
+    "space",
+    "javascript",
+    "webgl"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "three": "0.185.1"
+  }
+}

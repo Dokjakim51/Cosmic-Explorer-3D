@@ -1,0 +1,378 @@
+[
+  {
+    "id": "sun",
+    "name": "Sun",
+    "slug": "sun",
+    "category": "star",
+    "constellation": "Solar System center",
+    "type": "Yellow dwarf · Main-sequence star",
+    "spectralType": "G2V",
+    "shortDescription": "Our home star, the source of nearly all energy that sustains life on Earth.",
+    "accentColor": "#fbbf24",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.075,
+      "pulseDuration": 4.8,
+      "coronaEnabled": true,
+      "visualScale": 1.0,
+      "surfacePattern": "granular"
+    },
+    "facts": {
+      "distance": "About 149.6 million km from Earth · 8 light-minutes 20 seconds",
+      "mass": "1 solar mass · 1.989 × 10³⁰ kg",
+      "radius": "About 700,000 km · 1 solar radius",
+      "temperature": "About 5,500 °C at the photosphere · 5,778 K",
+      "luminosity": "1 solar luminosity · about 3.83 × 10²⁶ W",
+      "color": "White from space; often appears yellow from Earth",
+      "age": "About 4.6 billion years",
+      "stage": "Main sequence · fusing hydrogen into helium",
+      "composition": "A sphere of plasma made mostly of hydrogen and helium, with smaller amounts of heavier elements.",
+      "features": [
+        "Its gravity holds the Solar System together.",
+        "Magnetic activity produces sunspots, flares, and coronal mass ejections.",
+        "The visible photosphere lies below the chromosphere and extremely hot corona."
+      ],
+      "curiosities": [
+        "The Sun contains more than 99.8% of the Solar System's mass.",
+        "Its core reaches roughly 15 million °C.",
+        "It is about halfway through its main-sequence lifetime."
+      ],
+      "sunComparison": "This is the reference star: stellar masses, radii, and luminosities are often measured in units of the Sun.",
+      "systemNote": "Eight planets, dwarf planets, moons, asteroids, comets, and other objects orbit the Sun."
+    },
+    "source": {
+      "label": "NASA Science — Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "sirius",
+    "name": "Sirius",
+    "slug": "sirius",
+    "category": "star",
+    "constellation": "Canis Major",
+    "type": "Blue-white main-sequence star",
+    "spectralType": "A1V",
+    "shortDescription": "The brightest star in Earth's night sky and the brilliant primary of a binary system.",
+    "accentColor": "#dbeafe",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.055,
+      "pulseDuration": 3.6,
+      "coronaEnabled": true,
+      "visualScale": 1.08,
+      "surfacePattern": "radiant"
+    },
+    "facts": {
+      "distance": "About 8.6 light-years",
+      "mass": "About 2.0 times the Sun",
+      "radius": "About 1.7 times the Sun",
+      "temperature": "About 10,000 K",
+      "luminosity": "About 25 times the Sun",
+      "color": "Blue-white",
+      "age": "Roughly 200–300 million years",
+      "stage": "Main sequence",
+      "composition": "Hot hydrogen-rich plasma, with energy produced through core hydrogen fusion.",
+      "features": [
+        "It is the brightest star visible in Earth's night sky.",
+        "Sirius A is orbited by Sirius B, a compact white dwarf.",
+        "The pair completes an orbit in roughly half a century."
+      ],
+      "curiosities": [
+        "Sirius is often called the Dog Star.",
+        "Its brightness comes from both its intrinsic power and its closeness to Earth.",
+        "Sirius B has almost the Sun's mass packed into an Earth-sized body."
+      ],
+      "sunComparison": "Sirius A is about twice as massive, almost twice as wide, and around 25 times as luminous as the Sun.",
+      "systemNote": "Sirius is a binary system composed of Sirius A and the white dwarf Sirius B."
+    },
+    "source": {
+      "label": "NASA Science — Astronomers Weigh the Dog Star's Companion",
+      "url": "https://science.nasa.gov/missions/hubble/astronomers-use-hubble-to-weigh-dog-stars-companion/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "vega",
+    "name": "Vega",
+    "slug": "vega",
+    "category": "star",
+    "constellation": "Lyra",
+    "type": "Blue-white main-sequence star",
+    "spectralType": "A0V",
+    "shortDescription": "A nearby, rapidly rotating star and one corner of the Summer Triangle.",
+    "accentColor": "#e0f2fe",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.045,
+      "pulseDuration": 4.1,
+      "coronaEnabled": true,
+      "visualScale": 1.04,
+      "surfacePattern": "polar"
+    },
+    "facts": {
+      "distance": "About 25 light-years",
+      "mass": "About 2.1 times the Sun",
+      "radius": "About 2.4 times the Sun on average",
+      "temperature": "About 9,600–10,000 K",
+      "luminosity": "About 40 times the Sun",
+      "color": "Blue-white",
+      "age": "About 450 million years",
+      "stage": "Main sequence",
+      "composition": "Hydrogen-rich plasma undergoing core fusion, surrounded by a broad debris disk.",
+      "features": [
+        "Vega rotates so rapidly that it is wider at the equator than at the poles.",
+        "Its poles are hotter and brighter than its equatorial region.",
+        "Infrared observations reveal a large disk of dust around it."
+      ],
+      "curiosities": [
+        "Vega was once Earth's northern pole star and will be again because Earth's axis slowly precesses.",
+        "It helped define historical astronomical brightness scales.",
+        "It forms the Summer Triangle with Altair and Deneb."
+      ],
+      "sunComparison": "Vega is roughly twice the Sun's mass, more than twice its radius, and about 40 times as luminous.",
+      "systemNote": "No confirmed planets are known, but its debris disk is an important laboratory for planetary-system studies."
+    },
+    "source": {
+      "label": "NASA Science — Tiny Particles, So Far Away",
+      "url": "https://science.nasa.gov/photojournal/tiny-particles-so-far-away/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "betelgeuse",
+    "name": "Betelgeuse",
+    "slug": "betelgeuse",
+    "category": "star",
+    "constellation": "Orion",
+    "type": "Red supergiant",
+    "spectralType": "M1–2 Ia–ab",
+    "shortDescription": "A vast, variable red supergiant marking Orion's shoulder.",
+    "accentColor": "#fb7185",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.14,
+      "pulseDuration": 5.9,
+      "coronaEnabled": true,
+      "visualScale": 1.24,
+      "surfacePattern": "turbulent"
+    },
+    "facts": {
+      "distance": "Roughly 650 light-years; estimates remain uncertain",
+      "mass": "Approximately 15–20 times the Sun",
+      "radius": "Hundreds of times the Sun; commonly estimated near 700 solar radii",
+      "temperature": "About 3,500 K",
+      "luminosity": "Roughly 100,000 times the Sun, varying over time",
+      "color": "Orange-red",
+      "age": "About 10 million years",
+      "stage": "Red supergiant · advanced stellar evolution",
+      "composition": "A massive evolved star with a hot core and enormous, cool, unstable outer layers that lose gas and dust.",
+      "features": [
+        "It is one of the few stars whose surface and extended atmosphere can be directly studied.",
+        "Its brightness changes as the star pulsates and its surface evolves.",
+        "A major surface mass ejection contributed to its dramatic 2019–2020 dimming."
+      ],
+      "curiosities": [
+        "Placed at the center of our Solar System, it would extend beyond the orbit of Mars in many estimates.",
+        "Its future supernova would be spectacular but is not expected to threaten Earth.",
+        "Despite its size, its surface is cooler than the Sun's."
+      ],
+      "sunComparison": "Betelgeuse is far younger than the Sun but vastly larger and more luminous because it began life with much more mass.",
+      "systemNote": "Recent observations indicate that Betelgeuse may have a close stellar companion, while its vast atmosphere continuously sheds material."
+    },
+    "source": {
+      "label": "NASA Science — What Is Betelgeuse?",
+      "url": "https://science.nasa.gov/universe/what-is-betelgeuse-inside-the-strange-volatile-star/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "rigel",
+    "name": "Rigel",
+    "slug": "rigel",
+    "category": "star",
+    "constellation": "Orion",
+    "type": "Blue supergiant",
+    "spectralType": "B8 Ia",
+    "shortDescription": "A brilliant blue supergiant shining from Orion's foot.",
+    "accentColor": "#bfdbfe",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.06,
+      "pulseDuration": 4.4,
+      "coronaEnabled": true,
+      "visualScale": 1.16,
+      "surfacePattern": "radiant"
+    },
+    "facts": {
+      "distance": "About 860 light-years",
+      "mass": "About 20 times the Sun",
+      "radius": "At least 70 times the Sun",
+      "temperature": "About 12,000 K",
+      "luminosity": "About 120,000 times the Sun",
+      "color": "Blue-white",
+      "age": "Roughly 8 million years",
+      "stage": "Blue supergiant",
+      "composition": "A massive, very hot evolved star dominated by hydrogen and helium plasma.",
+      "features": [
+        "Rigel is usually the brightest star in Orion.",
+        "It radiates much of its energy in ultraviolet wavelengths.",
+        "Its apparent single point of light belongs to a multiple-star system."
+      ],
+      "curiosities": [
+        "Its light reaching Earth today began its journey centuries ago.",
+        "Rigel's short life is a consequence of consuming nuclear fuel extremely quickly.",
+        "It will eventually end as a core-collapse supernova."
+      ],
+      "sunComparison": "Rigel is around 20 times as massive, at least 70 times as wide, and about 120,000 times as luminous as the Sun.",
+      "systemNote": "Rigel is the dominant member of a multiple-star system with much fainter companions."
+    },
+    "source": {
+      "label": "NASA Science — Universe Glossary: Blue Supergiants",
+      "url": "https://science.nasa.gov/universe/glossary/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "polaris",
+    "name": "Polaris",
+    "slug": "polaris",
+    "category": "star",
+    "constellation": "Ursa Minor",
+    "type": "Yellow-white supergiant · Cepheid variable",
+    "spectralType": "F7 Ib",
+    "shortDescription": "The current North Star and a pulsating beacon in a triple-star system.",
+    "accentColor": "#fef3c7",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.09,
+      "pulseDuration": 3.97,
+      "coronaEnabled": true,
+      "visualScale": 1.1,
+      "surfacePattern": "cepheid"
+    },
+    "facts": {
+      "distance": "About 430 light-years",
+      "mass": "Roughly 5 times the Sun",
+      "radius": "Roughly 45–50 times the Sun",
+      "temperature": "About 6,000 K",
+      "luminosity": "Roughly 2,000–2,500 times the Sun",
+      "color": "Yellow-white",
+      "age": "Tens of millions of years",
+      "stage": "Evolved supergiant · classical Cepheid variable",
+      "composition": "An evolved hydrogen-and-helium star whose outer layers rhythmically expand and contract.",
+      "features": [
+        "It lies close to the direction of Earth's north rotational axis.",
+        "Its pulsations cause predictable brightness changes.",
+        "The Polaris system contains at least three stars."
+      ],
+      "curiosities": [
+        "Polaris is useful for navigation because it appears nearly fixed while the northern sky rotates around it.",
+        "It has not always been—and will not always be—the North Star.",
+        "Cepheid stars help astronomers measure cosmic distances."
+      ],
+      "sunComparison": "Polaris A is several times more massive, dozens of times larger, and thousands of times more luminous than the Sun.",
+      "systemNote": "Polaris A is accompanied by a close star, Polaris Ab, and a more distant companion, Polaris B."
+    },
+    "source": {
+      "label": "NASA Science — There's More to the North Star Than Meets the Eye",
+      "url": "https://science.nasa.gov/missions/hubble/theres-more-to-the-north-star-than-meets-the-eye/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "proxima-centauri",
+    "name": "Proxima Centauri",
+    "slug": "proxima-centauri",
+    "category": "star",
+    "constellation": "Centaurus",
+    "type": "Red dwarf · Flare star",
+    "spectralType": "M5.5Ve",
+    "shortDescription": "The nearest known star to the Sun: a small, faint, active red dwarf.",
+    "accentColor": "#f87171",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.16,
+      "pulseDuration": 3.1,
+      "coronaEnabled": true,
+      "visualScale": 0.78,
+      "surfacePattern": "flare"
+    },
+    "facts": {
+      "distance": "About 4.24 light-years",
+      "mass": "About 0.12 times the Sun",
+      "radius": "About 0.15 times the Sun",
+      "temperature": "About 3,050 K",
+      "luminosity": "About 0.0017 times the Sun",
+      "color": "Deep red-orange",
+      "age": "Approximately 4.8 billion years",
+      "stage": "Low-mass main-sequence red dwarf",
+      "composition": "A cool, fully convective hydrogen-rich star with strong magnetic activity.",
+      "features": [
+        "It is the closest known star beyond the Sun.",
+        "Powerful flares can make it brighten dramatically.",
+        "It belongs gravitationally to the Alpha Centauri stellar system."
+      ],
+      "curiosities": [
+        "It is too faint to see with the unaided eye.",
+        "At least two confirmed planets orbit it, including Proxima Centauri b.",
+        "Red dwarfs can remain on the main sequence far longer than Sun-like stars."
+      ],
+      "sunComparison": "Proxima has only about one-eighth of the Sun's mass and emits roughly one-thousandth as much light.",
+      "systemNote": "Proxima is the distant third member of the Alpha Centauri system and hosts a compact planetary system."
+    },
+    "source": {
+      "label": "NASA Science — Proxima Centauri",
+      "url": "https://science.nasa.gov/asset/hubble/proxima-centauri/",
+      "accessed": "2026-07-30"
+    }
+  },
+  {
+    "id": "antares",
+    "name": "Antares",
+    "slug": "antares",
+    "category": "star",
+    "constellation": "Scorpius",
+    "type": "Red supergiant",
+    "spectralType": "M1.5 Iab–Ib",
+    "shortDescription": "The reddish heart of Scorpius and one of the sky's most recognizable supergiants.",
+    "accentColor": "#ef4444",
+    "available": true,
+    "viewer": {
+      "pulseIntensity": 0.12,
+      "pulseDuration": 5.2,
+      "coronaEnabled": true,
+      "visualScale": 1.22,
+      "surfacePattern": "turbulent"
+    },
+    "facts": {
+      "distance": "Roughly 550 light-years",
+      "mass": "Approximately 12 times the Sun",
+      "radius": "Roughly 600–700 times the Sun",
+      "temperature": "About 3,500 K",
+      "luminosity": "Tens of thousands of times the Sun",
+      "color": "Red-orange",
+      "age": "Roughly 10–15 million years",
+      "stage": "Red supergiant · late stellar evolution",
+      "composition": "A massive evolved star with an extended cool atmosphere, strong stellar winds, and a hot fusion-driven interior.",
+      "features": [
+        "Its reddish color inspired a name meaning rival of Mars.",
+        "It marks the heart of the constellation Scorpius.",
+        "Antares has a much hotter, blue-white companion star."
+      ],
+      "curiosities": [
+        "Its diameter would extend beyond Mars's orbit in many scale comparisons.",
+        "NASA's Cassini spacecraft used Antares during stellar occultation studies of Saturn's rings.",
+        "Like Betelgeuse, Antares is expected to end its life as a supernova."
+      ],
+      "sunComparison": "Antares is only several times more massive than the Sun but hundreds of times wider and tens of thousands of times more luminous.",
+      "systemNote": "Antares A and its smaller hot companion Antares B form a binary system."
+    },
+    "source": {
+      "label": "NASA Science — July Night Sky Notes: Spy the Scorpion",
+      "url": "https://science.nasa.gov/solar-system/skywatching/night-sky-network/july2025-night-sky-notes/",
+      "accessed": "2026-07-30"
+    }
+  }
+]

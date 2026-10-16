@@ -1,0 +1,2973 @@
+{
+  "version": 2,
+  "generatedBy": "Cosmic Explorer original procedural renderer",
+  "sampleRate": 22050,
+  "profiles": {
+    "section-home": {
+      "id": "section-home",
+      "category": "section",
+      "names": {
+        "es": "Umbral de Cosmic Explorer",
+        "en": "Cosmic Explorer Threshold"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-home/music.ogg",
+          "mp3": "/audio/ambient/section-home/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-home/ambience.ogg",
+          "mp3": "/audio/ambient/section-home/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-home/sonification.ogg",
+          "mp3": "/audio/ambient/section-home/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "section-universe": {
+      "id": "section-universe",
+      "category": "section",
+      "names": {
+        "es": "Horizonte profundo",
+        "en": "Deep Horizon"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-universe/music.ogg",
+          "mp3": "/audio/ambient/section-universe/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-universe/ambience.ogg",
+          "mp3": "/audio/ambient/section-universe/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-universe/sonification.ogg",
+          "mp3": "/audio/ambient/section-universe/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "section-gallery": {
+      "id": "section-gallery",
+      "category": "section",
+      "names": {
+        "es": "Archivo de fenómenos",
+        "en": "Phenomena Archive"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-gallery/music.ogg",
+          "mp3": "/audio/ambient/section-gallery/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-gallery/ambience.ogg",
+          "mp3": "/audio/ambient/section-gallery/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-gallery/sonification.ogg",
+          "mp3": "/audio/ambient/section-gallery/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "section-favorites": {
+      "id": "section-favorites",
+      "category": "section",
+      "names": {
+        "es": "Colección estelar",
+        "en": "Stellar Collection"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-favorites/music.ogg",
+          "mp3": "/audio/ambient/section-favorites/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-favorites/ambience.ogg",
+          "mp3": "/audio/ambient/section-favorites/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-favorites/sonification.ogg",
+          "mp3": "/audio/ambient/section-favorites/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "section-music-space": {
+      "id": "section-music-space",
+      "category": "section",
+      "names": {
+        "es": "Antesala musical",
+        "en": "Music Antechamber"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-music-space/music.ogg",
+          "mp3": "/audio/ambient/section-music-space/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-music-space/ambience.ogg",
+          "mp3": "/audio/ambient/section-music-space/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-music-space/sonification.ogg",
+          "mp3": "/audio/ambient/section-music-space/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "section-cosmic-defender": {
+      "id": "section-cosmic-defender",
+      "category": "section",
+      "names": {
+        "es": "Sala de lanzamiento",
+        "en": "Launch Bay"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-cosmic-defender/music.ogg",
+          "mp3": "/audio/ambient/section-cosmic-defender/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-cosmic-defender/ambience.ogg",
+          "mp3": "/audio/ambient/section-cosmic-defender/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-cosmic-defender/sonification.ogg",
+          "mp3": "/audio/ambient/section-cosmic-defender/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "section-appearance": {
+      "id": "section-appearance",
+      "category": "section",
+      "names": {
+        "es": "Laboratorio visual",
+        "en": "Visual Laboratory"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/section-appearance/music.ogg",
+          "mp3": "/audio/ambient/section-appearance/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/section-appearance/ambience.ogg",
+          "mp3": "/audio/ambient/section-appearance/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/section-appearance/sonification.ogg",
+          "mp3": "/audio/ambient/section-appearance/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-mercury": {
+      "id": "planet-mercury",
+      "category": "planet",
+      "names": {
+        "es": "Mercurio · Hierro solar",
+        "en": "Mercury · Solar Iron"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-mercury/music.ogg",
+          "mp3": "/audio/ambient/planet-mercury/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-mercury/ambience.ogg",
+          "mp3": "/audio/ambient/planet-mercury/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-mercury/sonification.ogg",
+          "mp3": "/audio/ambient/planet-mercury/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-venus": {
+      "id": "planet-venus",
+      "category": "planet",
+      "names": {
+        "es": "Venus · Velo de presión",
+        "en": "Venus · Pressure Veil"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-venus/music.ogg",
+          "mp3": "/audio/ambient/planet-venus/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-venus/ambience.ogg",
+          "mp3": "/audio/ambient/planet-venus/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-venus/sonification.ogg",
+          "mp3": "/audio/ambient/planet-venus/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-earth": {
+      "id": "planet-earth",
+      "category": "planet",
+      "names": {
+        "es": "Tierra · Mundo vivo",
+        "en": "Earth · Living World"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-earth/music.ogg",
+          "mp3": "/audio/ambient/planet-earth/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-earth/ambience.ogg",
+          "mp3": "/audio/ambient/planet-earth/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-earth/sonification.ogg",
+          "mp3": "/audio/ambient/planet-earth/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-mars": {
+      "id": "planet-mars",
+      "category": "planet",
+      "names": {
+        "es": "Marte · Viento rojo",
+        "en": "Mars · Red Wind"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-mars/music.ogg",
+          "mp3": "/audio/ambient/planet-mars/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-mars/ambience.ogg",
+          "mp3": "/audio/ambient/planet-mars/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-mars/sonification.ogg",
+          "mp3": "/audio/ambient/planet-mars/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-jupiter": {
+      "id": "planet-jupiter",
+      "category": "planet",
+      "names": {
+        "es": "Júpiter · Núcleo de tormenta",
+        "en": "Jupiter · Storm Core"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-jupiter/music.ogg",
+          "mp3": "/audio/ambient/planet-jupiter/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-jupiter/ambience.ogg",
+          "mp3": "/audio/ambient/planet-jupiter/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-jupiter/sonification.ogg",
+          "mp3": "/audio/ambient/planet-jupiter/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-saturn": {
+      "id": "planet-saturn",
+      "category": "planet",
+      "names": {
+        "es": "Saturno · Resonancia orbital",
+        "en": "Saturn · Orbital Resonance"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-saturn/music.ogg",
+          "mp3": "/audio/ambient/planet-saturn/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-saturn/ambience.ogg",
+          "mp3": "/audio/ambient/planet-saturn/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-saturn/sonification.ogg",
+          "mp3": "/audio/ambient/planet-saturn/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-uranus": {
+      "id": "planet-uranus",
+      "category": "planet",
+      "names": {
+        "es": "Urano · Cristal inclinado",
+        "en": "Uranus · Tilted Crystal"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-uranus/music.ogg",
+          "mp3": "/audio/ambient/planet-uranus/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-uranus/ambience.ogg",
+          "mp3": "/audio/ambient/planet-uranus/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-uranus/sonification.ogg",
+          "mp3": "/audio/ambient/planet-uranus/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "planet-neptune": {
+      "id": "planet-neptune",
+      "category": "planet",
+      "names": {
+        "es": "Neptuno · Viento oscuro",
+        "en": "Neptune · Dark Wind"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/planet-neptune/music.ogg",
+          "mp3": "/audio/ambient/planet-neptune/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/planet-neptune/ambience.ogg",
+          "mp3": "/audio/ambient/planet-neptune/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/planet-neptune/sonification.ogg",
+          "mp3": "/audio/ambient/planet-neptune/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-sun": {
+      "id": "star-sun",
+      "category": "star",
+      "names": {
+        "es": "Sol · Firma estelar",
+        "en": "Sun · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-sun/music.ogg",
+          "mp3": "/audio/ambient/star-sun/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-sun/ambience.ogg",
+          "mp3": "/audio/ambient/star-sun/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-sun/sonification.ogg",
+          "mp3": "/audio/ambient/star-sun/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-sirius": {
+      "id": "star-sirius",
+      "category": "star",
+      "names": {
+        "es": "Sirio · Firma estelar",
+        "en": "Sirius · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-sirius/music.ogg",
+          "mp3": "/audio/ambient/star-sirius/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-sirius/ambience.ogg",
+          "mp3": "/audio/ambient/star-sirius/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-sirius/sonification.ogg",
+          "mp3": "/audio/ambient/star-sirius/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-vega": {
+      "id": "star-vega",
+      "category": "star",
+      "names": {
+        "es": "Vega · Firma estelar",
+        "en": "Vega · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-vega/music.ogg",
+          "mp3": "/audio/ambient/star-vega/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-vega/ambience.ogg",
+          "mp3": "/audio/ambient/star-vega/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-vega/sonification.ogg",
+          "mp3": "/audio/ambient/star-vega/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-betelgeuse": {
+      "id": "star-betelgeuse",
+      "category": "star",
+      "names": {
+        "es": "Betelgeuse · Firma estelar",
+        "en": "Betelgeuse · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-betelgeuse/music.ogg",
+          "mp3": "/audio/ambient/star-betelgeuse/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-betelgeuse/ambience.ogg",
+          "mp3": "/audio/ambient/star-betelgeuse/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-betelgeuse/sonification.ogg",
+          "mp3": "/audio/ambient/star-betelgeuse/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-rigel": {
+      "id": "star-rigel",
+      "category": "star",
+      "names": {
+        "es": "Rigel · Firma estelar",
+        "en": "Rigel · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-rigel/music.ogg",
+          "mp3": "/audio/ambient/star-rigel/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-rigel/ambience.ogg",
+          "mp3": "/audio/ambient/star-rigel/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-rigel/sonification.ogg",
+          "mp3": "/audio/ambient/star-rigel/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-polaris": {
+      "id": "star-polaris",
+      "category": "star",
+      "names": {
+        "es": "Polaris · Firma estelar",
+        "en": "Polaris · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-polaris/music.ogg",
+          "mp3": "/audio/ambient/star-polaris/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-polaris/ambience.ogg",
+          "mp3": "/audio/ambient/star-polaris/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-polaris/sonification.ogg",
+          "mp3": "/audio/ambient/star-polaris/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-proxima-centauri": {
+      "id": "star-proxima-centauri",
+      "category": "star",
+      "names": {
+        "es": "Próxima Centauri · Firma estelar",
+        "en": "Proxima Centauri · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-proxima-centauri/music.ogg",
+          "mp3": "/audio/ambient/star-proxima-centauri/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-proxima-centauri/ambience.ogg",
+          "mp3": "/audio/ambient/star-proxima-centauri/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-proxima-centauri/sonification.ogg",
+          "mp3": "/audio/ambient/star-proxima-centauri/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "star-antares": {
+      "id": "star-antares",
+      "category": "star",
+      "names": {
+        "es": "Antares · Firma estelar",
+        "en": "Antares · Stellar Signature"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/star-antares/music.ogg",
+          "mp3": "/audio/ambient/star-antares/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/star-antares/ambience.ogg",
+          "mp3": "/audio/ambient/star-antares/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/star-antares/sonification.ogg",
+          "mp3": "/audio/ambient/star-antares/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-black-hole-accretion-disk": {
+      "id": "gallery-black-hole-accretion-disk",
+      "category": "gallery",
+      "names": {
+        "es": "Agujero negro · Disco de acreción",
+        "en": "Black Hole · Accretion Disk"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-black-hole-accretion-disk/music.ogg",
+          "mp3": "/audio/ambient/gallery-black-hole-accretion-disk/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-black-hole-accretion-disk/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-black-hole-accretion-disk/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-black-hole-accretion-disk/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-black-hole-accretion-disk/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-quasar": {
+      "id": "gallery-quasar",
+      "category": "gallery",
+      "names": {
+        "es": "Cuásar · Faro energético",
+        "en": "Quasar · Energetic Beacon"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-quasar/music.ogg",
+          "mp3": "/audio/ambient/gallery-quasar/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-quasar/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-quasar/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-quasar/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-quasar/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-blazar": {
+      "id": "gallery-blazar",
+      "category": "gallery",
+      "names": {
+        "es": "Blázar · Chorro frontal",
+        "en": "Blazar · Forward Jet"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-blazar/music.ogg",
+          "mp3": "/audio/ambient/gallery-blazar/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-blazar/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-blazar/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-blazar/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-blazar/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-tidal-disruption-event": {
+      "id": "gallery-tidal-disruption-event",
+      "category": "gallery",
+      "names": {
+        "es": "Disrupción de marea",
+        "en": "Tidal Disruption Event"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-tidal-disruption-event/music.ogg",
+          "mp3": "/audio/ambient/gallery-tidal-disruption-event/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-tidal-disruption-event/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-tidal-disruption-event/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-tidal-disruption-event/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-tidal-disruption-event/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-pulsar": {
+      "id": "gallery-pulsar",
+      "category": "gallery",
+      "names": {
+        "es": "Púlsar · Faro regular",
+        "en": "Pulsar · Regular Beacon"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-pulsar/music.ogg",
+          "mp3": "/audio/ambient/gallery-pulsar/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-pulsar/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-pulsar/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-pulsar/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-pulsar/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-magnetar": {
+      "id": "gallery-magnetar",
+      "category": "gallery",
+      "names": {
+        "es": "Magnetar · Pulso magnético",
+        "en": "Magnetar · Magnetic Pulse"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-magnetar/music.ogg",
+          "mp3": "/audio/ambient/gallery-magnetar/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-magnetar/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-magnetar/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-magnetar/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-magnetar/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-supernova": {
+      "id": "gallery-supernova",
+      "category": "gallery",
+      "names": {
+        "es": "Supernova · Expansión",
+        "en": "Supernova · Expansion"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-supernova/music.ogg",
+          "mp3": "/audio/ambient/gallery-supernova/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-supernova/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-supernova/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-supernova/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-supernova/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-supernova-remnant": {
+      "id": "gallery-supernova-remnant",
+      "category": "gallery",
+      "names": {
+        "es": "Remanente · Eco expansivo",
+        "en": "Remnant · Expanding Echo"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-supernova-remnant/music.ogg",
+          "mp3": "/audio/ambient/gallery-supernova-remnant/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-supernova-remnant/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-supernova-remnant/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-supernova-remnant/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-supernova-remnant/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-neutron-star-merger-kilonova": {
+      "id": "gallery-neutron-star-merger-kilonova",
+      "category": "gallery",
+      "names": {
+        "es": "Kilonova · Choque denso",
+        "en": "Kilonova · Dense Collision"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-neutron-star-merger-kilonova/music.ogg",
+          "mp3": "/audio/ambient/gallery-neutron-star-merger-kilonova/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-neutron-star-merger-kilonova/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-neutron-star-merger-kilonova/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-neutron-star-merger-kilonova/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-neutron-star-merger-kilonova/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-protostar-protoplanetary-disk": {
+      "id": "gallery-protostar-protoplanetary-disk",
+      "category": "gallery",
+      "names": {
+        "es": "Protoestrella · Nacimiento orbital",
+        "en": "Protostar · Orbital Birth"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-protostar-protoplanetary-disk/music.ogg",
+          "mp3": "/audio/ambient/gallery-protostar-protoplanetary-disk/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-protostar-protoplanetary-disk/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-protostar-protoplanetary-disk/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-protostar-protoplanetary-disk/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-protostar-protoplanetary-disk/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-planetary-nebula": {
+      "id": "gallery-planetary-nebula",
+      "category": "gallery",
+      "names": {
+        "es": "Nebulosa planetaria · Capas etéreas",
+        "en": "Planetary Nebula · Ethereal Layers"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-planetary-nebula/music.ogg",
+          "mp3": "/audio/ambient/gallery-planetary-nebula/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-planetary-nebula/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-planetary-nebula/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-planetary-nebula/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-planetary-nebula/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-cosmic-web": {
+      "id": "gallery-cosmic-web",
+      "category": "gallery",
+      "names": {
+        "es": "Red cósmica · Nodos lentos",
+        "en": "Cosmic Web · Slow Nodes"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-cosmic-web/music.ogg",
+          "mp3": "/audio/ambient/gallery-cosmic-web/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-cosmic-web/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-cosmic-web/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-cosmic-web/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-cosmic-web/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-wolf-rayet-star": {
+      "id": "gallery-wolf-rayet-star",
+      "category": "gallery",
+      "names": {
+        "es": "Wolf–Rayet · Viento estelar",
+        "en": "Wolf–Rayet · Stellar Wind"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-wolf-rayet-star/music.ogg",
+          "mp3": "/audio/ambient/gallery-wolf-rayet-star/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-wolf-rayet-star/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-wolf-rayet-star/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-wolf-rayet-star/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-wolf-rayet-star/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-vampire-star-system": {
+      "id": "gallery-vampire-star-system",
+      "category": "gallery",
+      "names": {
+        "es": "Sistema vampiro · Transferencia dual",
+        "en": "Vampire System · Dual Transfer"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-vampire-star-system/music.ogg",
+          "mp3": "/audio/ambient/gallery-vampire-star-system/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-vampire-star-system/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-vampire-star-system/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-vampire-star-system/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-vampire-star-system/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-herbig-haro-stellar-jet": {
+      "id": "gallery-herbig-haro-stellar-jet",
+      "category": "gallery",
+      "names": {
+        "es": "Herbig–Haro · Chorro joven",
+        "en": "Herbig–Haro · Young Jet"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-herbig-haro-stellar-jet/music.ogg",
+          "mp3": "/audio/ambient/gallery-herbig-haro-stellar-jet/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-herbig-haro-stellar-jet/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-herbig-haro-stellar-jet/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-herbig-haro-stellar-jet/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-herbig-haro-stellar-jet/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    },
+    "gallery-gamma-ray-burst": {
+      "id": "gallery-gamma-ray-burst",
+      "category": "gallery",
+      "names": {
+        "es": "Estallido gamma · Pulso breve",
+        "en": "Gamma-Ray Burst · Brief Pulse"
+      },
+      "stems": {
+        "music": {
+          "ogg": "/audio/ambient/gallery-gamma-ray-burst/music.ogg",
+          "mp3": "/audio/ambient/gallery-gamma-ray-burst/music.mp3",
+          "targetRmsDb": -16.5,
+          "duration": 30.0
+        },
+        "ambience": {
+          "ogg": "/audio/ambient/gallery-gamma-ray-burst/ambience.ogg",
+          "mp3": "/audio/ambient/gallery-gamma-ray-burst/ambience.mp3",
+          "targetRmsDb": -20.0,
+          "duration": 20.0
+        },
+        "sonification": {
+          "ogg": "/audio/ambient/gallery-gamma-ray-burst/sonification.ogg",
+          "mp3": "/audio/ambient/gallery-gamma-ray-burst/sonification.mp3",
+          "targetRmsDb": -19.0,
+          "duration": 16.0
+        }
+      }
+    }
+  },
+  "files": [
+    {
+      "profileId": "section-home",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-home/music.ogg",
+      "duration": 30.006,
+      "size": 239203
+    },
+    {
+      "profileId": "section-home",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-home/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-home",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-home/ambience.ogg",
+      "duration": 20.006,
+      "size": 129624
+    },
+    {
+      "profileId": "section-home",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-home/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-home",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-home/sonification.ogg",
+      "duration": 16.006,
+      "size": 112120
+    },
+    {
+      "profileId": "section-home",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-home/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "section-universe",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-universe/music.ogg",
+      "duration": 30.006,
+      "size": 273473
+    },
+    {
+      "profileId": "section-universe",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-universe/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-universe",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-universe/ambience.ogg",
+      "duration": 20.006,
+      "size": 135362
+    },
+    {
+      "profileId": "section-universe",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-universe/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-universe",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-universe/sonification.ogg",
+      "duration": 16.006,
+      "size": 109695
+    },
+    {
+      "profileId": "section-universe",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-universe/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "section-gallery",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-gallery/music.ogg",
+      "duration": 30.006,
+      "size": 293665
+    },
+    {
+      "profileId": "section-gallery",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-gallery/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-gallery",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-gallery/ambience.ogg",
+      "duration": 20.006,
+      "size": 135203
+    },
+    {
+      "profileId": "section-gallery",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-gallery/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-gallery",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-gallery/sonification.ogg",
+      "duration": 16.006,
+      "size": 62677
+    },
+    {
+      "profileId": "section-gallery",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-gallery/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "section-favorites",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-favorites/music.ogg",
+      "duration": 30.006,
+      "size": 247264
+    },
+    {
+      "profileId": "section-favorites",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-favorites/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-favorites",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-favorites/ambience.ogg",
+      "duration": 20.006,
+      "size": 128470
+    },
+    {
+      "profileId": "section-favorites",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-favorites/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-favorites",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-favorites/sonification.ogg",
+      "duration": 16.006,
+      "size": 111528
+    },
+    {
+      "profileId": "section-favorites",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-favorites/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "section-music-space",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-music-space/music.ogg",
+      "duration": 30.006,
+      "size": 265940
+    },
+    {
+      "profileId": "section-music-space",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-music-space/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-music-space",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-music-space/ambience.ogg",
+      "duration": 20.006,
+      "size": 128310
+    },
+    {
+      "profileId": "section-music-space",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-music-space/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-music-space",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-music-space/sonification.ogg",
+      "duration": 16.006,
+      "size": 115537
+    },
+    {
+      "profileId": "section-music-space",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-music-space/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "section-cosmic-defender",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-cosmic-defender/music.ogg",
+      "duration": 30.006,
+      "size": 268828
+    },
+    {
+      "profileId": "section-cosmic-defender",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-cosmic-defender/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-cosmic-defender",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-cosmic-defender/ambience.ogg",
+      "duration": 20.006,
+      "size": 115476
+    },
+    {
+      "profileId": "section-cosmic-defender",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-cosmic-defender/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-cosmic-defender",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-cosmic-defender/sonification.ogg",
+      "duration": 16.006,
+      "size": 60530
+    },
+    {
+      "profileId": "section-cosmic-defender",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-cosmic-defender/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "section-appearance",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/section-appearance/music.ogg",
+      "duration": 30.006,
+      "size": 273291
+    },
+    {
+      "profileId": "section-appearance",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/section-appearance/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "section-appearance",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/section-appearance/ambience.ogg",
+      "duration": 20.006,
+      "size": 131026
+    },
+    {
+      "profileId": "section-appearance",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/section-appearance/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "section-appearance",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/section-appearance/sonification.ogg",
+      "duration": 16.006,
+      "size": 114938
+    },
+    {
+      "profileId": "section-appearance",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/section-appearance/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-mercury",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-mercury/music.ogg",
+      "duration": 30.006,
+      "size": 269157
+    },
+    {
+      "profileId": "planet-mercury",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-mercury/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-mercury",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-mercury/ambience.ogg",
+      "duration": 20.006,
+      "size": 127214
+    },
+    {
+      "profileId": "planet-mercury",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-mercury/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-mercury",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-mercury/sonification.ogg",
+      "duration": 16.006,
+      "size": 109123
+    },
+    {
+      "profileId": "planet-mercury",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-mercury/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-venus",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-venus/music.ogg",
+      "duration": 30.006,
+      "size": 287094
+    },
+    {
+      "profileId": "planet-venus",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-venus/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-venus",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-venus/ambience.ogg",
+      "duration": 20.006,
+      "size": 148639
+    },
+    {
+      "profileId": "planet-venus",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-venus/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-venus",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-venus/sonification.ogg",
+      "duration": 16.006,
+      "size": 58710
+    },
+    {
+      "profileId": "planet-venus",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-venus/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-earth",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-earth/music.ogg",
+      "duration": 30.006,
+      "size": 246105
+    },
+    {
+      "profileId": "planet-earth",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-earth/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-earth",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-earth/ambience.ogg",
+      "duration": 20.006,
+      "size": 127876
+    },
+    {
+      "profileId": "planet-earth",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-earth/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-earth",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-earth/sonification.ogg",
+      "duration": 16.006,
+      "size": 112767
+    },
+    {
+      "profileId": "planet-earth",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-earth/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-mars",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-mars/music.ogg",
+      "duration": 30.006,
+      "size": 284354
+    },
+    {
+      "profileId": "planet-mars",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-mars/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-mars",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-mars/ambience.ogg",
+      "duration": 20.006,
+      "size": 115471
+    },
+    {
+      "profileId": "planet-mars",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-mars/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-mars",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-mars/sonification.ogg",
+      "duration": 16.006,
+      "size": 57028
+    },
+    {
+      "profileId": "planet-mars",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-mars/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-jupiter",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-jupiter/music.ogg",
+      "duration": 30.006,
+      "size": 294903
+    },
+    {
+      "profileId": "planet-jupiter",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-jupiter/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-jupiter",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-jupiter/ambience.ogg",
+      "duration": 20.006,
+      "size": 117310
+    },
+    {
+      "profileId": "planet-jupiter",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-jupiter/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-jupiter",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-jupiter/sonification.ogg",
+      "duration": 16.006,
+      "size": 98476
+    },
+    {
+      "profileId": "planet-jupiter",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-jupiter/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-saturn",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-saturn/music.ogg",
+      "duration": 30.006,
+      "size": 255661
+    },
+    {
+      "profileId": "planet-saturn",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-saturn/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-saturn",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-saturn/ambience.ogg",
+      "duration": 20.006,
+      "size": 135636
+    },
+    {
+      "profileId": "planet-saturn",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-saturn/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-saturn",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-saturn/sonification.ogg",
+      "duration": 16.006,
+      "size": 105695
+    },
+    {
+      "profileId": "planet-saturn",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-saturn/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-uranus",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-uranus/music.ogg",
+      "duration": 30.006,
+      "size": 274320
+    },
+    {
+      "profileId": "planet-uranus",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-uranus/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-uranus",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-uranus/ambience.ogg",
+      "duration": 20.006,
+      "size": 130826
+    },
+    {
+      "profileId": "planet-uranus",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-uranus/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-uranus",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-uranus/sonification.ogg",
+      "duration": 16.006,
+      "size": 114135
+    },
+    {
+      "profileId": "planet-uranus",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-uranus/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "planet-neptune",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/planet-neptune/music.ogg",
+      "duration": 30.006,
+      "size": 294046
+    },
+    {
+      "profileId": "planet-neptune",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/planet-neptune/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "planet-neptune",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/planet-neptune/ambience.ogg",
+      "duration": 20.006,
+      "size": 117365
+    },
+    {
+      "profileId": "planet-neptune",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/planet-neptune/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "planet-neptune",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/planet-neptune/sonification.ogg",
+      "duration": 16.006,
+      "size": 65967
+    },
+    {
+      "profileId": "planet-neptune",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/planet-neptune/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-sun",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-sun/music.ogg",
+      "duration": 30.006,
+      "size": 274873
+    },
+    {
+      "profileId": "star-sun",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-sun/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-sun",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-sun/ambience.ogg",
+      "duration": 20.006,
+      "size": 137697
+    },
+    {
+      "profileId": "star-sun",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-sun/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-sun",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-sun/sonification.ogg",
+      "duration": 16.006,
+      "size": 74856
+    },
+    {
+      "profileId": "star-sun",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-sun/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-sirius",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-sirius/music.ogg",
+      "duration": 30.006,
+      "size": 317682
+    },
+    {
+      "profileId": "star-sirius",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-sirius/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-sirius",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-sirius/ambience.ogg",
+      "duration": 20.006,
+      "size": 124462
+    },
+    {
+      "profileId": "star-sirius",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-sirius/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-sirius",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-sirius/sonification.ogg",
+      "duration": 16.006,
+      "size": 115175
+    },
+    {
+      "profileId": "star-sirius",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-sirius/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-vega",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-vega/music.ogg",
+      "duration": 30.006,
+      "size": 284844
+    },
+    {
+      "profileId": "star-vega",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-vega/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-vega",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-vega/ambience.ogg",
+      "duration": 20.006,
+      "size": 134265
+    },
+    {
+      "profileId": "star-vega",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-vega/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-vega",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-vega/sonification.ogg",
+      "duration": 16.006,
+      "size": 112557
+    },
+    {
+      "profileId": "star-vega",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-vega/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-betelgeuse",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-betelgeuse/music.ogg",
+      "duration": 30.006,
+      "size": 299631
+    },
+    {
+      "profileId": "star-betelgeuse",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-betelgeuse/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-betelgeuse",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-betelgeuse/ambience.ogg",
+      "duration": 20.006,
+      "size": 128594
+    },
+    {
+      "profileId": "star-betelgeuse",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-betelgeuse/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-betelgeuse",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-betelgeuse/sonification.ogg",
+      "duration": 16.006,
+      "size": 59176
+    },
+    {
+      "profileId": "star-betelgeuse",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-betelgeuse/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-rigel",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-rigel/music.ogg",
+      "duration": 30.006,
+      "size": 319447
+    },
+    {
+      "profileId": "star-rigel",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-rigel/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-rigel",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-rigel/ambience.ogg",
+      "duration": 20.006,
+      "size": 118989
+    },
+    {
+      "profileId": "star-rigel",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-rigel/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-rigel",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-rigel/sonification.ogg",
+      "duration": 16.006,
+      "size": 115827
+    },
+    {
+      "profileId": "star-rigel",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-rigel/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-polaris",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-polaris/music.ogg",
+      "duration": 30.006,
+      "size": 256376
+    },
+    {
+      "profileId": "star-polaris",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-polaris/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-polaris",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-polaris/ambience.ogg",
+      "duration": 20.006,
+      "size": 134100
+    },
+    {
+      "profileId": "star-polaris",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-polaris/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-polaris",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-polaris/sonification.ogg",
+      "duration": 16.006,
+      "size": 113951
+    },
+    {
+      "profileId": "star-polaris",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-polaris/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-proxima-centauri",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-proxima-centauri/music.ogg",
+      "duration": 30.006,
+      "size": 287685
+    },
+    {
+      "profileId": "star-proxima-centauri",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-proxima-centauri/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-proxima-centauri",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-proxima-centauri/ambience.ogg",
+      "duration": 20.006,
+      "size": 114498
+    },
+    {
+      "profileId": "star-proxima-centauri",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-proxima-centauri/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-proxima-centauri",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-proxima-centauri/sonification.ogg",
+      "duration": 16.006,
+      "size": 76339
+    },
+    {
+      "profileId": "star-proxima-centauri",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-proxima-centauri/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "star-antares",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/star-antares/music.ogg",
+      "duration": 30.006,
+      "size": 300828
+    },
+    {
+      "profileId": "star-antares",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/star-antares/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "star-antares",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/star-antares/ambience.ogg",
+      "duration": 20.006,
+      "size": 120187
+    },
+    {
+      "profileId": "star-antares",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/star-antares/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "star-antares",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/star-antares/sonification.ogg",
+      "duration": 16.006,
+      "size": 96096
+    },
+    {
+      "profileId": "star-antares",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/star-antares/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-black-hole-accretion-disk",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-black-hole-accretion-disk/music.ogg",
+      "duration": 30.006,
+      "size": 314132
+    },
+    {
+      "profileId": "gallery-black-hole-accretion-disk",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-black-hole-accretion-disk/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-black-hole-accretion-disk",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-black-hole-accretion-disk/ambience.ogg",
+      "duration": 20.006,
+      "size": 148297
+    },
+    {
+      "profileId": "gallery-black-hole-accretion-disk",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-black-hole-accretion-disk/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-black-hole-accretion-disk",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-black-hole-accretion-disk/sonification.ogg",
+      "duration": 16.006,
+      "size": 142439
+    },
+    {
+      "profileId": "gallery-black-hole-accretion-disk",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-black-hole-accretion-disk/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-quasar",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-quasar/music.ogg",
+      "duration": 30.006,
+      "size": 279386
+    },
+    {
+      "profileId": "gallery-quasar",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-quasar/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-quasar",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-quasar/ambience.ogg",
+      "duration": 20.006,
+      "size": 138563
+    },
+    {
+      "profileId": "gallery-quasar",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-quasar/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-quasar",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-quasar/sonification.ogg",
+      "duration": 16.006,
+      "size": 40604
+    },
+    {
+      "profileId": "gallery-quasar",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-quasar/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-blazar",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-blazar/music.ogg",
+      "duration": 30.006,
+      "size": 251007
+    },
+    {
+      "profileId": "gallery-blazar",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-blazar/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-blazar",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-blazar/ambience.ogg",
+      "duration": 20.006,
+      "size": 133573
+    },
+    {
+      "profileId": "gallery-blazar",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-blazar/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-blazar",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-blazar/sonification.ogg",
+      "duration": 16.006,
+      "size": 39021
+    },
+    {
+      "profileId": "gallery-blazar",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-blazar/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-tidal-disruption-event",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-tidal-disruption-event/music.ogg",
+      "duration": 30.006,
+      "size": 291360
+    },
+    {
+      "profileId": "gallery-tidal-disruption-event",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-tidal-disruption-event/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-tidal-disruption-event",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-tidal-disruption-event/ambience.ogg",
+      "duration": 20.006,
+      "size": 135933
+    },
+    {
+      "profileId": "gallery-tidal-disruption-event",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-tidal-disruption-event/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-tidal-disruption-event",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-tidal-disruption-event/sonification.ogg",
+      "duration": 16.006,
+      "size": 62331
+    },
+    {
+      "profileId": "gallery-tidal-disruption-event",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-tidal-disruption-event/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-pulsar",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-pulsar/music.ogg",
+      "duration": 30.006,
+      "size": 248634
+    },
+    {
+      "profileId": "gallery-pulsar",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-pulsar/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-pulsar",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-pulsar/ambience.ogg",
+      "duration": 20.006,
+      "size": 136256
+    },
+    {
+      "profileId": "gallery-pulsar",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-pulsar/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-pulsar",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-pulsar/sonification.ogg",
+      "duration": 16.006,
+      "size": 20521
+    },
+    {
+      "profileId": "gallery-pulsar",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-pulsar/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-magnetar",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-magnetar/music.ogg",
+      "duration": 30.006,
+      "size": 311336
+    },
+    {
+      "profileId": "gallery-magnetar",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-magnetar/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-magnetar",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-magnetar/ambience.ogg",
+      "duration": 20.006,
+      "size": 126208
+    },
+    {
+      "profileId": "gallery-magnetar",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-magnetar/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-magnetar",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-magnetar/sonification.ogg",
+      "duration": 16.006,
+      "size": 24374
+    },
+    {
+      "profileId": "gallery-magnetar",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-magnetar/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-supernova",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-supernova/music.ogg",
+      "duration": 30.006,
+      "size": 294122
+    },
+    {
+      "profileId": "gallery-supernova",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-supernova/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-supernova",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-supernova/ambience.ogg",
+      "duration": 20.006,
+      "size": 132272
+    },
+    {
+      "profileId": "gallery-supernova",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-supernova/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-supernova",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-supernova/sonification.ogg",
+      "duration": 16.006,
+      "size": 25922
+    },
+    {
+      "profileId": "gallery-supernova",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-supernova/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-supernova-remnant",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-supernova-remnant/music.ogg",
+      "duration": 30.006,
+      "size": 261054
+    },
+    {
+      "profileId": "gallery-supernova-remnant",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-supernova-remnant/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-supernova-remnant",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-supernova-remnant/ambience.ogg",
+      "duration": 20.006,
+      "size": 118360
+    },
+    {
+      "profileId": "gallery-supernova-remnant",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-supernova-remnant/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-supernova-remnant",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-supernova-remnant/sonification.ogg",
+      "duration": 16.006,
+      "size": 41492
+    },
+    {
+      "profileId": "gallery-supernova-remnant",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-supernova-remnant/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-neutron-star-merger-kilonova",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-neutron-star-merger-kilonova/music.ogg",
+      "duration": 30.006,
+      "size": 313624
+    },
+    {
+      "profileId": "gallery-neutron-star-merger-kilonova",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-neutron-star-merger-kilonova/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-neutron-star-merger-kilonova",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-neutron-star-merger-kilonova/ambience.ogg",
+      "duration": 20.006,
+      "size": 129728
+    },
+    {
+      "profileId": "gallery-neutron-star-merger-kilonova",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-neutron-star-merger-kilonova/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-neutron-star-merger-kilonova",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-neutron-star-merger-kilonova/sonification.ogg",
+      "duration": 16.006,
+      "size": 25922
+    },
+    {
+      "profileId": "gallery-neutron-star-merger-kilonova",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-neutron-star-merger-kilonova/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-protostar-protoplanetary-disk",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-protostar-protoplanetary-disk/music.ogg",
+      "duration": 30.006,
+      "size": 255213
+    },
+    {
+      "profileId": "gallery-protostar-protoplanetary-disk",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-protostar-protoplanetary-disk/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-protostar-protoplanetary-disk",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-protostar-protoplanetary-disk/ambience.ogg",
+      "duration": 20.006,
+      "size": 138936
+    },
+    {
+      "profileId": "gallery-protostar-protoplanetary-disk",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-protostar-protoplanetary-disk/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-protostar-protoplanetary-disk",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-protostar-protoplanetary-disk/sonification.ogg",
+      "duration": 16.006,
+      "size": 112169
+    },
+    {
+      "profileId": "gallery-protostar-protoplanetary-disk",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-protostar-protoplanetary-disk/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-planetary-nebula",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-planetary-nebula/music.ogg",
+      "duration": 30.006,
+      "size": 284978
+    },
+    {
+      "profileId": "gallery-planetary-nebula",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-planetary-nebula/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-planetary-nebula",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-planetary-nebula/ambience.ogg",
+      "duration": 20.006,
+      "size": 127813
+    },
+    {
+      "profileId": "gallery-planetary-nebula",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-planetary-nebula/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-planetary-nebula",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-planetary-nebula/sonification.ogg",
+      "duration": 16.006,
+      "size": 113919
+    },
+    {
+      "profileId": "gallery-planetary-nebula",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-planetary-nebula/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-cosmic-web",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-cosmic-web/music.ogg",
+      "duration": 30.006,
+      "size": 286352
+    },
+    {
+      "profileId": "gallery-cosmic-web",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-cosmic-web/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-cosmic-web",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-cosmic-web/ambience.ogg",
+      "duration": 20.006,
+      "size": 127818
+    },
+    {
+      "profileId": "gallery-cosmic-web",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-cosmic-web/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-cosmic-web",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-cosmic-web/sonification.ogg",
+      "duration": 16.006,
+      "size": 39971
+    },
+    {
+      "profileId": "gallery-cosmic-web",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-cosmic-web/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-wolf-rayet-star",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-wolf-rayet-star/music.ogg",
+      "duration": 30.006,
+      "size": 253926
+    },
+    {
+      "profileId": "gallery-wolf-rayet-star",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-wolf-rayet-star/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-wolf-rayet-star",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-wolf-rayet-star/ambience.ogg",
+      "duration": 20.006,
+      "size": 110933
+    },
+    {
+      "profileId": "gallery-wolf-rayet-star",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-wolf-rayet-star/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-wolf-rayet-star",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-wolf-rayet-star/sonification.ogg",
+      "duration": 16.006,
+      "size": 99895
+    },
+    {
+      "profileId": "gallery-wolf-rayet-star",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-wolf-rayet-star/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-vampire-star-system",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-vampire-star-system/music.ogg",
+      "duration": 30.006,
+      "size": 258809
+    },
+    {
+      "profileId": "gallery-vampire-star-system",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-vampire-star-system/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-vampire-star-system",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-vampire-star-system/ambience.ogg",
+      "duration": 20.006,
+      "size": 151612
+    },
+    {
+      "profileId": "gallery-vampire-star-system",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-vampire-star-system/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-vampire-star-system",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-vampire-star-system/sonification.ogg",
+      "duration": 16.006,
+      "size": 98488
+    },
+    {
+      "profileId": "gallery-vampire-star-system",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-vampire-star-system/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-herbig-haro-stellar-jet",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-herbig-haro-stellar-jet/music.ogg",
+      "duration": 30.006,
+      "size": 252328
+    },
+    {
+      "profileId": "gallery-herbig-haro-stellar-jet",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-herbig-haro-stellar-jet/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-herbig-haro-stellar-jet",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-herbig-haro-stellar-jet/ambience.ogg",
+      "duration": 20.006,
+      "size": 126189
+    },
+    {
+      "profileId": "gallery-herbig-haro-stellar-jet",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-herbig-haro-stellar-jet/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-herbig-haro-stellar-jet",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-herbig-haro-stellar-jet/sonification.ogg",
+      "duration": 16.006,
+      "size": 37222
+    },
+    {
+      "profileId": "gallery-herbig-haro-stellar-jet",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-herbig-haro-stellar-jet/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    },
+    {
+      "profileId": "gallery-gamma-ray-burst",
+      "stem": "music",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-gamma-ray-burst/music.ogg",
+      "duration": 30.006,
+      "size": 283147
+    },
+    {
+      "profileId": "gallery-gamma-ray-burst",
+      "stem": "music",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-gamma-ray-burst/music.mp3",
+      "duration": 30.067,
+      "size": 240787
+    },
+    {
+      "profileId": "gallery-gamma-ray-burst",
+      "stem": "ambience",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-gamma-ray-burst/ambience.ogg",
+      "duration": 20.006,
+      "size": 112740
+    },
+    {
+      "profileId": "gallery-gamma-ray-burst",
+      "stem": "ambience",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-gamma-ray-burst/ambience.mp3",
+      "duration": 20.062,
+      "size": 160748
+    },
+    {
+      "profileId": "gallery-gamma-ray-burst",
+      "stem": "sonification",
+      "format": "ogg",
+      "path": "audio/ambient/gallery-gamma-ray-burst/sonification.ogg",
+      "duration": 16.006,
+      "size": 14361
+    },
+    {
+      "profileId": "gallery-gamma-ray-burst",
+      "stem": "sonification",
+      "format": "mp3",
+      "path": "audio/ambient/gallery-gamma-ray-burst/sonification.mp3",
+      "duration": 16.065,
+      "size": 128774
+    }
+  ]
+}
